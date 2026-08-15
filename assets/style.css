@@ -1,0 +1,123 @@
+/* Shared styling for every policy page. Neutral on purpose — these pages sit
+   behind three apps with different palettes, and a Play reviewer opening one
+   should read it as a document, not as marketing. */
+
+:root {
+  --bg: #ffffff;
+  --card: #f7f8f7;
+  --line: #e3e6e3;
+  --txt: #161c18;
+  --txt2: #5c6660;
+  --accent: #2f6d3f;
+  --accent-soft: rgba(47, 109, 63, 0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d100e;
+    --card: #151a17;
+    --line: #262d29;
+    --txt: #e9efeb;
+    --txt2: #8e9a93;
+    --accent: #7fd694;
+    --accent-soft: rgba(127, 214, 148, 0.1);
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0 20px 80px;
+  background: var(--bg);
+  color: var(--txt);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap { max-width: 720px; margin: 0 auto; }
+
+header { padding: 48px 0 28px; border-bottom: 1px solid var(--line); }
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  text-decoration: none;
+  color: inherit;
+}
+.brand img { width: 44px; height: 44px; border-radius: 11px; flex-shrink: 0; }
+.brand b { font-size: 18px; letter-spacing: -0.2px; display: block; }
+.brand span { color: var(--txt2); font-size: 13px; }
+
+h1 { font-size: 33px; line-height: 1.15; letter-spacing: -0.6px; margin: 30px 0 6px; }
+h2 { font-size: 20px; letter-spacing: -0.2px; margin: 38px 0 10px; }
+
+.updated { color: var(--txt2); font-size: 14px; margin: 0 0 6px; }
+
+p { margin: 0 0 14px; }
+ul { margin: 0 0 14px; padding-left: 22px; }
+li { margin-bottom: 8px; }
+a { color: var(--accent); }
+
+.callout {
+  background: var(--accent-soft);
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  padding: 17px 20px;
+  margin: 22px 0;
+}
+.callout p:last-child { margin-bottom: 0; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 14px;
+  font-size: 15px;
+  display: block;
+  overflow-x: auto;
+}
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th {
+  color: var(--txt2);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.9em;
+  background: var(--accent-soft);
+  padding: 2px 6px;
+  border-radius: 5px;
+}
+
+footer {
+  margin-top: 52px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  color: var(--txt2);
+  font-size: 14px;
+}
+
+/* Index page — the list of apps */
+.apps { display: grid; gap: 12px; margin: 30px 0 0; }
+.app {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 17px 19px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  text-decoration: none;
+  color: inherit;
+}
+.app:hover { border-color: var(--accent); }
+.app img { width: 46px; height: 46px; border-radius: 11px; flex-shrink: 0; }
+.app b { display: block; font-size: 16px; letter-spacing: -0.1px; }
+.app span { color: var(--txt2); font-size: 14px; }
+.app .chev { margin-left: auto; color: var(--txt2); }
