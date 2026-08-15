@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy · GPA Calculator BD</title>
-<meta name="description" content="GPA Calculator BD works fully offline. Your grades stay on your device.">
+<meta name="description" content="GPA Calculator BD works fully offline — the released build has no internet permission. Your grades stay on your device.">
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
@@ -23,68 +23,331 @@
 <h1>Privacy Policy</h1>
 <p class="updated">Last updated 15 August 2026</p>
 
+<dl class="meta">
+  <div><dt>Application</dt><dd>GPA Calculator BD</dd></div>
+  <div><dt>Package</dt><dd><code>com.skrchowdhury.cgcalculatorbd</code></dd></div>
+  <div><dt>Platform</dt><dd>Android</dd></div>
+  <div><dt>Applies from version</dt><dd>1.0.1</dd></div>
+</dl>
+
 <div class="callout">
-  <p><strong>The short version:</strong> the app works entirely offline. It
-  requests no Android permissions at all — not even internet access — so your
-  grades cannot leave your device by any route the app controls. There are no
-  accounts, no analytics and no ads.</p>
+  <p><strong>The short version:</strong> the app works entirely offline. The
+  released build has <strong>no internet permission</strong>, so your grades
+  cannot leave your device by any route the app controls — not by accident, not
+  by a future bug, not at all. There are no accounts, no analytics and no ads.
+  Everything you enter stays in the app's private storage on your phone.</p>
 </div>
 
-<h2>What the app collects</h2>
-<p>Nothing is collected, because nothing is sent anywhere. The app has no server
-and no network permission. There is no login, no profile and no advertising.</p>
+<h2 id="glance">At a glance</h2>
 
-<h2>What is stored on your device</h2>
-<p>So your work survives closing the app, the following is saved in the app's
-own private storage on your phone:</p>
+<p>This is the same set of answers given on the app's Google Play
+<em>Data safety</em> declaration.</p>
+
+<div class="glance">
+<table>
+  <tbody>
+    <tr><th>Personal data collected</th><td>None</td></tr>
+    <tr><th>Data shared with third parties</th><td>None</td></tr>
+    <tr><th>Data transmitted off the device</th><td>None</td></tr>
+    <tr><th>Accounts or sign-in</th><td>None</td></tr>
+    <tr><th>Advertising or advertising ID</th><td>None</td></tr>
+    <tr><th>Analytics, telemetry or crash reporting</th><td>None</td></tr>
+    <tr><th>In-app purchases</th><td>None</td></tr>
+    <tr><th>Android permissions declared</th><td><code>VIBRATE</code></td></tr>
+    <tr><th>Internet permission</th><td>Not declared</td></tr>
+    <tr><th>Works in airplane mode</th><td>Completely</td></tr>
+    <tr><th>Android Auto Backup</th><td>Enabled — to your own Google account</td></tr>
+    <tr><th>Age suitability</th><td>Everyone</td></tr>
+  </tbody>
+</table>
+</div>
+
+<nav class="toc">
+  <b>Contents</b>
+  <ol>
+    <li><a href="#collect">What the app collects</a></li>
+    <li><a href="#storage">What is stored on your device</a></li>
+    <li><a href="#permissions">Permissions</a></li>
+    <li><a href="#network">Network access</a></li>
+    <li><a href="#sdks">Libraries in the app</a></li>
+    <li><a href="#backup">Android Auto Backup</a></li>
+    <li><a href="#export">Files you export or share</a></li>
+    <li><a href="#import">Reading files you pick</a></li>
+    <li><a href="#deletion">Retention and deletion</a></li>
+    <li><a href="#security">Security</a></li>
+    <li><a href="#rights">Your rights</a></li>
+    <li><a href="#verify">Verifying these claims</a></li>
+    <li><a href="#accuracy">Accuracy of results</a></li>
+    <li><a href="#children">Children</a></li>
+    <li><a href="#changes">Changes to this policy</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</nav>
+
+<h2 id="collect">1. What the app collects</h2>
+
+<p><strong>Nothing.</strong> Nothing is collected because nothing is sent
+anywhere. There is no server behind this app, no login, no profile and no
+advertising.</p>
+
+<p>Specifically, the app never collects, requests or receives:</p>
+
 <ul>
-  <li>Courses, credits and grades you enter, and the results calculated from them</li>
-  <li>Saved calculation history</li>
-  <li>Grading scales, including any custom scale you create</li>
-  <li>Settings such as theme and language</li>
+  <li>your name, email address, phone number or any other contact detail</li>
+  <li>your marks, grades, subjects, results or any other academic information</li>
+  <li>your institution, roll number, registration number or board</li>
+  <li>your location, at any precision</li>
+  <li>your device identifiers, Android ID or advertising ID</li>
+  <li>analytics, usage statistics, diagnostics or crash reports</li>
+  <li>your contacts, photos, files, camera or microphone</li>
 </ul>
+
+<h2 id="storage">2. What is stored on your device</h2>
+
+<p>So that your work survives closing the app, the following is saved in the
+app's own private storage — a memory-mapped key-value store under the app's
+private <code>files/mmkv</code> directory, which the Android sandbox makes
+unreadable to every other app on the phone:</p>
+
+<table>
+  <thead><tr><th>What is saved</th><th>Why</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Subjects, marks, grades and credits you have entered on the SSC/HSC and university screens, including retake flags</td>
+      <td>So a half-finished calculation is still there when you come back to it</td>
+    </tr>
+    <tr>
+      <td>Results you choose to save, each with a snapshot of the grading scale it was calculated on</td>
+      <td>So reopening a saved result reproduces the exact figure, even if you later edit that scale</td>
+    </tr>
+    <tr>
+      <td>Grading scales you create or duplicate</td>
+      <td>So a custom scale only has to be built once. Built-in scales ship inside the app and are not stored</td>
+    </tr>
+    <tr>
+      <td>Settings: theme, language, Bangla numerals, and whether you have seen the intro</td>
+      <td>So the app opens the way you left it</td>
+    </tr>
+  </tbody>
+</table>
+
 <p>This data belongs to you. It is readable only by this app, is never
-transmitted, and is deleted when you uninstall the app or clear its data from
-Android Settings.</p>
+transmitted, and is removed when you delete it in the app, clear the app's data
+from Android Settings, or uninstall the app.</p>
 
-<h2>Android Auto Backup</h2>
+<h2 id="permissions">3. Permissions</h2>
+
+<p>The released build declares exactly one real Android permission:</p>
+
+<table>
+  <thead><tr><th>Permission</th><th>Why it is needed</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><code>android.permission.VIBRATE</code></td>
+      <td>The short haptic tap you feel when a result lands. It is an
+      install-time permission that grants access to the vibration motor and to no
+      information whatsoever.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>If you inspect the manifest of the released build you will also see
+<code>com.skrchowdhury.cgcalculatorbd.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>.
+That entry is generated automatically by an Android system library. It is
+<em>signature-level</em> — only a build signed with this app's own key could ever
+hold it — it is scoped to this app alone, and it grants access to nothing. It
+exists so the app's internal message receivers are <em>not</em> exposed to other
+apps, which is a privacy protection rather than a privacy cost. It is listed here
+only so that the count matches what you actually see.</p>
+
+<p>There is <strong>no</strong> internet, storage, location, camera, microphone,
+contacts, phone or notification permission.</p>
+
+<h3>Permissions that were deliberately removed</h3>
+
+<p>Android libraries merge their own permission requests into the app that uses
+them, whether or not the app uses the feature those permissions are for. The file
+library used here ships a download manager, and would otherwise have added
+<code>INTERNET</code>, network and Wi-Fi state, <code>WAKE_LOCK</code>, external
+storage read/write and background-download permissions to the released app. None
+of that is used — only reading and writing a single file in the app's own cache
+directory — so those permissions are explicitly stripped from the release build.</p>
+
+<p>The effect is that the declared permission surface of the shipped app matches
+what the app actually does, rather than what its dependencies theoretically
+could.</p>
+
+<h2 id="network">4. Network access</h2>
+
+<p>The app makes <strong>no network requests</strong>, and the released build
+cannot make one: without <code>INTERNET</code>, the operating system itself
+refuses. Every calculation, every grading scale and every saved result is
+computed and stored on your phone.</p>
+
+<p>This is easy to confirm — put the phone in airplane mode and use the app
+normally. Nothing degrades, because nothing was ever coming from a server.</p>
+
+<p class="note">Internet access is declared only in the development build, so the
+bundler on a developer's own machine can serve code during development. It is not
+merged into the build published on Google Play.</p>
+
+<h2 id="sdks">5. Libraries in the app</h2>
+
+<p>The app is built with React Native and bundles open-source libraries for
+navigation, list rendering, animation, gestures, local storage, haptics,
+translation, image capture, the system share sheet and the system file picker.</p>
+
+<p>There is <strong>no</strong> advertising network, analytics SDK, attribution
+SDK, crash reporter, A/B testing framework, push-notification service or
+social-media SDK in this app. No bundled library contacts a server at runtime;
+the released build has no permission that would let one.</p>
+
+<h2 id="backup">6. Android Auto Backup</h2>
+
 <p>The app allows Android's built-in Auto Backup. That is an operating-system
-feature, not part of this app: when it is enabled on your phone, Android may
-copy the app's saved data to <strong>your own Google Drive backup</strong> so it
-can be restored if you switch phones. The backup is held in your Google account
-under Google's terms, and neither the developer nor anyone else gains access to
-it.</p>
-<p>To turn it off, use Android's own setting — typically
-<em>Settings &rsaquo; Google &rsaquo; Backup</em>, or the per-app backup control
-your device provides.</p>
+feature rather than part of this app: when it is enabled on your phone, Android
+may copy the app's saved data to <strong>your own Google account</strong>, so
+your history and custom scales can be restored if you set up a new phone, or
+transferred directly during a phone-to-phone setup.</p>
 
-<h2>Files you export or share</h2>
-<p>The app can export your data to a file and can share a result as an image.
-Both happen only when you ask for them. When you do, you choose the destination
-through Android's own file picker or share sheet, and the file goes wherever you
-send it. What happens to it after that is governed by whichever app or service
-you chose, not by this policy. Nothing is uploaded automatically.</p>
+<p>What is included in that backup is exactly the app's key-value store — saved
+results, custom scales and settings. Nothing else is included, because there is
+nothing else.</p>
 
-<h2>Reading files you pick</h2>
-<p>When restoring a backup, the app reads only the single file you select
-through the system document picker. It has no ability to browse your storage on
-its own.</p>
+<p>The backup is held in your Google account under
+<a href="https://policies.google.com/privacy">Google's privacy policy</a>. The
+developer has no access to it and receives no copy of it. To turn it off, use
+Android's own setting — typically <em>Settings &rsaquo; Google &rsaquo;
+Backup</em>, or the per-app backup control your device provides.</p>
 
-<h2>Accuracy</h2>
-<p>Results depend on the grading scale selected and on the values you enter.
-Institutions differ in how they calculate CGPA and how they treat retakes and
-exclusions. Always confirm against your institution's official transcript or
-regulations before relying on a number for anything that matters.</p>
+<h2 id="export">7. Files you export or share</h2>
 
-<h2>Children</h2>
-<p>The app is suitable for all ages and collects no data from anyone, children
-included.</p>
+<p>Three features can move data off your device, and every one of them requires
+you to act:</p>
 
-<h2>Changes to this policy</h2>
-<p>Any revision will be posted on this page with a new date at the top.</p>
+<ol>
+  <li><strong>Export backup.</strong> Writes a <code>.json</code> file containing
+  your saved results and custom scales to the app's own cache, then hands it to
+  Android's share sheet so you can put it wherever you want — Drive, Files, a
+  chat, an email to yourself. The file is named for the day it was made.</li>
+  <li><strong>Share a result card.</strong> Renders an image of a result and
+  hands that image to the share sheet.</li>
+  <li><strong>Share a grading scale.</strong> Hands a small <code>.json</code>
+  file describing the scale to the share sheet, so another student can import
+  it.</li>
+</ol>
 
-<h2>Contact</h2>
-<p><a href="mailto:emailofs2o@gmail.com">emailofs2o@gmail.com</a></p>
+<p>In all three cases <em>you</em> choose the destination, and the file goes only
+where you send it. What happens to it afterwards is governed by whichever app or
+service you chose, not by this policy. Nothing is uploaded automatically, and
+nothing is sent if you dismiss the share sheet.</p>
+
+<p>Because no storage permission is requested, this all happens through Android's
+own share and document mechanisms — the app is granted access to the one file
+involved, not to your storage.</p>
+
+<h2 id="import">8. Reading files you pick</h2>
+
+<p>When restoring a backup or importing a scale, the app reads only the single
+file you select through the system document picker. It has no ability to browse
+your storage, list your files, or open anything you did not choose. If the file
+is not a valid backup, it is rejected and nothing is changed.</p>
+
+<p>Importing merges into your library rather than overwriting it, and an imported
+scale is always added as a copy, so an import can never silently destroy work you
+already had.</p>
+
+<h2 id="deletion">9. Retention and deletion</h2>
+
+<p>Data is kept on your device for as long as you keep it, and nowhere else. You
+are in full control of removing it:</p>
+
+<ul>
+  <li><strong>Clear</strong> on a calculator screen empties that screen's entries</li>
+  <li><strong>Delete</strong> on a saved result or a custom scale removes that item</li>
+  <li><em>Settings &rsaquo; Apps &rsaquo; GPA Calculator BD &rsaquo; Storage &rsaquo;
+  Clear data</em> removes everything at once</li>
+  <li><strong>Uninstalling</strong> the app removes all of it</li>
+</ul>
+
+<p>There is no deletion request to submit, because no copy exists off your device
+for anyone to delete. If you have Auto Backup enabled, remember that a copy may
+also exist in your own Google account until you remove it there.</p>
+
+<h2 id="security">10. Security</h2>
+
+<p>Your data is protected by the Android application sandbox: the app's private
+storage is readable only by this app, and only on an unmodified device. There is
+no additional encryption layer, and none is claimed — on a rooted or compromised
+phone, the sandbox guarantee is weaker, and that is true of every app.</p>
+
+<p>The strongest protection here is structural rather than cryptographic: data
+that is never transmitted cannot be intercepted, and a build with no network
+permission cannot transmit it.</p>
+
+<h2 id="rights">11. Your rights</h2>
+
+<p>Data-protection laws such as the GDPR give you rights of access, correction,
+export and erasure over personal data a service holds about you. Those rights are
+fully satisfied here in the simplest possible way: no personal data is ever
+collected, so there is no profile to access, nothing to correct and nothing for
+anyone else to erase.</p>
+
+<p>The equivalents live in the app itself and are always available to you —
+export gives you your data as a readable file, editing corrects it, and delete or
+uninstall erases it.</p>
+
+<h2 id="verify">12. Verifying these claims</h2>
+
+<ul>
+  <li>Open <em>Settings &rsaquo; Apps &rsaquo; GPA Calculator BD &rsaquo;
+  Permissions</em>. Vibration is the only entry.</li>
+  <li>Turn on airplane mode and use every feature of the app. Nothing stops
+  working.</li>
+  <li>With the Android SDK installed,
+  <code>aapt2 dump permissions app-release.apk</code> prints the build's complete
+  permission list — <code>VIBRATE</code> plus the signature-level entry described
+  above, and nothing else.</li>
+</ul>
+
+<h2 id="accuracy">13. Accuracy of results</h2>
+
+<p>The app implements the Bangladesh education board grading scale and the UGC
+uniform grading scheme, and lets you build your own scales for anything else.
+Institutions differ in how they calculate CGPA and in how they treat retakes,
+exclusions and the fourth subject, which is exactly why custom scales exist.</p>
+
+<p>Results are for your own reference and planning. Your official result is
+whatever your education board or institution publishes — always treat the
+published marksheet or transcript as authoritative before relying on a number for
+anything that matters.</p>
+
+<h2 id="children">14. Children</h2>
+
+<p>The app is suitable for all ages and is used mainly by secondary and
+university students. Because it collects no data whatsoever, it collects nothing
+from children either. It shows no ads, contains no in-app purchases, has no chat
+and hosts no user-generated content.</p>
+
+<h2 id="changes">15. Changes to this policy</h2>
+
+<p>Any revision will be posted on this page with a new date at the top. Because
+the app collects nothing, material changes are unlikely; if the app ever did
+begin collecting something, this page would say so before the version that did it
+shipped.</p>
+
+<table>
+  <thead><tr><th>Date</th><th>Change</th></tr></thead>
+  <tbody>
+    <tr><td>15 August 2026</td><td>Corrected the permissions section: the released build declares <code>VIBRATE</code>, which the previous wording did not mention. Added storage, library, deletion, security, rights and verification detail.</td></tr>
+    <tr><td>15 August 2026</td><td>First published for version 1.0.1.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="contact">16. Contact</h2>
+
+<p>Questions about this policy or the app:
+<a href="mailto:emailofs2o@gmail.com">emailofs2o@gmail.com</a></p>
 
 <footer>
   <p><a href="../">All privacy policies</a></p>

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy · শব্দ খেলা (Shobdo Khela)</title>
-<meta name="description" content="শব্দ খেলা works fully offline. Your game progress stays on your device.">
+<meta name="description" content="শব্দ খেলা works fully offline — the released build has no internet permission. Your game progress stays on your device.">
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
@@ -23,65 +23,306 @@
 <h1>Privacy Policy</h1>
 <p class="updated">Last updated 15 August 2026</p>
 
+<dl class="meta">
+  <div><dt>Application</dt><dd>শব্দ খেলা — Shobdo Khela</dd></div>
+  <div><dt>Package</dt><dd><code>com.skrchowdhury.shobdokhela</code></dd></div>
+  <div><dt>Platform</dt><dd>Android</dd></div>
+  <div><dt>Applies from version</dt><dd>1.0.0</dd></div>
+</dl>
+
 <div class="callout">
-  <p><strong>The short version:</strong> the game works entirely offline. It
-  requests no Android permissions at all — not even internet access — so your
-  play data cannot leave your device by any route the app controls. There are no
-  accounts, no analytics and no ads.</p>
+  <p><strong>The short version:</strong> the game works entirely offline. The
+  released build has <strong>no internet permission</strong>, so your play data
+  cannot leave your device by any route the app controls. There are no accounts,
+  no leaderboards, no analytics and no ads. Every puzzle is generated and checked
+  on your phone.</p>
 </div>
 
-<h2>What the app collects</h2>
-<p>Nothing is collected, because nothing is sent anywhere. The game has no
-server and no network permission. There is no login, no leaderboard account and
-no advertising. Puzzles are generated and checked on your device.</p>
+<h2 id="glance">At a glance</h2>
 
-<h2>What is stored on your device</h2>
-<p>So your progress survives closing the game, the following is saved in the
-app's own private storage on your phone:</p>
+<p>This is the same set of answers given on the game's Google Play
+<em>Data safety</em> declaration.</p>
+
+<div class="glance">
+<table>
+  <tbody>
+    <tr><th>Personal data collected</th><td>None</td></tr>
+    <tr><th>Data shared with third parties</th><td>None</td></tr>
+    <tr><th>Data transmitted off the device</th><td>None</td></tr>
+    <tr><th>Accounts, sign-in or online leaderboards</th><td>None</td></tr>
+    <tr><th>Advertising or advertising ID</th><td>None</td></tr>
+    <tr><th>Analytics, telemetry or crash reporting</th><td>None</td></tr>
+    <tr><th>In-app purchases</th><td>None</td></tr>
+    <tr><th>Chat or user-generated content</th><td>None</td></tr>
+    <tr><th>Android permissions declared</th><td><code>VIBRATE</code></td></tr>
+    <tr><th>Internet permission</th><td>Not declared</td></tr>
+    <tr><th>Works in airplane mode</th><td>Completely</td></tr>
+    <tr><th>Android Auto Backup</th><td>Enabled — to your own Google account</td></tr>
+    <tr><th>Age suitability</th><td>Everyone</td></tr>
+  </tbody>
+</table>
+</div>
+
+<nav class="toc">
+  <b>Contents</b>
+  <ol>
+    <li><a href="#collect">What the game collects</a></li>
+    <li><a href="#storage">What is stored on your device</a></li>
+    <li><a href="#permissions">Permissions</a></li>
+    <li><a href="#network">Network access</a></li>
+    <li><a href="#sdks">Libraries in the game</a></li>
+    <li><a href="#backup">Android Auto Backup</a></li>
+    <li><a href="#export">Backup files and sharing results</a></li>
+    <li><a href="#import">Reading files you pick</a></li>
+    <li><a href="#deletion">Retention and deletion</a></li>
+    <li><a href="#security">Security</a></li>
+    <li><a href="#rights">Your rights</a></li>
+    <li><a href="#verify">Verifying these claims</a></li>
+    <li><a href="#children">Children</a></li>
+    <li><a href="#changes">Changes to this policy</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</nav>
+
+<h2 id="collect">1. What the game collects</h2>
+
+<p><strong>Nothing.</strong> Nothing is collected because nothing is sent
+anywhere. There is no server behind this game, no login, no online leaderboard
+and no advertising.</p>
+
+<p>Specifically, the game never collects, requests or receives:</p>
+
 <ul>
-  <li>Your current puzzle and the guesses you have made in it</li>
-  <li>Statistics: games played, win rate, current and longest streak, guess distribution</li>
-  <li>Settings such as theme and language</li>
+  <li>your name, email address, phone number or any other contact detail</li>
+  <li>your guesses, your statistics, your streak or your play times</li>
+  <li>your location, at any precision</li>
+  <li>your device identifiers, Android ID or advertising ID</li>
+  <li>analytics, usage statistics, diagnostics or crash reports</li>
+  <li>your contacts, photos, files, camera or microphone</li>
 </ul>
+
+<p>The daily word, the word lists and the checking of every guess all live inside
+the app package on your phone. Nothing about the puzzle is fetched, and nothing
+about your play is reported.</p>
+
+<h2 id="storage">2. What is stored on your device</h2>
+
+<p>So that your progress survives closing the game, the following is saved in the
+app's own private storage — a memory-mapped key-value store under the app's
+private <code>files/mmkv</code> directory, which the Android sandbox makes
+unreadable to every other app on the phone:</p>
+
+<table>
+  <thead><tr><th>What is saved</th><th>Detail</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Puzzle progress</td>
+      <td>The words you have guessed in each puzzle, kept per day and per
+      difficulty so the daily, an archive puzzle and a practice game can all be
+      in progress at once. Only the guessed words are stored — the coloured tile
+      feedback is recalculated from them each time</td>
+    </tr>
+    <tr>
+      <td>Statistics</td>
+      <td>Games played, games won, current streak, longest streak, guess
+      distribution, and which day's puzzle you last completed</td>
+    </tr>
+    <tr>
+      <td>Settings</td>
+      <td>Theme, language, difficulty, keyboard layout, high-contrast mode,
+      reduce-motion preference, strict scoring, Bangla numerals, haptics, and
+      whether you have seen the tutorial</td>
+    </tr>
+  </tbody>
+</table>
+
 <p>This data belongs to you. It is readable only by this app, is never
-transmitted, and is deleted when you uninstall the game or clear its data from
-Android Settings.</p>
+transmitted, and is removed when you reset your statistics in the game, clear the
+app's data from Android Settings, or uninstall the game.</p>
 
-<h2>Android Auto Backup</h2>
+<h2 id="permissions">3. Permissions</h2>
+
+<p>The released build declares exactly one real Android permission:</p>
+
+<table>
+  <thead><tr><th>Permission</th><th>Why it is needed</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><code>android.permission.VIBRATE</code></td>
+      <td>Haptic feedback on key presses and tile reveals. You can turn haptics
+      off in Settings. It is an install-time permission that grants access to the
+      vibration motor and to no information whatsoever.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>If you inspect the manifest of the released build you will also see
+<code>com.skrchowdhury.shobdokhela.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>.
+That entry is generated automatically by an Android system library. It is
+<em>signature-level</em> — only a build signed with this app's own key could ever
+hold it — it is scoped to this app alone, and it grants access to nothing. It
+exists so the game's internal message receivers are <em>not</em> exposed to other
+apps, which is a privacy protection rather than a privacy cost. It is listed here
+only so that the count matches what you actually see.</p>
+
+<p>There is <strong>no</strong> internet, storage, location, camera, microphone,
+contacts, phone or notification permission.</p>
+
+<h2 id="network">4. Network access</h2>
+
+<p>The game makes <strong>no network requests</strong>, and the released build
+cannot make one: without <code>INTERNET</code>, the operating system itself
+refuses. The word lists ship inside the app, the daily answer is derived on the
+device from the date, and guesses are validated against the bundled list.</p>
+
+<p>This is easy to confirm — put the phone in airplane mode and play. Everything
+works, including tomorrow's puzzle.</p>
+
+<p class="note">Internet access is declared only in the development build, so the
+bundler on a developer's own machine can serve code during development. It is not
+merged into the build published on Google Play.</p>
+
+<h2 id="sdks">5. Libraries in the game</h2>
+
+<p>The game is built with React Native and bundles open-source libraries for
+rendering, animation, gestures, navigation, local storage, haptics, translation,
+the system share sheet and the system file picker, along with a Bangla typeface.</p>
+
+<p>There is <strong>no</strong> advertising network, analytics SDK, attribution
+SDK, crash reporter, A/B testing framework, push-notification service or
+social-media SDK in this game. No bundled library contacts a server at runtime;
+the released build has no permission that would let one.</p>
+
+<h2 id="backup">6. Android Auto Backup</h2>
+
 <p>The game allows Android's built-in Auto Backup. That is an operating-system
-feature, not part of this app: when it is enabled on your phone, Android may
-copy the game's saved data to <strong>your own Google Drive backup</strong> so
-your streak can be restored if you switch phones. The backup is held in your
-Google account under Google's terms, and neither the developer nor anyone else
-gains access to it.</p>
-<p>To turn it off, use Android's own setting — typically
-<em>Settings &rsaquo; Google &rsaquo; Backup</em>, or the per-app backup control
-your device provides.</p>
+feature rather than part of this app: when it is enabled on your phone, Android
+may copy the game's saved data to <strong>your own Google account</strong>, so
+your streak and statistics can be restored if you set up a new phone, or
+transferred directly during a phone-to-phone setup.</p>
 
-<h2>Backup files and sharing results</h2>
-<p>The game can export your statistics and history to a plain JSON file, and can
-share a result card as an image. Both happen only when you ask for them. You
-choose the destination through Android's own file picker or share sheet, and the
-file goes wherever you send it — what happens to it afterwards is governed by
-whichever app or service you chose, not by this policy. Nothing is uploaded
-automatically.</p>
-<p>The export is deliberately plain, readable JSON: it is your data, and a
-format you can inspect is a format you can trust.</p>
+<p>What is included is exactly the game's key-value store — statistics, settings
+and in-progress puzzles. The word lists and caches are excluded, since they are
+already part of the app package and would only make the backup larger.</p>
 
-<h2>Reading files you pick</h2>
+<p>The backup is held in your Google account under
+<a href="https://policies.google.com/privacy">Google's privacy policy</a>. The
+developer has no access to it and receives no copy of it. To turn it off, use
+Android's own setting — typically <em>Settings &rsaquo; Google &rsaquo;
+Backup</em>, or the per-app backup control your device provides.</p>
+
+<h2 id="export">7. Backup files and sharing results</h2>
+
+<p>Two features can move data off your device, and both require you to act:</p>
+
+<ol>
+  <li><strong>Export data.</strong> Writes your statistics, settings and puzzle
+  progress to a <code>.json</code> file and hands it to Android's share sheet, so
+  you can put it wherever you want — Drive, Files, a chat, an email to
+  yourself.</li>
+  <li><strong>Share a result.</strong> Draws an image of your result grid and
+  hands that image to the share sheet. The image shows the pattern of your
+  guesses, not the answer.</li>
+</ol>
+
+<p>In both cases <em>you</em> choose the destination, and the file goes only
+where you send it. What happens to it afterwards is governed by whichever app or
+service you chose, not by this policy. Nothing is uploaded automatically, and
+nothing is sent if you dismiss the share sheet.</p>
+
+<p>The export is deliberately plain, readable JSON, with the format and export
+date at the top: it is your data, and a format you can open and inspect is a
+format you can trust.</p>
+
+<h2 id="import">8. Reading files you pick</h2>
+
 <p>When importing a backup, the game reads only the single file you select
-through the system document picker. It has no ability to browse your storage on
-its own.</p>
+through the system document picker. It has no ability to browse your storage,
+list your files, or open anything you did not choose.</p>
 
-<h2>Children</h2>
+<p>The file is validated before anything is changed: a file that is not a Shobdo
+Khela backup is rejected, and one written by a newer version of the game is
+refused outright rather than imported with unknown fields silently dropped.</p>
+
+<h2 id="deletion">9. Retention and deletion</h2>
+
+<p>Data is kept on your device for as long as you keep it, and nowhere else. You
+are in full control of removing it:</p>
+
+<ul>
+  <li><strong>Reset statistics</strong> in the game clears your stats, streak and
+  guess distribution</li>
+  <li><em>Settings &rsaquo; Apps &rsaquo; শব্দ খেলা &rsaquo; Storage &rsaquo;
+  Clear data</em> removes everything at once</li>
+  <li><strong>Uninstalling</strong> the game removes all of it</li>
+</ul>
+
+<p>There is no deletion request to submit, because no copy exists off your device
+for anyone to delete. If you have Auto Backup enabled, remember that a copy may
+also exist in your own Google account until you remove it there.</p>
+
+<h2 id="security">10. Security</h2>
+
+<p>Your data is protected by the Android application sandbox: the game's private
+storage is readable only by this app, and only on an unmodified device. There is
+no additional encryption layer, and none is claimed — on a rooted or compromised
+phone, the sandbox guarantee is weaker, and that is true of every app.</p>
+
+<p>The strongest protection here is structural rather than cryptographic: data
+that is never transmitted cannot be intercepted, and a build with no network
+permission cannot transmit it.</p>
+
+<h2 id="rights">11. Your rights</h2>
+
+<p>Data-protection laws such as the GDPR give you rights of access, correction,
+export and erasure over personal data a service holds about you. Those rights are
+fully satisfied here in the simplest possible way: no personal data is ever
+collected, so there is no profile to access, nothing to correct and nothing for
+anyone else to erase.</p>
+
+<p>The equivalents live in the game itself and are always available to you —
+export gives you your data as a readable file, and reset or uninstall erases
+it.</p>
+
+<h2 id="verify">12. Verifying these claims</h2>
+
+<ul>
+  <li>Open <em>Settings &rsaquo; Apps &rsaquo; শব্দ খেলা &rsaquo;
+  Permissions</em>. Vibration is the only entry.</li>
+  <li>Turn on airplane mode and play. Nothing stops working.</li>
+  <li>With the Android SDK installed,
+  <code>aapt2 dump permissions app-release.apk</code> prints the build's complete
+  permission list — <code>VIBRATE</code> plus the signature-level entry described
+  above, and nothing else.</li>
+</ul>
+
+<h2 id="children">13. Children</h2>
+
 <p>The game is suitable for all ages and collects no data from anyone, children
-included.</p>
+included. It shows no ads, contains no in-app purchases, has no chat, no
+messaging, no online leaderboard and no user-generated content. The only way it
+interacts with anything outside itself is the share sheet, which you open
+yourself and which sends only the image you asked it to send.</p>
 
-<h2>Changes to this policy</h2>
-<p>Any revision will be posted on this page with a new date at the top.</p>
+<h2 id="changes">14. Changes to this policy</h2>
 
-<h2>Contact</h2>
-<p><a href="mailto:emailofs2o@gmail.com">emailofs2o@gmail.com</a></p>
+<p>Any revision will be posted on this page with a new date at the top. Because
+the game collects nothing, material changes are unlikely; if the game ever did
+begin collecting something, this page would say so before the version that did it
+shipped.</p>
+
+<table>
+  <thead><tr><th>Date</th><th>Change</th></tr></thead>
+  <tbody>
+    <tr><td>15 August 2026</td><td>Corrected the permissions section: the released build declares <code>VIBRATE</code>, which the previous wording did not mention. Added storage, library, deletion, security, rights and verification detail.</td></tr>
+    <tr><td>15 August 2026</td><td>First published for version 1.0.0.</td></tr>
+  </tbody>
+</table>
+
+<h2 id="contact">15. Contact</h2>
+
+<p>Questions about this policy or the game:
+<a href="mailto:emailofs2o@gmail.com">emailofs2o@gmail.com</a></p>
 
 <footer>
   <p><a href="../">All privacy policies</a></p>

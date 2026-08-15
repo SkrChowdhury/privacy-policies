@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policies · SkrChowdhury</title>
-<meta name="description" content="Privacy policies for apps published by SkrChowdhury.">
+<meta name="description" content="Privacy policies for the Android apps published by SkrChowdhury. No accounts, no ads, no analytics, no trackers in any of them.">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -20,11 +20,17 @@
 </header>
 
 <h1>Privacy Policies</h1>
-<p class="updated">One page per published app.</p>
+<p class="updated">Three published apps · one policy page each · last reviewed 15 August 2026</p>
 
-<p>None of the apps listed here has accounts, advertising, analytics or
-third-party tracking of any kind. Each policy below describes exactly what its
-app does with data, including where that data is stored.</p>
+<p>None of the apps listed here has accounts, advertising, analytics, crash
+reporting or third-party tracking of any kind. That is not a promise about
+intent — it is a property of the builds themselves, and the sections below say
+how to check it yourself.</p>
+
+<p>Each policy describes exactly what its app does with data: which Android
+permissions the released build actually declares, what is written to your
+device and where, which servers (if any) it contacts, and what happens to
+anything you choose to export or share.</p>
 
 <div class="apps">
 
@@ -33,6 +39,11 @@ app does with data, including where that data is stored.</p>
     <div>
       <b>BDT Rate Today</b>
       <span>Remittance rate comparison · <code>com.skrchowdhury.bdtratestoday</code></span>
+      <div class="tags">
+        <span class="pill good">Collects nothing</span>
+        <span class="pill">Reads 4 public rate APIs</span>
+        <span class="pill good">Stores nothing on device</span>
+      </div>
     </div>
     <span class="chev">&rsaquo;</span>
   </a>
@@ -42,6 +53,11 @@ app does with data, including where that data is stored.</p>
     <div>
       <b>GPA Calculator BD</b>
       <span>Grade and CGPA calculator · <code>com.skrchowdhury.cgcalculatorbd</code></span>
+      <div class="tags">
+        <span class="pill good">Collects nothing</span>
+        <span class="pill good">No internet permission</span>
+        <span class="pill">Saves your work on-device</span>
+      </div>
     </div>
     <span class="chev">&rsaquo;</span>
   </a>
@@ -51,15 +67,119 @@ app does with data, including where that data is stored.</p>
     <div>
       <b>শব্দ খেলা <span style="opacity:.7">(Shobdo Khela)</span></b>
       <span>Bangla word game · <code>com.skrchowdhury.shobdokhela</code></span>
+      <div class="tags">
+        <span class="pill good">Collects nothing</span>
+        <span class="pill good">No internet permission</span>
+        <span class="pill">Saves progress on-device</span>
+      </div>
     </div>
     <span class="chev">&rsaquo;</span>
   </a>
 
 </div>
 
+<h2 id="common">What is true of all three</h2>
+
+<div class="glance">
+<table>
+  <tbody>
+    <tr><th>Personal data collected</th><td>None</td></tr>
+    <tr><th>Data shared with third parties</th><td>None</td></tr>
+    <tr><th>Accounts, sign-in or profiles</th><td>None</td></tr>
+    <tr><th>Advertising or advertising ID</th><td>None</td></tr>
+    <tr><th>Analytics, telemetry or crash reporting</th><td>None</td></tr>
+    <tr><th>In-app purchases</th><td>None</td></tr>
+    <tr><th>Location, contacts, camera, microphone or photos</th><td>Never accessed</td></tr>
+    <tr><th>Age suitability</th><td>Everyone</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>There is no server behind any of these apps. There is no account to close and
+no deletion request to file, because there is no copy of anything to delete —
+uninstalling an app removes everything it ever saved.</p>
+
+<h2 id="differences">Where they differ</h2>
+
+<p>The three apps are not identical, and the differences are the part worth
+reading. This table summarises them; each policy page has the full detail.</p>
+
+<div class="scroll">
+<table>
+  <thead>
+    <tr><th>&nbsp;</th><th>BDT Rate Today</th><th>GPA Calculator BD</th><th>শব্দ খেলা</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Network access</th>
+      <td>Yes — four public exchange-rate APIs</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>Permissions in the released build</th>
+      <td><code>INTERNET</code></td>
+      <td><code>VIBRATE</code></td>
+      <td><code>VIBRATE</code></td>
+    </tr>
+    <tr>
+      <th>Works in airplane mode</th>
+      <td>Only shows previously loaded rates</td>
+      <td>Yes, completely</td>
+      <td>Yes, completely</td>
+    </tr>
+    <tr>
+      <th>Written to device storage</th>
+      <td>Nothing — state is in memory only</td>
+      <td>Results, scales, settings</td>
+      <td>Puzzle progress, stats, settings</td>
+    </tr>
+    <tr>
+      <th>Android Auto Backup</th>
+      <td>Disabled</td>
+      <td>Enabled — to your own Google account</td>
+      <td>Enabled — to your own Google account</td>
+    </tr>
+    <tr>
+      <th>Export / import your data</th>
+      <td>Not applicable</td>
+      <td>JSON backup, you choose where</td>
+      <td>JSON backup, you choose where</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h2 id="verify">Checking any of this yourself</h2>
+
+<p>A privacy policy is a claim. These particular claims are testable, and you do
+not have to take the developer's word for any of them:</p>
+
+<ul>
+  <li><strong>Permissions.</strong> On your phone, open
+  <em>Settings &rsaquo; Apps &rsaquo; [the app] &rsaquo; Permissions</em>. The
+  Play listing also shows the full declared list under
+  <em>About this app &rsaquo; App permissions &rsaquo; See more</em>.</li>
+  <li><strong>Airplane mode.</strong> GPA Calculator BD and শব্দ খেলা have no
+  internet permission at all in their released builds. Turn on airplane mode and
+  every feature still works — because none of it was ever coming from a
+  server.</li>
+  <li><strong>The APK itself.</strong> If you have the Android SDK,
+  <code>aapt2 dump permissions app-release.apk</code> prints the complete
+  permission list of a build.</li>
+</ul>
+
+<h2 id="contact">Contact</h2>
+
+<p>Questions, corrections or anything that looks wrong on these pages:
+<a href="mailto:emailofs2o@gmail.com">emailofs2o@gmail.com</a>. Reports about a
+policy being inaccurate are especially welcome — an inaccurate privacy policy is
+a bug.</p>
+
 <footer>
-  <p>Questions about any of these policies:
-  <a href="mailto:emailofs2o@gmail.com">emailofs2o@gmail.com</a></p>
+  <p>These pages are the canonical privacy policies referenced by each app's
+  Google Play listing. They are served as plain static HTML: no cookies, no
+  scripts, no analytics on this site either.</p>
 </footer>
 
 </div>
