@@ -84,9 +84,13 @@ rather than copying a template:
   `react-native-haptic-feedback`. Checking only the main manifest is how both of
   those pages came to claim "no permissions at all", which was wrong.
   `aapt2 dump permissions app-release.apk` is the definitive answer.
-- **No `INTERNET` is a strong claim, so make it precisely.** Both offline apps
-  declare `INTERNET` in the *debug* manifest for the Metro dev server, and only
-  the release build is permission-free. Say "the released build", not "the app".
+- **No `INTERNET` is a strong claim, so make it precisely.** `GPA Calculator BD`
+  declares `INTERNET` only in the *debug* manifest for the Metro dev server, so
+  its release build is permission-free — say "the released build", not "the app".
+  `শব্দ খেলা` no longer qualifies: since cloud save it declares `INTERNET` in
+  `src/main`, so it ships in the release build. When a permission exists but is
+  used only for an opt-in feature, say exactly that instead of claiming it is
+  absent — the claim has to survive `aapt2`.
 - **Local storage** — MMKV, AsyncStorage, SQLite and files all count as data
   kept on the device. List what is stored, and say it never leaves.
 - **`android:allowBackup`** — if it is `true` (the Android default), the OS may

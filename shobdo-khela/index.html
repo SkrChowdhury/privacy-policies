@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy · শব্দ খেলা (Shobdo Khela)</title>
-<meta name="description" content="শব্দ খেলা works fully offline — the released build has no internet permission. Your game progress stays on your device.">
+<meta name="description" content="শব্দ খেলা collects nothing and has no server. Cloud save is optional and off by default; when you turn it on, your progress goes to your own Google Drive and nowhere else.">
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
@@ -21,7 +21,7 @@
 </header>
 
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated 15 August 2026</p>
+<p class="updated">Last updated 23 August 2026</p>
 
 <dl class="meta">
   <div><dt>Application</dt><dd>শব্দ খেলা — Shobdo Khela</dd></div>
@@ -31,11 +31,16 @@
 </dl>
 
 <div class="callout">
-  <p><strong>The short version:</strong> the game works entirely offline. The
-  released build has <strong>no internet permission</strong>, so your play data
-  cannot leave your device by any route the app controls. There are no accounts,
-  no leaderboards, no analytics and no ads. Every puzzle is generated and checked
-  on your phone.</p>
+  <p><strong>The short version:</strong> the game collects nothing about you.
+  There is no server behind it, no account, no leaderboard, no analytics and no
+  ads. Every puzzle is generated and checked on your phone.</p>
+
+  <p><strong>Cloud save is the one exception, and it is off until you turn it
+  on.</strong> With it off, the game never uses the network. With it on, your
+  game progress — and nothing else — is copied to <strong>your own Google
+  Drive</strong> so a new phone can restore it. The backup goes from your phone
+  to your Drive; the developer has no copy of it and no way to read it. No name,
+  no email address and no device identifier is ever put in it.</p>
 </div>
 
 <h2 id="glance">At a glance</h2>
@@ -48,15 +53,16 @@
   <tbody>
     <tr><th>Personal data collected</th><td>None</td></tr>
     <tr><th>Data shared with third parties</th><td>None</td></tr>
-    <tr><th>Data transmitted off the device</th><td>None</td></tr>
-    <tr><th>Accounts, sign-in or online leaderboards</th><td>None</td></tr>
+    <tr><th>Data sent to the developer</th><td>None — there is no server</td></tr>
+    <tr><th>Data transmitted off the device</th><td>Only your game progress, only to your own Google Drive, only with cloud save on</td></tr>
+    <tr><th>Accounts or sign-in</th><td>Optional Google sign-in, for cloud save only</td></tr>
+    <tr><th>Online leaderboards</th><td>None</td></tr>
     <tr><th>Advertising or advertising ID</th><td>None</td></tr>
     <tr><th>Analytics, telemetry or crash reporting</th><td>None</td></tr>
     <tr><th>In-app purchases</th><td>None</td></tr>
     <tr><th>Chat or user-generated content</th><td>None</td></tr>
-    <tr><th>Android permissions declared</th><td><code>VIBRATE</code></td></tr>
-    <tr><th>Internet permission</th><td>Not declared</td></tr>
-    <tr><th>Works in airplane mode</th><td>Completely</td></tr>
+    <tr><th>Android permissions declared</th><td><code>VIBRATE</code>, <code>INTERNET</code></td></tr>
+    <tr><th>Works in airplane mode</th><td>Completely, with cloud save off</td></tr>
     <tr><th>Android Auto Backup</th><td>Enabled — to your own Google account</td></tr>
     <tr><th>Age suitability</th><td>Everyone</td></tr>
   </tbody>
@@ -68,6 +74,7 @@
   <ol>
     <li><a href="#collect">What the game collects</a></li>
     <li><a href="#storage">What is stored on your device</a></li>
+    <li><a href="#cloud">Cloud save</a></li>
     <li><a href="#permissions">Permissions</a></li>
     <li><a href="#network">Network access</a></li>
     <li><a href="#sdks">Libraries in the game</a></li>
@@ -86,9 +93,9 @@
 
 <h2 id="collect">1. What the game collects</h2>
 
-<p><strong>Nothing.</strong> Nothing is collected because nothing is sent
-anywhere. There is no server behind this game, no login, no online leaderboard
-and no advertising.</p>
+<p><strong>Nothing.</strong> Nothing is collected because there is nowhere for it
+to go: there is no server behind this game, no login of the developer's, no
+online leaderboard and no advertising.</p>
 
 <p>Specifically, the game never collects, requests or receives:</p>
 
@@ -104,6 +111,10 @@ and no advertising.</p>
 <p>The daily word, the word lists and the checking of every guess all live inside
 the app package on your phone. Nothing about the puzzle is fetched, and nothing
 about your play is reported.</p>
+
+<p>Turning on cloud save does not change any of that. It copies your progress to
+<em>your</em> Google Drive — an account the developer has no access to. See
+<a href="#cloud">§3</a>.</p>
 
 <h2 id="storage">2. What is stored on your device</h2>
 
@@ -128,6 +139,12 @@ unreadable to every other app on the phone:</p>
       distribution, and which day's puzzle you last completed</td>
     </tr>
     <tr>
+      <td>Collection and rewards</td>
+      <td>The words you have collected with their meanings, your points balance
+      and what you have spent it on, and the badges, titles and board skins you
+      have earned</td>
+    </tr>
+    <tr>
       <td>Settings</td>
       <td>Theme, language, difficulty, keyboard layout, high-contrast mode,
       reduce-motion preference, strict scoring, Bangla numerals, haptics, and
@@ -136,13 +153,89 @@ unreadable to every other app on the phone:</p>
   </tbody>
 </table>
 
-<p>This data belongs to you. It is readable only by this app, is never
-transmitted, and is removed when you reset your statistics in the game, clear the
-app's data from Android Settings, or uninstall the game.</p>
+<p>This data belongs to you. It is readable only by this app, and it is removed
+when you reset your statistics in the game, clear the app's data from Android
+Settings, or uninstall the game. <strong>Uninstalling deletes all of it</strong>
+— unless you have turned cloud save on, in which case a copy also sits in your
+own Drive until you remove it there.</p>
 
-<h2 id="permissions">3. Permissions</h2>
+<h2 id="cloud">3. Cloud save</h2>
 
-<p>The released build declares exactly one real Android permission:</p>
+<p>Cloud save is <strong>optional and off by default</strong>. You turn it on in
+<em>Settings &rsaquo; ক্লাউডে সংরক্ষণ</em>, and that screen tells you, before you
+do, that switching it on means the game is no longer fully offline.</p>
+
+<h3>Where it goes</h3>
+
+<p>To <strong>your own Google Drive</strong>, in two places:</p>
+
+<ul>
+  <li>a hidden folder that only this app can see, holding the document the game
+  syncs from — Google calls this the <em>app data folder</em></li>
+  <li>a file named <code>shobdokhela-backup.json</code> in your My Drive, which
+  you can open, read, download, copy or delete like any other file of yours</li>
+</ul>
+
+<p>The game asks Google for the narrowest access that allows this — two
+permissions, both classified by Google as non-sensitive:</p>
+
+<table>
+  <thead><tr><th>Google Drive scope</th><th>What it allows</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><code>drive.appdata</code></td>
+      <td>The hidden per-app folder, and nothing else. Only this app can see it</td>
+    </tr>
+    <tr>
+      <td><code>drive.file</code></td>
+      <td>Files this app itself created — that is, the visible backup file</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Neither grants any sight of the rest of your Drive. The game cannot read your
+documents, your photos or anything else stored there, and it never asks to.</p>
+
+<p>Signing in shows the game your Google account's first name, so the settings
+row can tell you which account is linked. That stays on your device.</p>
+
+<h3>What is in the file</h3>
+
+<p>A single document containing <strong>game progress only</strong>: which
+puzzles you have solved and your guesses on them, your streak, statistics and
+guess distribution, your points balance and what you have spent it on, your
+collected words, badges, titles and board skins, and your settings.</p>
+
+<p>What it does <strong>not</strong> contain: your name, your email address, any
+device or advertising identifier, your location, your contacts, or anything you
+have typed that is not a guess in this game.</p>
+
+<p>The network is used <strong>only</strong> while backing up or restoring.
+Nothing is sent in the background, nothing is sent while you play, and none of it
+goes to advertising or analytics — there is neither in this game.</p>
+
+<h3>Turning it off, and deleting the backup</h3>
+
+<ul>
+  <li><strong>To unlink this phone</strong>, use <em>Settings &rsaquo; অ্যাকাউন্ট
+  সরিয়ে দিন</em>. The game signs out and can reach nothing further; your backup
+  stays in your Drive, which is the point of having one.</li>
+  <li><strong>The visible copy:</strong> delete
+  <code>shobdokhela-backup.json</code> from your My Drive.</li>
+  <li><strong>The hidden copy:</strong> <em>Google Drive &rsaquo; Settings
+  &rsaquo; Manage apps &rsaquo;</em> this app <em>&rsaquo; Delete hidden app
+  data</em>.</li>
+  <li><strong>To revoke the game's access to Drive entirely</strong>, remove it
+  at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+</ul>
+
+<p>Whatever sits in your Drive is held under
+<a href="https://policies.google.com/privacy">Google's privacy policy</a>. The
+developer has no access to it and receives no copy of it.</p>
+
+<h2 id="permissions">4. Permissions</h2>
+
+<p>The released build declares two real Android permissions:</p>
 
 <table>
   <thead><tr><th>Permission</th><th>Why it is needed</th></tr></thead>
@@ -153,8 +246,18 @@ app's data from Android Settings, or uninstall the game.</p>
       off in Settings. It is an install-time permission that grants access to the
       vibration motor and to no information whatsoever.</td>
     </tr>
+    <tr>
+      <td><code>android.permission.INTERNET</code></td>
+      <td>Cloud save only — talking to Google Drive. Nothing opens a network
+      connection until you turn cloud save on.</td>
+    </tr>
   </tbody>
 </table>
+
+<p>Neither grants access to personal information. <code>INTERNET</code> is an
+install-time permission and prompts nobody, which is exactly why this policy
+states plainly what it is for: the game is <em>capable</em> of reaching the
+network, and it does so only when you ask it to.</p>
 
 <p>If you inspect the manifest of the released build you will also see
 <code>com.skrchowdhury.shobdokhela.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>.
@@ -165,45 +268,49 @@ exists so the game's internal message receivers are <em>not</em> exposed to othe
 apps, which is a privacy protection rather than a privacy cost. It is listed here
 only so that the count matches what you actually see.</p>
 
-<p>There is <strong>no</strong> internet, storage, location, camera, microphone,
-contacts, phone or notification permission.</p>
+<p>There is <strong>no</strong> storage, location, camera, microphone, contacts,
+phone or notification permission.</p>
 
-<h2 id="network">4. Network access</h2>
+<h2 id="network">5. Network access</h2>
 
-<p>The game makes <strong>no network requests</strong>, and the released build
-cannot make one: without <code>INTERNET</code>, the operating system itself
-refuses. The word lists ship inside the app, the daily answer is derived on the
-device from the date, and guesses are validated against the bundled list.</p>
+<p>With cloud save off — which is how the game ships — <strong>no network request
+is ever made</strong>. The word lists ship inside the app, the daily answer is
+derived on the device from the date, and guesses are validated against the
+bundled list. Put the phone in airplane mode and play: everything works,
+including tomorrow's puzzle.</p>
 
-<p>This is easy to confirm — put the phone in airplane mode and play. Everything
-works, including tomorrow's puzzle.</p>
+<p>With cloud save on, the game talks to <strong>Google Drive and nothing
+else</strong>, and only at the moments you would expect: when you sign in, when a
+backup is written, and when a restore is read. There is no background sync, no
+periodic upload and no telemetry channel. If the network is unavailable the
+backup simply fails and says so; play is unaffected.</p>
 
-<p class="note">Internet access is declared only in the development build, so the
-bundler on a developer's own machine can serve code during development. It is not
-merged into the build published on Google Play.</p>
-
-<h2 id="sdks">5. Libraries in the game</h2>
+<h2 id="sdks">6. Libraries in the game</h2>
 
 <p>The game is built with React Native and bundles open-source libraries for
 rendering, animation, gestures, navigation, local storage, haptics, translation,
-the system share sheet and the system file picker, along with a Bangla typeface.</p>
+the system share sheet and the system file picker, along with a Bangla typeface.
+Cloud save adds Google's own sign-in library and ordinary HTTPS calls to the
+Google Drive API.</p>
 
 <p>There is <strong>no</strong> advertising network, analytics SDK, attribution
 SDK, crash reporter, A/B testing framework, push-notification service or
-social-media SDK in this game. No bundled library contacts a server at runtime;
-the released build has no permission that would let one.</p>
+social-media SDK in this game. Apart from the Drive calls described in
+<a href="#cloud">§3</a>, no bundled library contacts a server at runtime.</p>
 
-<h2 id="backup">6. Android Auto Backup</h2>
+<h2 id="backup">7. Android Auto Backup</h2>
 
-<p>The game allows Android's built-in Auto Backup. That is an operating-system
-feature rather than part of this app: when it is enabled on your phone, Android
-may copy the game's saved data to <strong>your own Google account</strong>, so
-your streak and statistics can be restored if you set up a new phone, or
-transferred directly during a phone-to-phone setup.</p>
+<p>Separately from the game's own cloud save, the game allows Android's built-in
+Auto Backup. That is an operating-system feature rather than part of this app:
+when it is enabled on your phone, Android may copy the game's saved data to
+<strong>your own Google account</strong>, so your streak and statistics can be
+restored if you set up a new phone, or transferred directly during a
+phone-to-phone setup.</p>
 
-<p>What is included is exactly the game's key-value store — statistics, settings
-and in-progress puzzles. The word lists and caches are excluded, since they are
-already part of the app package and would only make the backup larger.</p>
+<p>What is included is exactly the game's key-value store — statistics, settings,
+collection and in-progress puzzles. The word lists and caches are excluded, since
+they are already part of the app package and would only make the backup
+larger.</p>
 
 <p>The backup is held in your Google account under
 <a href="https://policies.google.com/privacy">Google's privacy policy</a>. The
@@ -211,9 +318,10 @@ developer has no access to it and receives no copy of it. To turn it off, use
 Android's own setting — typically <em>Settings &rsaquo; Google &rsaquo;
 Backup</em>, or the per-app backup control your device provides.</p>
 
-<h2 id="export">7. Backup files and sharing results</h2>
+<h2 id="export">8. Backup files and sharing results</h2>
 
-<p>Two features can move data off your device, and both require you to act:</p>
+<p>Two features can move data off your device by hand, and both require you to
+act:</p>
 
 <ol>
   <li><strong>Export data.</strong> Writes your statistics, settings and puzzle
@@ -232,9 +340,10 @@ nothing is sent if you dismiss the share sheet.</p>
 
 <p>The export is deliberately plain, readable JSON, with the format and export
 date at the top: it is your data, and a format you can open and inspect is a
-format you can trust.</p>
+format you can trust. It is the same format cloud save writes, so a copy pulled
+off your Drive by hand goes straight back into the game.</p>
 
-<h2 id="import">8. Reading files you pick</h2>
+<h2 id="import">9. Reading files you pick</h2>
 
 <p>When importing a backup, the game reads only the single file you select
 through the system document picker. It has no ability to browse your storage,
@@ -244,35 +353,44 @@ list your files, or open anything you did not choose.</p>
 Khela backup is rejected, and one written by a newer version of the game is
 refused outright rather than imported with unknown fields silently dropped.</p>
 
-<h2 id="deletion">9. Retention and deletion</h2>
+<h2 id="deletion">10. Retention and deletion</h2>
 
-<p>Data is kept on your device for as long as you keep it, and nowhere else. You
-are in full control of removing it:</p>
+<p>Data is kept on your device for as long as you keep it, plus — if you turned
+cloud save on — in your own Drive until you remove it there. You are in full
+control of all of it:</p>
 
 <ul>
   <li><strong>Reset statistics</strong> in the game clears your stats, streak and
   guess distribution</li>
   <li><em>Settings &rsaquo; Apps &rsaquo; শব্দ খেলা &rsaquo; Storage &rsaquo;
-  Clear data</em> removes everything at once</li>
-  <li><strong>Uninstalling</strong> the game removes all of it</li>
+  Clear data</em> removes everything on the phone at once</li>
+  <li><strong>Uninstalling</strong> the game removes all of it from the phone</li>
+  <li><strong>Your Drive copies</strong> are deleted by you, as described in
+  <a href="#cloud">§3</a></li>
 </ul>
 
-<p>There is no deletion request to submit, because no copy exists off your device
-for anyone to delete. If you have Auto Backup enabled, remember that a copy may
-also exist in your own Google account until you remove it there.</p>
+<p>There is no deletion request to submit, because no copy exists anywhere the
+developer can reach. Every copy is either on your phone or in your own Google
+account.</p>
 
-<h2 id="security">10. Security</h2>
+<h2 id="security">11. Security</h2>
 
-<p>Your data is protected by the Android application sandbox: the game's private
-storage is readable only by this app, and only on an unmodified device. There is
-no additional encryption layer, and none is claimed — on a rooted or compromised
-phone, the sandbox guarantee is weaker, and that is true of every app.</p>
+<p>On the device, your data is protected by the Android application sandbox: the
+game's private storage is readable only by this app, and only on an unmodified
+device. There is no additional encryption layer, and none is claimed — on a
+rooted or compromised phone, the sandbox guarantee is weaker, and that is true of
+every app.</p>
 
-<p>The strongest protection here is structural rather than cryptographic: data
-that is never transmitted cannot be intercepted, and a build with no network
-permission cannot transmit it.</p>
+<p>In transit, cloud save uses HTTPS to Google's own endpoints, and the sign-in
+token never leaves the device. At rest, the backup lives in your Google account
+under Google's security and your account's protections, including whatever
+two-factor authentication you have enabled there.</p>
 
-<h2 id="rights">11. Your rights</h2>
+<p>The strongest protection here remains structural rather than cryptographic:
+there is no server holding your data, so there is no breach of the developer's
+that could expose it.</p>
+
+<h2 id="rights">12. Your rights</h2>
 
 <p>Data-protection laws such as the GDPR give you rights of access, correction,
 export and erasure over personal data a service holds about you. Those rights are
@@ -281,45 +399,55 @@ collected, so there is no profile to access, nothing to correct and nothing for
 anyone else to erase.</p>
 
 <p>The equivalents live in the game itself and are always available to you —
-export gives you your data as a readable file, and reset or uninstall erases
-it.</p>
+export gives you your data as a readable file, cloud save's own file in your
+Drive is yours to open and delete, and reset or uninstall erases what is on the
+phone.</p>
 
-<h2 id="verify">12. Verifying these claims</h2>
+<h2 id="verify">13. Verifying these claims</h2>
 
 <ul>
   <li>Open <em>Settings &rsaquo; Apps &rsaquo; শব্দ খেলা &rsaquo;
-  Permissions</em>. Vibration is the only entry.</li>
-  <li>Turn on airplane mode and play. Nothing stops working.</li>
+  Permissions</em>. Vibration is the only entry that appears there;
+  <code>INTERNET</code> is install-time and is not shown as a toggle.</li>
+  <li>Leave cloud save off and turn on airplane mode. Nothing stops working.</li>
+  <li>Turn cloud save on, back up, then look in your own Drive: the file is
+  called <code>shobdokhela-backup.json</code>, and you can open it and read every
+  field in it.</li>
+  <li>Check what the game is allowed to touch at
+  <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>
+  — it will list the two Drive scopes in <a href="#cloud">§3</a> and no
+  others.</li>
   <li>With the Android SDK installed,
   <code>aapt2 dump permissions app-release.apk</code> prints the build's complete
-  permission list — <code>VIBRATE</code> plus the signature-level entry described
-  above, and nothing else.</li>
+  permission list — <code>VIBRATE</code> and <code>INTERNET</code> plus the
+  signature-level entry described above, and nothing else.</li>
 </ul>
 
-<h2 id="children">13. Children</h2>
+<h2 id="children">14. Children</h2>
 
 <p>The game is suitable for all ages and collects no data from anyone, children
 included. It shows no ads, contains no in-app purchases, has no chat, no
-messaging, no online leaderboard and no user-generated content. The only way it
-interacts with anything outside itself is the share sheet, which you open
-yourself and which sends only the image you asked it to send.</p>
+messaging, no online leaderboard and no user-generated content. The only ways it
+reaches outside itself are the share sheet, which you open yourself and which
+sends only the image you asked it to send, and cloud save, which is off unless
+someone turns it on and which writes only to that person's own Drive.</p>
 
-<h2 id="changes">14. Changes to this policy</h2>
+<h2 id="changes">15. Changes to this policy</h2>
 
-<p>Any revision will be posted on this page with a new date at the top. Because
-the game collects nothing, material changes are unlikely; if the game ever did
-begin collecting something, this page would say so before the version that did it
-shipped.</p>
+<p>Any revision will be posted on this page with a new date at the top. If the
+game ever did begin collecting something, this page would say so before the
+version that did it shipped.</p>
 
 <table>
   <thead><tr><th>Date</th><th>Change</th></tr></thead>
   <tbody>
+    <tr><td>23 August 2026</td><td>Documented <strong>cloud save</strong>: the optional Google Drive backup, the two non-sensitive Drive scopes it uses, what the backup file contains, and how to unlink, delete it or revoke access. Corrected the permissions and network sections — the released build now declares <code>INTERNET</code> for this feature, where the previous wording said it did not declare it at all.</td></tr>
     <tr><td>15 August 2026</td><td>Corrected the permissions section: the released build declares <code>VIBRATE</code>, which the previous wording did not mention. Added storage, library, deletion, security, rights and verification detail.</td></tr>
     <tr><td>15 August 2026</td><td>First published for version 1.0.0.</td></tr>
   </tbody>
 </table>
 
-<h2 id="contact">15. Contact</h2>
+<h2 id="contact">16. Contact</h2>
 
 <p>Questions about this policy or the game:
 <a href="mailto:emailofs2o@gmail.com">emailofs2o@gmail.com</a></p>

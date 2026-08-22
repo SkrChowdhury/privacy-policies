@@ -69,8 +69,8 @@ anything you choose to export or share.</p>
       <span>Bangla word game · <code>com.skrchowdhury.shobdokhela</code></span>
       <div class="tags">
         <span class="pill good">Collects nothing</span>
-        <span class="pill good">No internet permission</span>
-        <span class="pill">Saves progress on-device</span>
+        <span class="pill good">No server</span>
+        <span class="pill">Cloud save optional, off by default</span>
       </div>
     </div>
     <span class="chev">&rsaquo;</span>
@@ -85,7 +85,7 @@ anything you choose to export or share.</p>
   <tbody>
     <tr><th>Personal data collected</th><td>None</td></tr>
     <tr><th>Data shared with third parties</th><td>None</td></tr>
-    <tr><th>Accounts, sign-in or profiles</th><td>None</td></tr>
+    <tr><th>Accounts, sign-in or profiles</th><td>None — except শব্দ খেলা's optional Google sign-in, used only for its own cloud save</td></tr>
     <tr><th>Advertising or advertising ID</th><td>None</td></tr>
     <tr><th>Analytics, telemetry or crash reporting</th><td>None</td></tr>
     <tr><th>In-app purchases</th><td>None</td></tr>
@@ -114,25 +114,25 @@ reading. This table summarises them; each policy page has the full detail.</p>
       <th>Network access</th>
       <td>Yes — four public exchange-rate APIs</td>
       <td>None</td>
-      <td>None</td>
+      <td>Only with cloud save on, and only to your own Google Drive</td>
     </tr>
     <tr>
       <th>Permissions in the released build</th>
       <td><code>INTERNET</code></td>
       <td><code>VIBRATE</code></td>
-      <td><code>VIBRATE</code></td>
+      <td><code>VIBRATE</code>, <code>INTERNET</code></td>
     </tr>
     <tr>
       <th>Works in airplane mode</th>
       <td>Only shows previously loaded rates</td>
       <td>Yes, completely</td>
-      <td>Yes, completely</td>
+      <td>Yes, completely — cloud save is the only thing that needs a network</td>
     </tr>
     <tr>
       <th>Written to device storage</th>
       <td>Nothing — state is in memory only</td>
       <td>Results, scales, settings</td>
-      <td>Puzzle progress, stats, settings</td>
+      <td>Puzzle progress, stats, collection, rewards, settings</td>
     </tr>
     <tr>
       <th>Android Auto Backup</th>
@@ -160,10 +160,11 @@ not have to take the developer's word for any of them:</p>
   <em>Settings &rsaquo; Apps &rsaquo; [the app] &rsaquo; Permissions</em>. The
   Play listing also shows the full declared list under
   <em>About this app &rsaquo; App permissions &rsaquo; See more</em>.</li>
-  <li><strong>Airplane mode.</strong> GPA Calculator BD and শব্দ খেলা have no
-  internet permission at all in their released builds. Turn on airplane mode and
-  every feature still works — because none of it was ever coming from a
-  server.</li>
+  <li><strong>Airplane mode.</strong> GPA Calculator BD has no internet
+  permission at all in its released build. শব্দ খেলা declares one, but uses it
+  for nothing except the cloud save you switch on yourself — leave that off, turn
+  on airplane mode, and every feature still works, because none of it was ever
+  coming from a server.</li>
   <li><strong>The APK itself.</strong> If you have the Android SDK,
   <code>aapt2 dump permissions app-release.apk</code> prints the complete
   permission list of a build.</li>
