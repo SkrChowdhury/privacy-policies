@@ -21,7 +21,7 @@
 </header>
 
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated 15 August 2026</p>
+<p class="updated">Last updated 2 September 2026</p>
 
 <dl class="meta">
   <div><dt>Application</dt><dd>BDT Rate Today</dd></div>
@@ -140,7 +140,7 @@ contacts, phone, notification or background-activity permission.</p>
 
 <h2 id="network">4. Network requests</h2>
 
-<p>The app makes requests to four public rate sources, and to nothing else.
+<p>The app makes requests to five public rate sources, and to nothing else.
 Every request is a plain, unauthenticated HTTPS lookup for public pricing
 information. There is no API key tied to you, no session, no cookie and no
 device identifier.</p>
@@ -164,6 +164,11 @@ device identifier.</p>
       <td>The corridor and the send amount</td>
     </tr>
     <tr>
+      <td>Ria Money Transfer<br><code>www.riamoneytransfer.com</code></td>
+      <td>Ria&rsquo;s own published exchange rate for a corridor</td>
+      <td>Nothing beyond the request for a public country page</td>
+    </tr>
+    <tr>
       <td>Open Exchange Rates<br><code>open.er-api.com</code></td>
       <td>Mid-market reference rate</td>
       <td>Nothing beyond the request for the public USD rate table</td>
@@ -183,7 +188,7 @@ receives nor stores it, and has no account or dashboard with any of them.</p>
 
 <h2 id="thirdparty">5. Third-party services</h2>
 
-<p>The four hosts above are the complete list of third parties the app interacts
+<p>The five hosts above are the complete list of third parties the app interacts
 with, and it interacts with them only as an anonymous reader of public data.
 Their own policies are worth reading if you want to know how they treat the
 request logs every web server keeps:</p>
@@ -191,6 +196,7 @@ request logs every web server keeps:</p>
 <ul>
   <li><a href="https://wise.com/gb/legal/privacy-policy">Wise privacy policy</a></li>
   <li><a href="https://www.remitly.com/us/en/home/privacy">Remitly privacy policy</a></li>
+  <li><a href="https://www.riamoneytransfer.com/en-us/privacy-policy/">Ria Money Transfer privacy policy</a></li>
 </ul>
 
 <p>There is <strong>no</strong> advertising network, analytics SDK, attribution
@@ -250,7 +256,7 @@ to the address below — that would be a defect, and it would be fixed.</p>
   Permissions</em>, or the Play listing's <em>About this app &rsaquo; App
   permissions &rsaquo; See more</em>. Internet access is the only entry.</li>
   <li>Watch the app's traffic with any network inspection tool. Every request
-  goes to one of the four hosts listed above, and none carries an identifier.</li>
+  goes to one of the five hosts listed above, and none carries an identifier.</li>
   <li>With the Android SDK installed,
   <code>aapt2 dump permissions app-release.apk</code> prints the build's complete
   permission list.</li>
@@ -282,6 +288,7 @@ it shipped.</p>
 <table>
   <thead><tr><th>Date</th><th>Change</th></tr></thead>
   <tbody>
+    <tr><td>2 September 2026</td><td>Added Ria Money Transfer as a fifth rate source, for version 1.1.0.</td></tr>
     <tr><td>15 August 2026</td><td>Expanded with per-host request detail, permission and library disclosure, verification steps and a rights section.</td></tr>
     <tr><td>15 August 2026</td><td>First published for version 1.0.0.</td></tr>
   </tbody>
