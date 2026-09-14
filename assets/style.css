@@ -1,5 +1,5 @@
 /* Shared styling for every policy page. Neutral on purpose — these pages sit
-   behind three apps with different palettes, and a Play reviewer opening one
+   behind five apps with different palettes, and a Play reviewer opening one
    should read it as a document, not as marketing. */
 
 :root {
@@ -170,13 +170,14 @@ th {
 tbody th { white-space: normal; }
 tbody tr:last-child > * { border-bottom: none; }
 
-/* The cross-app comparison on the index page. Four columns cannot fit a phone
-   without shredding every cell, so the wrapper scrolls and the table keeps a
-   floor width. min-width belongs on the table, never on the scroll container —
-   on the container it would push the page itself sideways. */
+/* The cross-app comparison on the index page. Five app columns cannot fit a
+   phone without shredding every cell, so the wrapper scrolls and the table keeps
+   a floor width. min-width belongs on the table, never on the scroll container —
+   on the container it would push the page itself sideways. The floor grew with
+   the fifth app; bump it again if a sixth is added. */
 .scroll { overflow-x: auto; margin: 0 0 14px; }
-.scroll table { display: table; min-width: 600px; margin: 0; }
-.scroll th:first-child { width: 26%; }
+.scroll table { display: table; min-width: 760px; margin: 0; }
+.scroll th:first-child { width: 22%; }
 
 /* The Play "data safety" mirror — a two-column question/answer grid. */
 /* A wrapper div, not the table itself: a `display: block` table shrinks to fit

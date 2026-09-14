@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policies · SkrChowdhury</title>
-<meta name="description" content="Privacy policies for the Android apps published by SkrChowdhury. No accounts, no ads, no analytics, no trackers in any of them.">
+<meta name="description" content="Privacy policies for the Android apps published by SkrChowdhury. No accounts, no analytics and no developer-run server in any of them; one app shows ads, and its page says exactly what that sends.">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -20,12 +20,19 @@
 </header>
 
 <h1>Privacy Policies</h1>
-<p class="updated">Four published apps · one policy page each · last reviewed 24 August 2026</p>
+<p class="updated">Five published apps · one policy page each · last reviewed 11 September 2026</p>
 
-<p>None of the apps listed here has accounts, advertising, analytics, crash
-reporting or third-party tracking of any kind. That is not a promise about
+<p>None of the apps listed here has an account, a developer-run server,
+analytics, crash reporting or third-party tracking of any kind. In no case does
+any information about you reach the developer. That is not a promise about
 intent — it is a property of the builds themselves, and the sections below say
 how to check it yourself.</p>
+
+<p>Four of the five carry no advertising either. <b>জমি হিসাব</b> is the
+exception: it shows a Google AdMob banner, which sends your advertising ID and
+similar device data <em>to Google</em>. Rather than bury that, its page states it
+in the opening paragraph and devotes a full section to what is sent and how to
+switch personalisation off.</p>
 
 <p>Each policy describes exactly what its app does with data: which Android
 permissions the released build actually declares, what is written to your
@@ -90,46 +97,73 @@ anything you choose to export or share.</p>
     <span class="chev">&rsaquo;</span>
   </a>
 
+  <a class="app" href="jomi-hishab/">
+    <img src="assets/jomi-hishab.png" alt="">
+    <div>
+      <b>জমি হিসাব <span style="opacity:.7">(Jomi Hishab)</span></b>
+      <span>Land-unit converter · <code>com.skrchowdhury.jomihishab</code></span>
+      <div class="tags">
+        <span class="pill good">Developer collects nothing</span>
+        <span class="pill warn">Google AdMob banner</span>
+        <span class="pill good">Calculations fully offline</span>
+      </div>
+    </div>
+    <span class="chev">&rsaquo;</span>
+  </a>
+
 </div>
 
-<h2 id="common">What is true of all four</h2>
+<h2 id="common">What is true of all five</h2>
 
 <div class="glance">
 <table>
   <tbody>
-    <tr><th>Personal data collected</th><td>None</td></tr>
-    <tr><th>Data shared with third parties</th><td>None</td></tr>
+    <tr><th>Personal data reaching the developer</th><td>None</td></tr>
+    <tr><th>Developer-run server or backend</th><td>None</td></tr>
     <tr><th>Accounts, sign-in or profiles</th><td>None — except শব্দ খেলা's optional Google sign-in, used only for its own cloud save</td></tr>
-    <tr><th>Advertising or advertising ID</th><td>None</td></tr>
+    <tr><th>Advertising or advertising ID</th><td>None — except জমি হিসাব, which shows a Google AdMob banner</td></tr>
+    <tr><th>Data shared with third parties</th><td>None — except জমি হিসাব's advertising ID, shared with Google to serve that banner</td></tr>
     <tr><th>Analytics, telemetry or crash reporting</th><td>None</td></tr>
     <tr><th>In-app purchases</th><td>None</td></tr>
     <tr><th>Location, contacts, camera, microphone or photos</th><td>Never accessed</td></tr>
-    <tr><th>Age suitability</th><td>Everyone</td></tr>
+    <tr><th>Age suitability</th><td>Everyone — except জমি হিসাব, rated 18+ for its subject matter</td></tr>
   </tbody>
 </table>
 </div>
 
-<p>There is no server behind any of these apps. There is no account to close and
-no deletion request to file, because there is no copy of anything to delete —
-uninstalling an app removes everything it ever saved.</p>
+<p>There is no server behind any of these apps, and none of them has an account
+to close. There is no deletion request to file with the developer, because the
+developer holds no copy of anything to delete — uninstalling an app removes
+everything it ever saved. The one thing outside that guarantee is the ad data
+Google receives from জমি হিসাব, which Android's own advertising-ID controls let
+you reset or delete.</p>
 
 <h2 id="differences">Where they differ</h2>
 
-<p>The four apps are not identical, and the differences are the part worth
+<p>The five apps are not identical, and the differences are the part worth
 reading. This table summarises them; each policy page has the full detail.</p>
 
 <div class="scroll">
 <table>
   <thead>
-    <tr><th>&nbsp;</th><th>BDT Rate Today</th><th>GPA Calculator BD</th><th>শব্দ খেলা</th><th>CNG দরদাম</th></tr>
+    <tr><th>&nbsp;</th><th>BDT Rate Today</th><th>GPA Calculator BD</th><th>শব্দ খেলা</th><th>CNG দরদাম</th><th>জমি হিসাব</th></tr>
   </thead>
   <tbody>
+    <tr>
+      <th>Advertising</th>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>Google AdMob banner</td>
+    </tr>
     <tr>
       <th>Network access</th>
       <td>Yes — four public exchange-rate APIs</td>
       <td>None</td>
       <td>Only with cloud save on, and only to your own Google Drive</td>
       <td>None</td>
+      <td>Ad requests to Google only — every calculation is offline</td>
     </tr>
     <tr>
       <th>Permissions in the released build</th>
@@ -137,6 +171,7 @@ reading. This table summarises them; each policy page has the full detail.</p>
       <td><code>VIBRATE</code></td>
       <td><code>VIBRATE</code>, <code>INTERNET</code></td>
       <td><code>VIBRATE</code></td>
+      <td><code>INTERNET</code>, plus eight merged in by its libraries</td>
     </tr>
     <tr>
       <th>Works in airplane mode</th>
@@ -144,6 +179,7 @@ reading. This table summarises them; each policy page has the full detail.</p>
       <td>Yes, completely</td>
       <td>Yes, completely — cloud save is the only thing that needs a network</td>
       <td>Yes, completely</td>
+      <td>Yes, completely — only the ad banner is missing</td>
     </tr>
     <tr>
       <th>Written to device storage</th>
@@ -151,12 +187,14 @@ reading. This table summarises them; each policy page has the full detail.</p>
       <td>Results, scales, settings</td>
       <td>Puzzle progress, stats, collection, rewards, settings</td>
       <td>Stats, excuse collection, settings</td>
+      <td>Region, language, theme, pinned and custom units — never your measurements</td>
     </tr>
     <tr>
       <th>Android Auto Backup</th>
       <td>Disabled</td>
       <td>Enabled — to your own Google account</td>
       <td>Enabled — to your own Google account</td>
+      <td>Disabled</td>
       <td>Disabled</td>
     </tr>
     <tr>
@@ -165,6 +203,7 @@ reading. This table summarises them; each policy page has the full detail.</p>
       <td>JSON backup, you choose where</td>
       <td>JSON backup, you choose where</td>
       <td>Not applicable — share a result image only</td>
+      <td>Not applicable</td>
     </tr>
   </tbody>
 </table>
@@ -184,10 +223,14 @@ not have to take the developer's word for any of them:</p>
   internet permission at all in their released builds. শব্দ খেলা declares one,
   but uses it for nothing except the cloud save you switch on yourself — leave
   that off, turn on airplane mode, and every feature still works, because none
-  of it was ever coming from a server.</li>
+  of it was ever coming from a server. জমি হিসাব declares one solely for its ad
+  banner: in airplane mode every conversion, plot area and হিস্যা split still
+  works, and only the banner goes missing.</li>
   <li><strong>The APK itself.</strong> If you have the Android SDK,
   <code>aapt2 dump permissions app-release.apk</code> prints the complete
-  permission list of a build.</li>
+  permission list of a build. জমি হিসাব's page goes further and names the
+  library that contributes each of its eight entries, so the list can be checked
+  line by line.</li>
 </ul>
 
 <h2 id="contact">Contact</h2>
