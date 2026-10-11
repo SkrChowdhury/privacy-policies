@@ -19,6 +19,7 @@ without taking the policies offline.
 | শব্দ খেলা (Shobdo Khela) | `com.skrchowdhury.shobdokhela` | `/shobdo-khela/` |
 | CNG দরদাম (CNG Dordam) | `com.skrchowdhury.cngdordam` | `/cng-dordam/` |
 | জমি হিসাব (Jomi Hishab) | `com.skrchowdhury.jomihishab` | `/jomi-hishab/` |
+| Inked: Colour Nonograms | `com.skrchowdhury.inked` | `/inked/` |
 
 Base: `https://skrchowdhury.github.io/privacy-policies/`
 

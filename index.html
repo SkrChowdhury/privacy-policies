@@ -20,7 +20,7 @@
 </header>
 
 <h1>Privacy Policies</h1>
-<p class="updated">Five published apps · one policy page each · last reviewed 11 September 2026</p>
+<p class="updated">Six published apps · one policy page each · last reviewed 12 October 2026</p>
 
 <p>None of the apps listed here has an account, a developer-run server,
 analytics, crash reporting or third-party tracking of any kind. In no case does
@@ -28,11 +28,16 @@ any information about you reach the developer. That is not a promise about
 intent — it is a property of the builds themselves, and the sections below say
 how to check it yourself.</p>
 
-<p>Four of the five carry no advertising either. <b>জমি হিসাব</b> is the
+<p>Five of the six carry no advertising either. <b>জমি হিসাব</b> is the
 exception: it shows a Google AdMob banner, which sends your advertising ID and
 similar device data <em>to Google</em>. Rather than bury that, its page states it
 in the opening paragraph and devotes a full section to what is sent and how to
 switch personalisation off.</p>
+
+<p><b>Inked</b> is the one with online features, and each is optional: Google
+Play Games leaderboards (your daily times and streaks, posted to Google if you
+sign in to Play Games), an Editions subscription bought through Google Play, and
+cloud save to your own Google Drive. None of it reaches the developer.</p>
 
 <p>Each policy describes exactly what its app does with data: which Android
 permissions the released build actually declares, what is written to your
@@ -111,22 +116,36 @@ anything you choose to export or share.</p>
     <span class="chev">&rsaquo;</span>
   </a>
 
+  <a class="app" href="inked/">
+    <img src="assets/inked.png" alt="">
+    <div>
+      <b>Inked: Colour Nonograms</b>
+      <span>Colour nonogram game · <code>com.skrchowdhury.inked</code></span>
+      <div class="tags">
+        <span class="pill good">Developer collects nothing</span>
+        <span class="pill">Play Games leaderboards optional</span>
+        <span class="pill">Subscription via Google Play</span>
+      </div>
+    </div>
+    <span class="chev">&rsaquo;</span>
+  </a>
+
 </div>
 
-<h2 id="common">What is true of all five</h2>
+<h2 id="common">What is true of all six</h2>
 
 <div class="glance">
 <table>
   <tbody>
     <tr><th>Personal data reaching the developer</th><td>None</td></tr>
     <tr><th>Developer-run server or backend</th><td>None</td></tr>
-    <tr><th>Accounts, sign-in or profiles</th><td>None — except শব্দ খেলা's optional Google sign-in, used only for its own cloud save</td></tr>
+    <tr><th>Accounts, sign-in or profiles</th><td>None — except শব্দ খেলা's optional Google sign-in for its cloud save, and Inked's optional Google Play Games and Google Drive sign-in</td></tr>
     <tr><th>Advertising or advertising ID</th><td>None — except জমি হিসাব, which shows a Google AdMob banner</td></tr>
-    <tr><th>Data shared with third parties</th><td>None — except জমি হিসাব's advertising ID, shared with Google to serve that banner</td></tr>
+    <tr><th>Data shared with third parties</th><td>None — except জমি হিসাব's advertising ID, shared with Google to serve that banner, and Inked's leaderboard scores, posted to Google Play Games only if you sign in</td></tr>
     <tr><th>Analytics, telemetry or crash reporting</th><td>None</td></tr>
-    <tr><th>In-app purchases</th><td>None</td></tr>
+    <tr><th>In-app purchases</th><td>None — except Inked's optional Editions subscription, through Google Play</td></tr>
     <tr><th>Location, contacts, camera, microphone or photos</th><td>Never accessed</td></tr>
-    <tr><th>Age suitability</th><td>Everyone — except জমি হিসাব, rated 18+ for its subject matter</td></tr>
+    <tr><th>Age suitability</th><td>Everyone — except জমি হিসাব, rated 18+ for its subject matter, and Inked, aimed at ages 13 and up</td></tr>
   </tbody>
 </table>
 </div>
@@ -140,13 +159,13 @@ you reset or delete.</p>
 
 <h2 id="differences">Where they differ</h2>
 
-<p>The five apps are not identical, and the differences are the part worth
+<p>The six apps are not identical, and the differences are the part worth
 reading. This table summarises them; each policy page has the full detail.</p>
 
 <div class="scroll">
 <table>
   <thead>
-    <tr><th>&nbsp;</th><th>BDT Rate Today</th><th>GPA Calculator BD</th><th>শব্দ খেলা</th><th>CNG দরদাম</th><th>জমি হিসাব</th></tr>
+    <tr><th>&nbsp;</th><th>BDT Rate Today</th><th>GPA Calculator BD</th><th>শব্দ খেলা</th><th>CNG দরদাম</th><th>জমি হিসাব</th><th>Inked</th></tr>
   </thead>
   <tbody>
     <tr>
@@ -156,6 +175,7 @@ reading. This table summarises them; each policy page has the full detail.</p>
       <td>None</td>
       <td>None</td>
       <td>Google AdMob banner</td>
+      <td>None</td>
     </tr>
     <tr>
       <th>Network access</th>
@@ -164,6 +184,7 @@ reading. This table summarises them; each policy page has the full detail.</p>
       <td>Only with cloud save on, and only to your own Google Drive</td>
       <td>None</td>
       <td>Ad requests to Google only — every calculation is offline</td>
+      <td>Only for Google Play, Play Games (if signed in) and cloud save (if on)</td>
     </tr>
     <tr>
       <th>Permissions in the released build</th>
@@ -172,6 +193,7 @@ reading. This table summarises them; each policy page has the full detail.</p>
       <td><code>VIBRATE</code>, <code>INTERNET</code></td>
       <td><code>VIBRATE</code></td>
       <td><code>INTERNET</code>, plus eight merged in by its libraries</td>
+      <td><code>INTERNET</code>, <code>BILLING</code>, <code>POST_NOTIFICATIONS</code>, <code>VIBRATE</code> and three more — all listed on its page</td>
     </tr>
     <tr>
       <th>Works in airplane mode</th>
@@ -180,6 +202,7 @@ reading. This table summarises them; each policy page has the full detail.</p>
       <td>Yes, completely — cloud save is the only thing that needs a network</td>
       <td>Yes, completely</td>
       <td>Yes, completely — only the ad banner is missing</td>
+      <td>Yes, completely — leaderboard scores wait and post later</td>
     </tr>
     <tr>
       <th>Written to device storage</th>
@@ -188,6 +211,7 @@ reading. This table summarises them; each policy page has the full detail.</p>
       <td>Puzzle progress, stats, collection, rewards, settings</td>
       <td>Stats, excuse collection, settings</td>
       <td>Region, language, theme, pinned and custom units — never your measurements</td>
+      <td>Progress, stats, settings, a cached subscription status</td>
     </tr>
     <tr>
       <th>Android Auto Backup</th>
@@ -196,6 +220,7 @@ reading. This table summarises them; each policy page has the full detail.</p>
       <td>Enabled — to your own Google account</td>
       <td>Disabled</td>
       <td>Disabled</td>
+      <td>Enabled for progress and settings — to your own Google account</td>
     </tr>
     <tr>
       <th>Export / import your data</th>
@@ -204,6 +229,7 @@ reading. This table summarises them; each policy page has the full detail.</p>
       <td>JSON backup, you choose where</td>
       <td>Not applicable — share a result image only</td>
       <td>Not applicable</td>
+      <td>JSON backup, you choose where</td>
     </tr>
   </tbody>
 </table>
