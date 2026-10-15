@@ -77,6 +77,7 @@ declaration.</p>
     <tr><th>Analytics, telemetry or crash reporting</th><td>None</td></tr>
     <tr><th>Your reading, notes, japa, sadhana and family days</th><td>Kept on the phone, never transmitted</td></tr>
     <tr><th>Panjika calculations</th><td>All on the phone, offline</td></tr>
+    <tr><th>Downloads</th><td>Optional text packs (Veda, Upanishads), fetched from GitHub Pages only when you tap download — nothing about you is sent</td></tr>
     <tr><th>Notifications</th><td>Optional reminders, scheduled on the phone</td></tr>
     <tr><th>Contacts, camera, microphone or photos</th><td>Never accessed</td></tr>
     <tr><th>Android Auto Backup</th><td>Disabled</td></tr>
@@ -143,8 +144,10 @@ directory, which the Android sandbox makes unreadable to every other app):</p>
   <tbody>
     <tr><td>Settings</td><td>Region and city, panjika system, language, theme,
       text size, sounds, reminder choices</td></tr>
-    <tr><td>Reading</td><td>Your place in the Gita, bookmarks, highlights and the
-      notes you write</td></tr>
+    <tr><td>Reading</td><td>Your place in the Gita, the Chandi and the
+      downloaded texts, bookmarks, highlights and the notes you write</td></tr>
+    <tr><td>Downloaded texts</td><td>The text packs you chose to download
+      (section 8), until you remove them in <em>ডাউনলোড</em></td></tr>
     <tr><td>Family days</td><td>The names and lunar dates you add (only on your
       phone; see section 1)</td></tr>
     <tr><td>Practice</td><td>Japa sittings, the sadhana checklist, puja and katha
@@ -234,9 +237,9 @@ when the phone starts.</p>
   <thead><tr><th>Permission</th><th>Why</th></tr></thead>
   <tbody>
     <tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>,
-      <code>ACCESS_WIFI_STATE</code></td><td>Loading ads and talking to Google
-      Play Billing. The app's own features make no network requests
-      (section 8).</td></tr>
+      <code>ACCESS_WIFI_STATE</code></td><td>Loading ads, talking to Google
+      Play Billing, and downloading the text packs you choose — on Wi-Fi only,
+      unless you change that (section 8).</td></tr>
     <tr><td><code>ACCESS_COARSE_LOCATION</code></td><td>Only if you switch on
       “use my location” — one approximate fix to pick the nearest city
       (section 3).</td></tr>
@@ -273,18 +276,29 @@ phone or storage permission.</p>
 
 <h2 id="network">8. Network access</h2>
 
-<p>The app's own code makes <strong>no network requests</strong>: the panjika,
-the festivals, the Gita, the mantras and the kathas are all inside the app. The
-only traffic comes from Google's SDKs — the ads SDK and Google Play Billing.
-<strong>Put the phone in airplane mode and every feature still works</strong>;
-only the ads and new purchases need a connection.</p>
+<p>The panjika, the festivals, the Gita, the Chandi, the mantras and the kathas
+are all inside the app. <strong>Put the phone in airplane mode and every one of
+them still works</strong>.</p>
+
+<p>The app's own code makes one kind of request, and only when you ask for it:
+<strong>downloading a text pack</strong> (the Veda and Upanishad translations)
+from the <em>ডাউনলোড</em> screen. The app then reads a small list of the
+available packs and the pack file itself from GitHub Pages
+(<code>skrchowdhury.github.io</code>), over HTTPS. The request carries nothing
+about you — no identifier, no account, no reading data; like any web server,
+GitHub sees the phone's IP address and the file asked for, under
+<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's
+privacy statement</a>. By default packs download only on Wi-Fi.</p>
+
+<p>The other traffic comes from Google's SDKs — the ads SDK and Google Play
+Billing.</p>
 
 <h2 id="sdks">9. Libraries in the app</h2>
 
 <p>The app is built with React Native and bundles open-source libraries for
 navigation, animation, storage, notifications, audio playback, home-screen
 widgets, sharing and on-device astronomy (Astronomy Engine). None of them
-contacts a server.</p>
+contacts a server; the pack downloads in section 8 are the app's own code.</p>
 
 <p>The two that use the network are <strong>Google Mobile Ads</strong> (section
 4) and <strong>Google Play Billing</strong> (section 5). There is
@@ -368,6 +382,8 @@ say so before the version that did it shipped.</p>
   <thead><tr><th>Date</th><th>Change</th></tr></thead>
   <tbody>
     <tr><td>16 October 2026</td><td>First published for version 1.0.0.</td></tr>
+    <tr><td>16 October 2026</td><td>Added the optional text-pack downloads from
+      GitHub Pages (sections 2, 7 and 8).</td></tr>
   </tbody>
 </table>
 
