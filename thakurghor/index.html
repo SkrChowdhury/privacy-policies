@@ -15,17 +15,17 @@
     <img src="../assets/thakurghor.png" alt="">
     <div>
       <b>ঠাকুরঘর · Thakurghor</b>
-      <span>app.thakurghor</span>
+      <span>com.skrchowdhury.thakurghor</span>
     </div>
   </a>
 </header>
 
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated 16 October 2026</p>
+<p class="updated">Last updated 31 October 2026</p>
 
 <dl class="meta">
   <div><dt>Application</dt><dd>ঠাকুরঘর — Thakurghor</dd></div>
-  <div><dt>Package</dt><dd><code>app.thakurghor</code></dd></div>
+  <div><dt>Package</dt><dd><code>com.skrchowdhury.thakurghor</code></dd></div>
   <div><dt>Platform</dt><dd>Android</dd></div>
   <div><dt>Applies from version</dt><dd>1.0.0</dd></div>
   <div><dt>Terms of use</dt><dd><a href="terms/">Thakurghor terms</a></dd></div>
@@ -71,11 +71,11 @@ declaration.</p>
     <tr><th>Data collected by the ads SDK</th><td>Device or other IDs (advertising ID), by Google AdMob</td></tr>
     <tr><th>Data shared with third parties</th><td>Advertising ID, with Google, to serve ads</td></tr>
     <tr><th>Accounts, sign-in or profiles</th><td>None</td></tr>
-    <tr><th>Advertising</th><td>Yes — Google AdMob, on four screens; none for members</td></tr>
+    <tr><th>Advertising</th><td>Yes — Google AdMob, on the panjika, festival, fasting, auspicious-day, পঞ্জিকা+, rashiphal and More screens; none for members</td></tr>
     <tr><th>In-app purchases</th><td>Optional membership and one-time purchases, through Google Play Billing</td></tr>
     <tr><th>Location</th><td>Optional, approximate, used once on the phone to pick the nearest city — never stored as coordinates, never transmitted</td></tr>
     <tr><th>Analytics, telemetry or crash reporting</th><td>None</td></tr>
-    <tr><th>Your reading, notes, japa, sadhana and family days</th><td>Kept on the phone, never transmitted</td></tr>
+    <tr><th>Your reading, notes, japa, sadhana, family days and birth details</th><td>Kept on the phone, never transmitted</td></tr>
     <tr><th>Panjika calculations</th><td>All on the phone, offline</td></tr>
     <tr><th>Downloads</th><td>Optional text packs (Veda, Upanishads), fetched from GitHub Pages only when you tap download — nothing about you is sent</td></tr>
     <tr><th>Notifications</th><td>Optional reminders, scheduled on the phone</td></tr>
@@ -120,6 +120,8 @@ this app and no code in it that sends your data to the developer.</p>
   <li>your name, email address, phone number or any other contact detail</li>
   <li>the names and dates you save in the family calendar (birthdays, শ্রাদ্ধ
   and anniversaries by তিথি)</li>
+  <li>the name, birth date, birth time and birth place you enter for রাশি,
+  কুণ্ডলী or the সংকল্প, or the rashi and nakshatra worked out from them</li>
   <li>what you read, bookmark, highlight or write notes on</li>
   <li>your japa counts, sadhana log or puja checklists</li>
   <li>your location, at any precision</li>
@@ -152,6 +154,10 @@ directory, which the Android sandbox makes unreadable to every other app):</p>
       phone; see section 1)</td></tr>
     <tr><td>Practice</td><td>Japa sittings, the sadhana checklist, puja and katha
       progress</td></tr>
+    <tr><td>Rashi and পঞ্জিকা+</td><td>The name, birth date, time and place you
+      enter, your rashi and birth nakshatra, the name and gotra for the সংকল্প,
+      eclipse reminders, and which পঞ্জিকা+ tools a rewarded ad has unlocked and
+      until when</td></tr>
     <tr><td>Reminders</td><td>Which reminders and শুভ দিন bells you switched
       on</td></tr>
     <tr><td>Purchases</td><td>Which membership or one-time items your Google Play
@@ -179,11 +185,20 @@ track your location in the background.</p>
 
 <h2 id="ads">4. Advertising</h2>
 
-<p>The free version shows ads from <strong>Google AdMob</strong> in exactly four
-places: a banner on Home, and one ad card each in the festival, fasting and
-auspicious-day lists. Scripture, mantras, puja, japa, aarti and every other
-screen never show ads. You may also <em>choose</em> to watch a rewarded video ad,
-which turns ads off for a while. Membership removes ads altogether.</p>
+<p>The free version shows ads from <strong>Google AdMob</strong> only in these
+places:</p>
+
+<ul>
+  <li>a banner at the bottom of Home;</li>
+  <li>one ad card each in the festival, fasting and auspicious-day lists;</li>
+  <li>a banner at the end of the day's panjika, the festival list, the
+  পঞ্জিকা+ page and today's rashiphal, and one on the More page.</li>
+</ul>
+
+<p>Scripture, mantras, puja, japa, aarti and every other screen never show ads.
+You may also <em>choose</em> to watch a rewarded video ad: on the membership
+page it turns ads off for 24 hours, and in পঞ্জিকা+ it opens one tool for 24
+hours. Membership removes ads altogether.</p>
 
 <h3>What Google receives</h3>
 
@@ -200,7 +215,7 @@ apps that use its services is at
 <h3>What Google does not receive</h3>
 
 <p>The ad request carries no data from inside the app — not your city, your
-reading, your notes, your family days or your practice.</p>
+reading, your notes, your family days, your birth details or your practice.</p>
 
 <h3>Turning ad personalisation off</h3>
 
@@ -267,7 +282,7 @@ when the phone starts.</p>
 </table>
 
 <p>The released build also carries
-<code>app.thakurghor.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>, generated
+<code>com.skrchowdhury.thakurghor.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>, generated
 by AndroidX. It is signature-level, grants access to nothing, and exists so the
 app's internal receivers are <em>not</em> exposed to other apps.</p>
 
@@ -308,7 +323,7 @@ SDK in the app.</p>
 <h2 id="sharing">10. Sharing, copying and backup files</h2>
 
 <ul>
-  <li><strong>Sharing a verse or mantra as an image</strong> draws the card on
+  <li><strong>Sharing a verse, mantra or rashi card as an image</strong> draws the card on
   the phone and hands it to Android's share sheet. Where it goes is your
   choice.</li>
   <li><strong>Copying</strong> a verse or the app link writes to your clipboard
@@ -384,6 +399,11 @@ say so before the version that did it shipped.</p>
     <tr><td>16 October 2026</td><td>First published for version 1.0.0.</td></tr>
     <tr><td>16 October 2026</td><td>Added the optional text-pack downloads from
       GitHub Pages (sections 2, 7 and 8).</td></tr>
+    <tr><td>31 October 2026</td><td>The package name is now
+      <code>com.skrchowdhury.thakurghor</code>, as registered on Google Play
+      (header and section 7). The new ad banners are listed (section 4), and so
+      are the birth details kept on the phone for রাশি, কুণ্ডলী and পঞ্জিকা+
+      (sections 1, 2 and 10).</td></tr>
   </tbody>
 </table>
 

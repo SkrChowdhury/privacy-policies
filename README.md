@@ -20,7 +20,7 @@ without taking the policies offline.
 | CNG দরদাম (CNG Dordam) | `com.skrchowdhury.cngdordam` | `/cng-dordam/` |
 | জমি হিসাব (Jomi Hishab) | `com.skrchowdhury.jomihishab` | `/jomi-hishab/` |
 | Inked: Colour Nonograms | `com.skrchowdhury.inked` | `/inked/` |
-| ঠাকুরঘর (Thakurghor) | `app.thakurghor` | `/thakurghor/` · terms `/thakurghor/terms/` |
+| ঠাকুরঘর (Thakurghor) | `com.skrchowdhury.thakurghor` | `/thakurghor/` · terms `/thakurghor/terms/` |
 
 Base: `https://skrchowdhury.github.io/privacy-policies/`
 
@@ -65,8 +65,9 @@ reader inspecting the manifest would otherwise be surprised by it.
 
 ### ঠাকুরঘর
 
-Verified on 16 October 2026 against the app's source and its packaged release
-manifest. Version 1.0.0.
+Verified on 31 October 2026 against the app's source and its packaged release
+manifest (`com.skrchowdhury.thakurghor`, the ID registered on Google Play;
+it was `app.thakurghor` before). Version 1.0.0.
 
 - **Release permissions:** `INTERNET`, `ACCESS_NETWORK_STATE`,
   `ACCESS_WIFI_STATE`, `ACCESS_COARSE_LOCATION`, `POST_NOTIFICATIONS`,
@@ -77,13 +78,15 @@ manifest. Version 1.0.0.
   — the city lookup only ever takes one coarse fix.
 - **Network:** Google AdMob and Google Play Billing only; the app's code has no
   HTTP calls.
-- **Ads:** AdMob — Home banner, one native card each on the festival, fasting
-  and auspicious-day lists, and opt-in rewarded ads. None for members.
+- **Ads:** AdMob — Home banner; one native card each on the festival, fasting
+  and auspicious-day lists; an inline banner at the end of the day panjika,
+  festival list, পঞ্জিকা+ and rashiphal, and on More; opt-in rewarded ads (24 h
+  ad-free, or one পঞ্জিকা+ tool for 24 h). None for members.
 - **Purchases:** membership (month / year / lifetime) and one-time items through
   Google Play Billing.
 - **Storage:** MMKV (settings, reader marks and notes, family days, japa,
   sadhana, katha and puja progress, purchases, reminder bells, widgets, recent
-  searches). `allowBackup="false"`. Backup export as a JSON file via the share
+  searches, rashi and পঞ্জিকা+ inputs: name, birth date, time and place, gotra). `allowBackup="false"`. Backup export as a JSON file via the share
   sheet.
 - **Terms of use** live beside the policy at `/thakurghor/terms/`.
 
