@@ -41,14 +41,14 @@ update this first, then the page.
 
 | | BDT Rate Today | GPA Calculator BD | শব্দ খেলা | CNG দরদাম | জমি হিসাব |
 |---|---|---|---|---|---|
-| Version | 1.0.0 | 1.0.1 | 1.0.0 | 1.0.0 | 1.0 |
-| Release permissions | `INTERNET` | `VIBRATE` | `VIBRATE` | `VIBRATE` | `INTERNET`, `ACCESS_NETWORK_STATE`, `WAKE_LOCK`, `AD_ID`, 3× `ACCESS_ADSERVICES_*`, `FOREGROUND_SERVICE` |
-| Network | 4 public rate APIs | none | none | none | Google ad servers only |
-| Ads | — | — | — | — | **Google AdMob banner** |
-| On-device storage | none | MMKV `files/mmkv` | MMKV `files/mmkv` | MMKV `files/mmkv` (id `cngdordam`) | AsyncStorage, one key `jomihishab.settings.v1` |
+| Version | 1.0.0 | 1.0.1 | 1.0.0 | 1.0.0 | 1.1.0 |
+| Release permissions | `INTERNET` | `VIBRATE` | `VIBRATE` | `VIBRATE` | 15: `INTERNET`, `WRITE_EXTERNAL_STORAGE` (≤ API 28), `BILLING`, `ACCESS_NETWORK_STATE`, `WAKE_LOCK`, `AD_ID`, 3× `ACCESS_ADSERVICES_*`, `ACCESS_WIFI_STATE`, `VIBRATE`, AppLovin `BIND_APPHUB_SERVICE`, `BIND_GET_INSTALL_REFERRER_SERVICE`, `FOREGROUND_SERVICE`, `DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION` |
+| Network | 4 public rate APIs | none | none | none | AdMob (+ Meta, AppLovin mediation), Firebase Analytics + Remote Config, Play Billing |
+| Ads | — | — | — | — | **AdMob native, banner, rewarded**; optional `remove_ads` purchase |
+| On-device storage | none | MMKV `files/mmkv` | MMKV `files/mmkv` | MMKV `files/mmkv` (id `cngdordam`) | AsyncStorage: `jomihishab.settings.v1`, `jh-khata`, `jh-adfree`, `jh-adcount` |
 | `android:allowBackup` | `false` | `true` | `true` | `false` | `false` |
-| Export / import | — | JSON via share sheet + document picker | JSON via share sheet + document picker | — | — |
-| Share as image | — | result card, scale JSON | result card | result card (1080×1350 PNG) | — |
+| Export / import | — | JSON via share sheet + document picker | JSON via share sheet + document picker | — | JSON backup via system save / open dialog |
+| Share as image | — | result card, scale JSON | result card | result card (1080×1350 PNG) | result card (1080×1350 PNG, HD 2160×2700) |
 | Bundled media decoder | — | — | — | yes — FFmpeg, for the game's own sound files | — |
 | Opens external links | — | — | — | GitHub + LinkedIn, via the system browser | LinkedIn + portfolio, via the system browser |
 
