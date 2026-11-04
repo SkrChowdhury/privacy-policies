@@ -67,8 +67,8 @@
     <tr><th>Your land measurements, results, ledger names and notes</th><td>Never transmitted</td></tr>
     <tr><th>Accounts, sign-in or profiles</th><td>None</td></tr>
     <tr><th>Advertising</th><td>Yes — Google AdMob, with Meta Audience Network and AppLovin mediation</td></tr>
-    <tr><th>Data collected for advertising</th><td>Advertising ID and device information, by the ad networks</td></tr>
-    <tr><th>Analytics</th><td>Google Analytics for Firebase: seven named events, no values</td></tr>
+    <tr><th>Data collected for advertising</th><td>Advertising ID, device information, approximate location from IP, ad interactions and SDK diagnostics, by the ad networks</td></tr>
+    <tr><th>Analytics</th><td>Google Analytics for Firebase: seven named events plus Firebase's automatic ones, no values you enter</td></tr>
     <tr><th>In-app purchases</th><td>One, optional: "remove ads", through Google Play</td></tr>
     <tr><th>Crash reporting</th><td>None</td></tr>
     <tr><th>Location, contacts, camera, microphone</th><td>Never accessed</td></tr>
@@ -155,6 +155,8 @@ AppLovin may collect:</p>
   does not have and never requests</li>
   <li>ad-delivery events such as whether an ad was shown, tapped or a video
   watched to the end</li>
+  <li><strong>diagnostic information</strong> about the app and the ads SDK,
+  such as app launch time, hang rate and energy use</li>
 </ul>
 
 <p>This goes <strong>to the ad networks, not to the developer</strong>. The
@@ -197,8 +199,8 @@ listed in section 7 with everything else.</p>
 <h2 id="analytics">3. Usage statistics</h2>
 
 <p>The app uses <strong>Google Analytics for Firebase</strong> to understand
-which parts of it are used, so the developer knows what to improve. It sends
-only these seven events:</p>
+which parts of it are used, so the developer knows what to improve. The app
+itself sends only these seven events:</p>
 
 <table>
   <thead><tr><th>Event</th><th>Sent when</th><th>Extra detail</th></tr></thead>
@@ -214,9 +216,11 @@ only these seven events:</p>
 </table>
 
 <p>Along with these, Firebase records its own standard information: an
-<strong>app-instance ID</strong> generated on install, device model,
-operating-system version, app version, country derived from IP, and when the app
-was opened. <strong>No number you type, no result, no ledger entry, name or
+<strong>app-instance ID</strong> generated on install, the advertising ID,
+device model, operating-system version, app version, a coarse location derived
+from a masked IP address, and its automatic events — first open, sessions, app
+updates and, if you buy "remove ads", the purchase with its product ID and
+price. <strong>No number you type, no result, no ledger entry, name or
 note is ever part of an event.</strong></p>
 
 <p>The app also uses <strong>Firebase Remote Config</strong> to fetch six on/off
