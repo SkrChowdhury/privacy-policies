@@ -21,6 +21,7 @@ without taking the policies offline.
 | জমি হিসাব (Jomi Hishab) | `com.skrchowdhury.jomihishab` | `/jomi-hishab/` |
 | Inked: Colour Nonograms | `com.skrchowdhury.inked` | `/inked/` |
 | ঠাকুরঘর (Thakurghor) | `com.skrchowdhury.thakurghor` | `/thakurghor/` · terms `/thakurghor/terms/` |
+| Onkoo Kids (অংক কিডস) | `online.skrchowdhury.onkookids` | `/onkoo-kids/` |
 
 Base: `https://skrchowdhury.github.io/privacy-policies/`
 
@@ -89,6 +90,35 @@ it was `app.thakurghor` before). Version 1.0.0.
   searches, rashi and পঞ্জিকা+ inputs: name, birth date, time and place, gotra). `allowBackup="false"`. Backup export as a JSON file via the share
   sheet.
 - **Terms of use** live beside the policy at `/thakurghor/terms/`.
+
+### Onkoo Kids
+
+Verified on 6 November 2026 against the app's source and its packaged release
+build (`aapt2 dump permissions`, merged release manifest report, release
+dependency tree). Version 1.0 (versionCode 1). A children's app (ages 4–8) for
+Google Play's Families Policy.
+
+- **Release permissions:** `INTERNET` (app manifest + react-native-blob-util),
+  `ACCESS_NETWORK_STATE` (react-native-blob-util, Play Billing's datatransport),
+  `com.android.vending.BILLING` (Play Billing via react-native-iap / openiap),
+  `WAKE_LOCK` (react-native-blob-util), `VIBRATE` (react-native-haptic-feedback),
+  plus the generated signature-level receiver permission. Storage and download
+  permissions that libraries add are stripped with `tools:node="remove"`.
+- **Network:** none during play. Google Play Billing (tip jar) connects only
+  while the grown-ups area is open; Play In-App Review and the portfolio /
+  LinkedIn links only on a tap there. All behind the parental gate.
+- **Bundled Google components:** Play Billing 9.1.0 brings
+  `datatransport:transport-backend-cct` (Google's billing diagnostics, active
+  only while billing is connected); openiap brings the Play Integrity client,
+  which the app never calls.
+- **Ads / analytics / crash reporting:** none.
+- **Storage:** MMKV id `onkoo` — progress, stickers, garden, skill counts,
+  minutes per day, settings, tip count, and the last name typed on each
+  certificate. `allowBackup="false"`.
+- **Files:** certificate PNGs written to the cache, then saved to
+  `Pictures/Onkoo` (MediaStore, API 29+) or the app's own pictures folder
+  (API 24–28), or handed to the share sheet; *Copy summary* uses the clipboard.
+  All user-initiated.
 
 ## Page structure
 
