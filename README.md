@@ -21,7 +21,7 @@ without taking the policies offline.
 | জমি হিসাব (Jomi Hishab) | `com.skrchowdhury.jomihishab` | `/jomi-hishab/` |
 | Inked: Colour Nonograms | `com.skrchowdhury.inked` | `/inked/` |
 | ঠাকুরঘর (Thakurghor) | `com.skrchowdhury.thakurghor` | `/thakurghor/` · terms `/thakurghor/terms/` |
-| Onkoo Kids (অংক কিডস) | `online.skrchowdhury.onkookids` | `/onkoo-kids/` |
+| Onkoo Kids (অংক কিডস) | `com.skrchowdhury.onkookids` | `/onkoo-kids/` |
 
 Base: `https://skrchowdhury.github.io/privacy-policies/`
 
