@@ -21,6 +21,7 @@ without taking the policies offline.
 | জমি হিসাব (Jomi Hishab) | `com.skrchowdhury.jomihishab` | `/jomi-hishab/` |
 | Inked: Colour Nonograms | `com.skrchowdhury.inked` | `/inked/` |
 | ঠাকুরঘর (Thakurghor) | `com.skrchowdhury.thakurghor` | `/thakurghor/` · terms `/thakurghor/terms/` |
+| Onkoo (অংক) | `com.skrchowdhury.onkoo` | `/onkoo/` |
 | Onkoo Kids (অংক কিডস) | `com.skrchowdhury.onkookids` | `/onkoo-kids/` · terms `/onkoo-kids/terms/` |
 
 Base: `https://skrchowdhury.github.io/privacy-policies/`
@@ -119,6 +120,42 @@ Google Play's Families Policy.
   `Pictures/Onkoo` (MediaStore, API 29+) or the app's own pictures folder
   (API 24–28), or handed to the share sheet; *Copy summary* uses the clipboard.
   All user-initiated.
+
+### Onkoo
+
+Verified on 8 November 2026 against the app's source and its packaged release
+build (`aapt2 dump permissions`, merged release manifest report, release
+dependency tree). Version 1.0.0 (versionCode 1). A number-puzzle game for
+adults; Play target audience 18+.
+
+- **Release permissions (14):** `INTERNET` (app manifest);
+  `ACCESS_NETWORK_STATE`, `WAKE_LOCK` (react-native-google-mobile-ads);
+  `AD_ID`, `ACCESS_ADSERVICES_AD_ID`, `ACCESS_ADSERVICES_ATTRIBUTION`,
+  `ACCESS_ADSERVICES_TOPICS` (play-services-ads-api 25.5.0);
+  `com.android.vending.BILLING` (openiap-google via react-native-iap);
+  `POST_NOTIFICATIONS`, `ACCESS_NOTIFICATION_POLICY`,
+  `BROADCAST_CLOSE_SYSTEM_DIALOGS` (maxSdk 30) (Notifee);
+  `FOREGROUND_SERVICE` (androidx.work); `VIBRATE`
+  (react-native-haptic-feedback); plus the generated signature-level receiver
+  permission. Notifee's `SCHEDULE_EXACT_ALARM` is stripped with
+  `tools:node="remove"` (the reminder is an inexact alarm).
+- **Network:** Google AdMob rewarded ads (UMP consent first; the SDK starts at
+  launch and preloads one ad for non-Plus users, not at all for Plus owners),
+  Play Games Services v2 22.1.0 (sign-in, two XP leaderboards, Saved Games
+  snapshot `onkoo-main`), Play Billing 9.1.0 (`onkoo_plus`, `coins_500`,
+  `coins_1500`, `coins_4000`), Play In-App Review. No developer server.
+- **Bundled Google components:** datatransport (billing / ads diagnostics);
+  openiap brings the Play Integrity client, which the app never calls.
+- **Ads:** rewarded only — Shop +50 coins (3 a day), a free hint, double coins on
+  the result, one go at a locked difficulty. Max ad content rating PG. No
+  banners, interstitials or app-open ads.
+- **Analytics / crash reporting:** none.
+- **Storage:** MMKV id `onkoo` — progress, XP, coins, stars, bests, streak,
+  badges, outfits, skill points, settings, reminder time, intro answers, Plus
+  flag and purchase token. `allowBackup="false"`. The same object is the Play
+  Games cloud save (on by default once signed in; switch in Settings).
+- **Files / share:** none written outside the app. League *Invite* sends a text
+  message through the share sheet; Help opens the mail app.
 
 ## Page structure
 
