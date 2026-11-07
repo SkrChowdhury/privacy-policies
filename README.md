@@ -18,7 +18,7 @@ without taking the policies offline.
 | GPA Calculator BD | `com.skrchowdhury.cgcalculatorbd` | `/gpa-calculator-bd/` |
 | শব্দ খেলা (Shobdo Khela) | `com.skrchowdhury.shobdokhela` | `/shobdo-khela/` |
 | CNG দরদাম (CNG Dordam) | `com.skrchowdhury.cngdordam` | `/cng-dordam/` |
-| জমি হিসাব (Jomi Hishab) | `com.skrchowdhury.jomihishab` | `/jomi-hishab/` |
+| জমি হিসাব (Jomi Hishab) | `com.skrchowdhury.jomihishab` | `/jomi-hishab/` · terms `/jomi-hishab/terms/` |
 | Inked: Colour Nonograms | `com.skrchowdhury.inked` | `/inked/` |
 | ঠাকুরঘর (Thakurghor) | `com.skrchowdhury.thakurghor` | `/thakurghor/` · terms `/thakurghor/terms/` |
 | Onkoo (অংক) | `com.skrchowdhury.onkoo` | `/onkoo/` |
