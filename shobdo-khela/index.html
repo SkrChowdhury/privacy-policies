@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy · শব্দ খেলা (Shobdo Khela)</title>
-<meta name="description" content="শব্দ খেলা collects nothing and has no server. Cloud save is optional and off by default; when you turn it on, your progress goes to your own Google Drive and nowhere else.">
+<meta name="description" content="শব্দ খেলা collects nothing and has no server. Cloud save and daily reminders are optional and off by default; cloud save puts your progress in your own Google Drive and nowhere else.">
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
@@ -21,7 +21,7 @@
 </header>
 
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated 23 August 2026</p>
+<p class="updated">Last updated 12 November 2026</p>
 
 <dl class="meta">
   <div><dt>Application</dt><dd>শব্দ খেলা — Shobdo Khela</dd></div>
@@ -62,7 +62,8 @@
     <tr><th>Analytics, telemetry or crash reporting</th><td>None</td></tr>
     <tr><th>In-app purchases</th><td>None</td></tr>
     <tr><th>Chat or user-generated content</th><td>None</td></tr>
-    <tr><th>Android permissions declared</th><td><code>VIBRATE</code>, <code>INTERNET</code></td></tr>
+    <tr><th>Android permissions declared</th><td><code>VIBRATE</code>, <code>INTERNET</code>, <code>POST_NOTIFICATIONS</code>, <code>RECEIVE_BOOT_COMPLETED</code></td></tr>
+    <tr><th>Notifications</th><td>Optional daily reminder, off by default, scheduled on your phone — no push service</td></tr>
     <tr><th>Works in airplane mode</th><td>Completely, with cloud save off</td></tr>
     <tr><th>Android Auto Backup</th><td>Enabled — to your own Google account</td></tr>
     <tr><th>Age suitability</th><td>Everyone</td></tr>
@@ -101,7 +102,9 @@ online leaderboard and no advertising.</p>
 <p>Specifically, the game never collects, requests or receives:</p>
 
 <ul>
-  <li>your name, email address, phone number or any other contact detail</li>
+  <li>your real name, email address, phone number or any other contact detail
+  — the profile's optional display name stays on your phone, and in your own
+  Drive with cloud save on (see <a href="#storage">§2</a>)</li>
   <li>your guesses, your statistics, your streak or your play times</li>
   <li>your location, at any precision</li>
   <li>your device identifiers, Android ID or advertising ID</li>
@@ -148,11 +151,27 @@ unreadable to every other app on the phone:</p>
     <tr>
       <td>Settings</td>
       <td>Theme, language, difficulty, keyboard layout, high-contrast mode,
-      reduce-motion preference, strict scoring, Bangla numerals, haptics, and
-      whether you have seen the tutorial</td>
+      reduce-motion preference, strict scoring, Bangla numerals, haptics,
+      whether you have seen the tutorial, whether daily reminders are on and at
+      what hour, and the display name you typed on your profile, if you set one</td>
+    </tr>
+    <tr>
+      <td>Reminder schedule</td>
+      <td>Only if you turn reminders on: the times and texts of the next week's
+      reminders, so Android can re-arm them after the phone restarts</td>
+    </tr>
+    <tr>
+      <td>Home-screen widget</td>
+      <td>Only if you add the widget: which day it describes, whether that day is
+      solved, your streak, and the lines it shows, so the widget can stay current
+      while the game is closed</td>
     </tr>
   </tbody>
 </table>
+
+<p>The <strong>display name</strong> is optional and can be anything — a
+nickname, a word, nothing at all. It is used only on your profile, to draw your
+alpona, and is never sent to the developer.</p>
 
 <p>This data belongs to you. It is readable only by this app, and it is removed
 when you reset your statistics in the game, clear the app's data from Android
@@ -205,11 +224,14 @@ row can tell you which account is linked. That stays on your device.</p>
 <p>A single document containing <strong>game progress only</strong>: which
 puzzles you have solved and your guesses on them, your streak, statistics and
 guess distribution, your points balance and what you have spent it on, your
-collected words, badges, titles and board skins, and your settings.</p>
+collected words, badges, titles and board skins, and your settings — including
+the optional display name you typed on your profile, if you set one, so a new
+phone shows the same profile.</p>
 
-<p>What it does <strong>not</strong> contain: your name, your email address, any
-device or advertising identifier, your location, your contacts, or anything you
-have typed that is not a guess in this game.</p>
+<p>What it does <strong>not</strong> contain: your Google account name, your
+email address, any device or advertising identifier, your location, your
+contacts, or anything you have typed other than your guesses and that optional
+display name.</p>
 
 <p>The network is used <strong>only</strong> while backing up or restoring.
 Nothing is sent in the background, nothing is sent while you play, and none of it
@@ -236,7 +258,7 @@ developer has no access to it and receives no copy of it.</p>
 
 <h2 id="permissions">4. Permissions</h2>
 
-<p>The released build declares two real Android permissions:</p>
+<p>The released build declares four real Android permissions:</p>
 
 <table>
   <thead><tr><th>Permission</th><th>Why it is needed</th></tr></thead>
@@ -252,13 +274,38 @@ developer has no access to it and receives no copy of it.</p>
       <td>Cloud save only — talking to Google Drive. Nothing opens a network
       connection until you turn cloud save on.</td>
     </tr>
+    <tr>
+      <td><code>android.permission.POST_NOTIFICATIONS</code></td>
+      <td>The optional daily reminder (from version 1.1.0). Android asks you for
+      it only when you turn reminders on; if you refuse, reminders stay off. You
+      can withdraw it at any time in your phone's settings.</td>
+    </tr>
+    <tr>
+      <td><code>android.permission.RECEIVE_BOOT_COMPLETED</code></td>
+      <td>Lets the game re-arm reminders you have already turned on after the
+      phone restarts, because Android forgets scheduled alarms on a reboot (from
+      version 1.1.0). It does nothing if reminders are off, and it grants access
+      to no information.</td>
+    </tr>
   </tbody>
 </table>
 
-<p>Neither grants access to personal information. <code>INTERNET</code> is an
-install-time permission and prompts nobody, which is exactly why this policy
-states plainly what it is for: the game is <em>capable</em> of reaching the
-network, and it does so only when you ask it to.</p>
+<p>None of them grants access to personal information. <code>INTERNET</code>
+and <code>RECEIVE_BOOT_COMPLETED</code> are install-time permissions and prompt
+nobody, which is exactly why this policy states plainly what they are for: the
+game is <em>capable</em> of reaching the network, and it does so only when you
+ask it to.</p>
+
+<p><strong>Reminders</strong> are scheduled on your phone with Android's own
+alarm service. There is no push service and no server: the text of each
+reminder is written by the game on your phone, and nothing is sent anywhere to
+deliver it. They are off until you turn them on, and the game schedules at most
+a week ahead.</p>
+
+<p><strong>The home-screen widget</strong> is optional; it appears only if you
+add it. It reads the small snapshot described in <a href="#storage">§2</a> from
+the game's own storage and shows it on your home screen. It sends nothing
+anywhere.</p>
 
 <p>If you inspect the manifest of the released build you will also see
 <code>com.skrchowdhury.shobdokhela.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>.
@@ -270,7 +317,7 @@ apps, which is a privacy protection rather than a privacy cost. It is listed her
 only so that the count matches what you actually see.</p>
 
 <p>There is <strong>no</strong> storage, location, camera, microphone, contacts,
-phone or notification permission.</p>
+phone or exact-alarm permission.</p>
 
 <h2 id="network">5. Network access</h2>
 
@@ -286,6 +333,12 @@ backup is written, and when a restore is read. There is no background sync, no
 periodic upload and no telemetry channel. If the network is unavailable the
 backup simply fails and says so; play is unaffected.</p>
 
+<p>Two features from version 1.1.0 involve other apps, not the game's own
+network use. The <strong>rating prompt</strong> is shown by the Google Play
+Store app (see <a href="#sdks">§6</a>). A <strong>challenge link</strong> in a
+result you share opens a page on this website in the browser of whoever you
+sent it to (see <a href="#export">§8</a>).</p>
+
 <h2 id="sdks">6. Libraries in the game</h2>
 
 <p>The game is built with React Native and bundles open-source libraries for
@@ -294,9 +347,19 @@ the system share sheet and the system file picker, along with a Bangla typeface.
 Cloud save adds Google's own sign-in library and ordinary HTTPS calls to the
 Google Drive API.</p>
 
+<p>From version 1.1.0 the game includes Google's <strong>Play In-App Review</strong>
+library. After your 3rd, 10th and 25th win it may ask the Google Play Store app
+to show its rating sheet, so you can rate the game without leaving it. The sheet
+is drawn by the Play Store app, and any rating or review you leave goes to
+Google Play under <a href="https://policies.google.com/privacy">Google's privacy
+policy</a> and appears on the store as Google's reviews always do. The game
+itself is told nothing — not whether the sheet appeared, not whether you rated,
+not what you wrote.</p>
+
 <p>There is <strong>no</strong> advertising network, analytics SDK, attribution
 SDK, crash reporter, A/B testing framework, push-notification service or
-social-media SDK in this game. Apart from the Drive calls described in
+social-media SDK in this game; the reminders are local, as described in
+<a href="#permissions">§4</a>. Apart from the Drive calls described in
 <a href="#cloud">§3</a>, no bundled library contacts a server at runtime.</p>
 
 <h2 id="backup">7. Android Auto Backup</h2>
@@ -331,8 +394,22 @@ act:</p>
   yourself.</li>
   <li><strong>Share a result.</strong> Draws an image of your result grid and
   hands that image to the share sheet. The image shows the pattern of your
-  guesses, not the answer.</li>
+  guesses, not the answer. From version 1.1.0 the accompanying text ends with a
+  <strong>challenge link</strong> such as
+  <code>…/shobdo-khela/c/?p=316&amp;g=3&amp;l=5</code>: the puzzle number, how
+  many tries you took and the word length. It carries nothing about you or your
+  device.</li>
 </ol>
+
+<p>Someone who opens a challenge link sees a static page on this website
+(GitHub Pages) that can open the same puzzle in the game, or the Google Play
+listing if they do not have it. The page has no analytics, no cookies and no
+tracking. Like any website, GitHub's servers may log the visit as described in
+<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's
+privacy statement</a>; the developer receives nothing from it.</p>
+
+<p>The exported file contains the same data as a cloud backup, including the
+optional display name described in <a href="#storage">§2</a>.</p>
 
 <p>In both cases <em>you</em> choose the destination, and the file goes only
 where you send it. What happens to it afterwards is governed by whichever app or
@@ -408,8 +485,9 @@ phone.</p>
 
 <ul>
   <li>Open <em>Settings &rsaquo; Apps &rsaquo; শব্দ খেলা &rsaquo;
-  Permissions</em>. Vibration is the only entry that appears there;
-  <code>INTERNET</code> is install-time and is not shown as a toggle.</li>
+  Permissions</em>. Notifications appears there, and is off until you turn on
+  reminders in the game; the other permissions are install-time and are not
+  shown as toggles.</li>
   <li>Leave cloud save off and turn on airplane mode. Nothing stops working.</li>
   <li>Turn cloud save on, back up, then look in your own Drive: the file is
   called <code>shobdokhela-backup.json</code>, and you can open it and read every
@@ -420,7 +498,8 @@ phone.</p>
   others.</li>
   <li>With the Android SDK installed,
   <code>aapt2 dump permissions app-release.apk</code> prints the build's complete
-  permission list — <code>VIBRATE</code> and <code>INTERNET</code> plus the
+  permission list — <code>VIBRATE</code>, <code>INTERNET</code>,
+  <code>POST_NOTIFICATIONS</code> and <code>RECEIVE_BOOT_COMPLETED</code> plus the
   signature-level entry described above, and nothing else.</li>
 </ul>
 
@@ -430,8 +509,10 @@ phone.</p>
 included. It shows no ads, contains no in-app purchases, has no chat, no
 messaging, no online leaderboard and no user-generated content. The only ways it
 reaches outside itself are the share sheet, which you open yourself and which
-sends only the image you asked it to send, and cloud save, which is off unless
-someone turns it on and which writes only to that person's own Drive.</p>
+sends only the image and text you asked it to send; cloud save, which is off
+unless someone turns it on and which writes only to that person's own Drive;
+and the Google Play rating sheet, which Google shows and controls. Reminders are
+off unless someone turns them on.</p>
 
 <h2 id="changes">15. Changes to this policy</h2>
 
@@ -442,6 +523,7 @@ version that did it shipped.</p>
 <table>
   <thead><tr><th>Date</th><th>Change</th></tr></thead>
   <tbody>
+    <tr><td>12 November 2026</td><td>For version 1.1.0: added the <code>POST_NOTIFICATIONS</code> and <code>RECEIVE_BOOT_COMPLETED</code> permissions and the optional <strong>daily reminder</strong> they serve; the <strong>home-screen widget</strong>; Google's <strong>Play In-App Review</strong> library; and <strong>challenge links</strong> in shared results. Corrected the description of the cloud backup and the export: both include the optional profile display name, which the previous wording said they did not.</td></tr>
     <tr><td>23 August 2026</td><td>Documented <strong>cloud save</strong>: the optional Google Drive backup, the two non-sensitive Drive scopes it uses, what the backup file contains, and how to unlink, delete it or revoke access. Corrected the permissions and network sections — the released build now declares <code>INTERNET</code> for this feature, where the previous wording said it did not declare it at all.</td></tr>
     <tr><td>15 August 2026</td><td>Corrected the permissions section: the released build declares <code>VIBRATE</code>, which the previous wording did not mention. Added storage, library, deletion, security, rights and verification detail.</td></tr>
     <tr><td>15 August 2026</td><td>First published for version 1.0.0.</td></tr>
