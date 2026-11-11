@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>শব্দ খেলা — আপনি পারবেন?</title>
+<!--
+  The challenge page. A result shared from the app links here with
+  ?p=<puzzle number>&g=<tries, or x for a miss>. Static, no tracking, no
+  server: the app derives the word from the puzzle number, so the number is all
+  that travels. "অ্যাপে খুলুন" opens shobdokhela://puzzle?p=… through an Android
+  intent URL, which falls back to the Play listing when the app is not
+  installed. See src/features/challenge/link.ts in the shobdo-khela repo.
+-->
+<meta property="og:title" content="শব্দ খেলা — আপনি পারবেন?">
+<meta property="og:description" content="প্রতিদিন একটি নতুন বাংলা শব্দ, ছয় চেষ্টায় খুঁজে বের করুন।">
+<meta property="og:image" content="https://skrchowdhury.github.io/privacy-policies/shobdo-khela/c/og.png">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#E4572E">
+<style>
+  :root { --bg:#FBF7EF; --ink:#1F1A15; --muted:#6F655B; --vermilion:#E4572E; --turquoise:#0E8F8F; --line:#E7DED0; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#14110E; --ink:#F3EDE3; --muted:#A79C8F; --line:#2E2822; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Hind Siliguri","Noto Sans Bengali",system-ui,sans-serif;
+    min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px 16px; }
+  main { width:100%; max-width:420px; text-align:center; }
+  .mark { width:72px; height:72px; margin:0 auto 18px; border-radius:20px;
+    background:linear-gradient(135deg,var(--vermilion) 62%,var(--turquoise) 62%);
+    color:#FBF7EF; font-size:40px; font-weight:700; display:flex; align-items:center; justify-content:center; }
+  h1 { font-size:28px; margin:0 0 6px; }
+  .number { color:var(--muted); font-size:15px; margin:0 0 22px; }
+  .challenge { font-size:21px; line-height:1.5; margin:0 0 26px; }
+  .btn { display:block; width:100%; padding:15px 18px; border-radius:999px; font-size:17px; font-weight:600;
+    text-decoration:none; margin-bottom:12px; }
+  .primary { background:var(--vermilion); color:#fff; }
+  .secondary { border:1px solid var(--line); color:var(--ink); }
+  .note { color:var(--muted); font-size:13.5px; line-height:1.6; margin-top:18px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="mark" aria-hidden="true">শ</div>
+  <h1>শব্দ খেলা</h1>
+  <p class="number" id="number">প্রতিদিন একটি নতুন বাংলা শব্দ</p>
+  <p class="challenge" id="challenge">আপনার বন্ধু আপনাকে একটা ধাঁধার চ্যালেঞ্জ দিয়েছেন।</p>
+  <a class="btn primary" id="open" href="https://play.google.com/store/apps/details?id=com.skrchowdhury.shobdokhela">অ্যাপে খুলুন</a>
+  <a class="btn secondary" href="https://play.google.com/store/apps/details?id=com.skrchowdhury.shobdokhela">Google Play থেকে নামান — ফ্রি</a>
+  <p class="note">বিজ্ঞাপন নেই, অফলাইনেও খেলা যায়। ছয় চেষ্টায় শব্দটা খুঁজে বের করুন।</p>
+</main>
+<script>
+  (function () {
+    var PLAY = 'https://play.google.com/store/apps/details?id=com.skrchowdhury.shobdokhela';
+    var digits = '০১২৩৪৫৬৭৮৯';
+    function bn(n) { return String(n).replace(/[0-9]/g, function (d) { return digits[+d]; }); }
+
+    var params = new URLSearchParams(location.search);
+    var p = params.get('p');
+    var g = params.get('g');
+    var l = params.get('l');
+    if (!p || !/^\d{1,5}$/.test(p)) { return; }
+    // The level the sharer played, passed on so the friend gets the same word.
+    var level = l && /^[4-6]$/.test(l) ? '&l=' + l : '';
+
+    document.getElementById('number').textContent = 'ধাঁধা #' + bn(p);
+    document.getElementById('challenge').textContent =
+      g && /^[1-7]$/.test(g)
+        ? 'আপনার বন্ধু এটা ' + bn(g) + ' চেষ্টায় পেরেছেন। আপনি পারবেন?'
+        : 'আপনার বন্ধু এটা পারেননি। আপনি পারবেন?';
+
+    // Android: an intent URL opens the app at this puzzle, or the Play listing
+    // when it is not installed. Elsewhere the button stays a Play link.
+    if (/Android/i.test(navigator.userAgent)) {
+      document.getElementById('open').href =
+        'intent://puzzle?p=' + p + level +
+        '#Intent;scheme=shobdokhela;package=com.skrchowdhury.shobdokhela;' +
+        'S.browser_fallback_url=' + encodeURIComponent(PLAY) + ';end';
+    }
+  })();
+</script>
+</body>
+</html>
