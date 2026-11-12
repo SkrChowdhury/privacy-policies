@@ -15,7 +15,7 @@ without taking the policies offline.
 | App | Package | Policy URL |
 |---|---|---|
 | BDT Rate Today | `com.skrchowdhury.bdtratestoday` | `/bdt-rate-today/` |
-| GPA Calculator BD | `com.skrchowdhury.cgcalculatorbd` | `/gpa-calculator-bd/` |
+| GPA Calculator BD | `com.skrchowdhury.cgcalculatorbd` | `/gpa-calculator-bd/` · terms `/gpa-calculator-bd/terms/` |
 | শব্দ খেলা (Shobdo Khela) | `com.skrchowdhury.shobdokhela` | `/shobdo-khela/` · terms `/shobdo-khela/terms/` |
 | CNG দরদাম (CNG Dordam) | `com.skrchowdhury.cngdordam` | `/cng-dordam/` |
 | জমি হিসাব (Jomi Hishab) | `com.skrchowdhury.jomihishab` | `/jomi-hishab/` · terms `/jomi-hishab/terms/` |
