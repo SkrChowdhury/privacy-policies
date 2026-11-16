@@ -21,7 +21,7 @@
 </header>
 
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated 27 October 2026</p>
+<p class="updated">Last updated 16 November 2026</p>
 
 <dl class="meta">
   <div><dt>Application</dt><dd>BDT Rate Today</dd></div>
@@ -115,6 +115,12 @@ pull to refresh, and it disappears entirely when Android closes the app.</p>
 <p>Close the app and none of it survives. Reopening starts from a blank slate
 and fetches fresh rates.</p>
 
+<p>To decide which currency to open on, the app reads your device's time zone
+setting — Asia/Riyadh opens on the Saudi riyal, Europe/London on the pound. That
+reading happens on the device, is used once, and is never stored or sent
+anywhere. It is not your location: the app has no location permission and never
+asks for one.</p>
+
 <h2 id="permissions">3. Permissions</h2>
 
 <p>The released build declares exactly one Android permission:</p>
@@ -188,8 +194,10 @@ receives nor stores it, and has no account or dashboard with any of them.</p>
 
 <h2 id="thirdparty">5. Third-party services</h2>
 
-<p>The five hosts above are the complete list of third parties the app interacts
-with, and it interacts with them only as an anonymous reader of public data.
+<p>The five hosts above are the complete list of third parties the app contacts
+over the network, and it contacts them only as an anonymous reader of public
+data. The one other service it can involve is Google Play, for the rating card
+described in section 6.
 Their own policies are worth reading if you want to know how they treat the
 request logs every web server keeps:</p>
 
@@ -198,6 +206,7 @@ request logs every web server keeps:</p>
   <li><a href="https://bdt-rates.com/privacy">bdt-rates.com privacy policy</a></li>
   <li><a href="https://www.remitly.com/us/en/home/privacy">Remitly privacy policy</a></li>
   <li><a href="https://www.riamoneytransfer.com/en-us/privacy-policy/">Ria Money Transfer privacy policy</a></li>
+  <li><a href="https://policies.google.com/privacy">Google privacy policy</a> (Google Play, for the rating card)</li>
 </ul>
 
 <p>There is <strong>no</strong> advertising network, analytics SDK, attribution
@@ -211,6 +220,13 @@ open-source libraries: a gradient renderer, an SVG renderer and a safe-area
 helper for handling notches and gesture bars. None of them contacts a server, and
 none collects data. There is no dependency in the build whose purpose is to
 observe the user.</p>
+
+<p>It also includes Google Play's in-app review library. After you have had the
+app for a couple of days, and come back to it from a provider's site, it can ask
+the Google Play app on your phone to show its &ldquo;rate this app&rdquo; card.
+Google Play decides whether the card appears, and any rating or review you leave
+goes to Google Play under Google's privacy policy. The app is never told whether
+you rated it or what you wrote.</p>
 
 <h2 id="backup">7. Backup</h2>
 
@@ -228,6 +244,12 @@ site, under their terms and their privacy policy.</p>
 <p>No tracking parameter, affiliate tag or referral identifier is appended to
 those links. The app is not an affiliate of any provider it lists, earns nothing
 from a tap, and is not told whether you went on to send money.</p>
+
+<p>If you use &ldquo;Share today's rate&rdquo;, the message you send contains the
+rate on screen and a link to the app's Google Play page. That link carries
+<code>utm_source=share</code>, which lets the Play Console count installs that came
+from shared links as a total. It identifies neither you nor the person you
+shared with.</p>
 
 <h2 id="deletion">9. Retention and deletion</h2>
 
