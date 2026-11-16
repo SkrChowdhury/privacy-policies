@@ -23,6 +23,7 @@ without taking the policies offline.
 | ঠাকুরঘর (Thakurghor) | `com.skrchowdhury.thakurghor` | `/thakurghor/` · terms `/thakurghor/terms/` |
 | Onkoo (অংক) | `com.skrchowdhury.onkoo` | `/onkoo/` |
 | Onkoo Kids (অংক কিডস) | `com.skrchowdhury.onkookids` | `/onkoo-kids/` · terms `/onkoo-kids/terms/` |
+| Summa Calculator: Scientific | `com.skrchowdhury.summa` | `/summa/` |
 
 Base: `https://skrchowdhury.github.io/privacy-policies/`
 
@@ -156,6 +157,40 @@ adults; Play target audience 18+.
   Games cloud save (on by default once signed in; switch in Settings).
 - **Files / share:** none written outside the app. League *Invite* sends a text
   message through the share sheet; Help opens the mail app.
+
+### Summa Calculator: Scientific
+
+Verified on 16 November 2026 against the app's source and its packaged release
+build (`aapt2 dump permissions`, merged release manifest report, release
+dependency tree). Version 1.0.0 (versionCode 1). A scientific calculator with
+tools; English only; suitable for everyone, not designed for children.
+
+- **Release permissions (7):** `INTERNET` (app manifest; also openiap);
+  `ACCESS_NETWORK_STATE` (androidx.work 2.7.1, datatransport);
+  `com.android.vending.BILLING` (openiap-google via react-native-iap);
+  `VIBRATE` (react-native-haptic-feedback; off by default);
+  `WAKE_LOCK`, `RECEIVE_BOOT_COMPLETED`, `FOREGROUND_SERVICE` (androidx.work
+  2.7.1, brought by Jetpack Glance 1.2.0 for the home-screen widgets); plus the
+  generated signature-level receiver permission.
+- **Network:** Google Play Billing 9.1.0 (`summa_plus`, one-time; connects at
+  startup to fetch the price and re-check ownership), Google Sign-In
+  (play-services-auth 21.4.0) and the Drive v3 REST API on
+  `www.googleapis.com`, scope `drive.appdata` only — the last two only while
+  Drive backup (a Plus feature, off by default) is on. No developer server.
+- **Bundled Google components:** datatransport (billing diagnostics); openiap
+  brings the Play Integrity client, which the app never calls; Play Billing
+  brings `play-services-location`, but no location permission is declared.
+- **Ads / analytics / crash reporting:** none.
+- **Storage:** MMKV id `summa` — settings, history (expression, result, time,
+  pin, note), memory, variables, last answer, Plus entitlement cache (with the
+  purchase token) and free-try counts, backup state (on/off, last time, Drive
+  file id). Tool inputs are not saved. The 4 × 4 widget keeps its current sum in
+  Glance's private state file. `allowBackup="false"`.
+- **Drive backup file:** `summa-backup.json` in the app data folder — settings,
+  history, variables, memory and a timestamp; never the Plus status, the token
+  or the email address.
+- **Files / share:** none written outside the app. *Copy history as CSV* uses
+  the clipboard and the share sheet; *Copy result* uses the clipboard.
 
 ## Page structure
 
