@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy · প্রস্তুতি (Prostuti)</title>
 <meta name="description" content="Prostuti plans SSC, HSC, admission and BCS study on your phone and sends the developer nothing. Ads come from Google AdMob, Pro is bought through Google Play, and Drive backup is optional; this page says exactly what each of them receives.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#fbfcfb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0e0d" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/webp" href="../assets/icons/prostuti.webp">
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
@@ -12,7 +16,7 @@
 
 <header>
   <a class="brand" href="../">
-    <img src="../assets/prostuti.png" alt="">
+    <img src="../assets/icons/prostuti.webp" width="48" height="48" alt="">
     <div>
       <b>প্রস্তুতি · Prostuti</b>
       <span>com.skrchowdhury.prostuti</span>
@@ -144,27 +148,27 @@ makes unreadable to every other app):</p>
 <table>
   <thead><tr><th>What is saved</th><th>Detail</th></tr></thead>
   <tbody>
-    <tr><td>Settings</td><td>Language, theme and colour, the Bangla or English
+    <tr><td data-label="What is saved">Settings</td><td data-label="Detail">Language, theme and colour, the Bangla or English
       version of chapter names, reminder, sound and Do Not Disturb choices,
       dismissed notices, the day you started</td></tr>
-    <tr><td>Your exams</td><td>The exam you chose (up to three with Pro), group,
+    <tr><td data-label="What is saved">Your exams</td><td data-label="Detail">The exam you chose (up to three with Pro), group,
       religion subject, admission targets or your own exam's name, and the exam
       date</td></tr>
-    <tr><td>Syllabus</td><td>Each chapter's status, chapters and subjects you
+    <tr><td data-label="What is saved">Syllabus</td><td data-label="Detail">Each chapter's status, chapters and subjects you
       added, renamed or hid, and the revision schedule (day 3, 7 and 21)</td></tr>
-    <tr><td>Plan and routine</td><td>Today's plan and ticks, your routine
+    <tr><td data-label="What is saved">Plan and routine</td><td data-label="Detail">Today's plan and ticks, your routine
       templates and blocks, the exam-day checklist</td></tr>
-    <tr><td>Study record</td><td>Focus sessions (date, subject, chapter,
+    <tr><td data-label="What is saved">Study record</td><td data-label="Detail">Focus sessions (date, subject, chapter,
       minutes), chapters finished per day, model-test scores, and your
       stuck-chapter notes</td></tr>
-    <tr><td>A running session</td><td>The focus session in progress, so it
+    <tr><td data-label="What is saved">A running session</td><td data-label="Detail">The focus session in progress, so it
       survives the phone closing the app</td></tr>
-    <tr><td>Pro</td><td>Whether Pro is unlocked and its Google Play purchase
+    <tr><td data-label="What is saved">Pro</td><td data-label="Detail">Whether Pro is unlocked and its Google Play purchase
       token, so Pro works offline</td></tr>
-    <tr><td>Drive backup</td><td>On or off, the time of the last backup, the
+    <tr><td data-label="What is saved">Drive backup</td><td data-label="Detail">On or off, the time of the last backup, the
       email address of the Google account you connected (shown in the backup
       sheet), and the backup file's Drive ID</td></tr>
-    <tr><td>Exam dates</td><td>The last copy of the public exam-date sheet (§7),
+    <tr><td data-label="What is saved">Exam dates</td><td data-label="Detail">The last copy of the public exam-date sheet (§7),
       so dates work offline</td></tr>
   </tbody>
 </table>
@@ -322,44 +326,44 @@ it in the app. They use no network.</p>
 <table>
   <thead><tr><th>Permission</th><th>Comes from</th><th>Why</th></tr></thead>
   <tbody>
-    <tr><td><code>INTERNET</code></td><td>The app; also the ads, notification and
-      billing libraries</td><td>Ads, Google Play Billing, the exam-date sheet
+    <tr><td data-label="Permission"><code>INTERNET</code></td><td data-label="Comes from">The app; also the ads, notification and
+      billing libraries</td><td data-label="Why">Ads, Google Play Billing, the exam-date sheet
       (§7) and Drive backup (§6).</td></tr>
-    <tr><td><code>ACCESS_NETWORK_STATE</code></td><td>Google Mobile Ads, the
-      notification library, WorkManager, Google's datatransport</td><td>Checking
+    <tr><td data-label="Permission"><code>ACCESS_NETWORK_STATE</code></td><td data-label="Comes from">Google Mobile Ads, the
+      notification library, WorkManager, Google's datatransport</td><td data-label="Why">Checking
       for a connection before network work.</td></tr>
-    <tr><td><code>POST_NOTIFICATIONS</code></td><td>The app; the notification
-      library</td><td>Showing the reminders you turn on and the focus-session
+    <tr><td data-label="Permission"><code>POST_NOTIFICATIONS</code></td><td data-label="Comes from">The app; the notification
+      library</td><td data-label="Why">Showing the reminders you turn on and the focus-session
       notification.</td></tr>
-    <tr><td><code>SCHEDULE_EXACT_ALARM</code></td><td>The app; the notification
-      and background-task libraries</td><td>Ringing a routine reminder at the exact
+    <tr><td data-label="Permission"><code>SCHEDULE_EXACT_ALARM</code></td><td data-label="Comes from">The app; the notification
+      and background-task libraries</td><td data-label="Why">Ringing a routine reminder at the exact
       minute. On Android 14 and newer it stays off until you allow <em>Alarms
       &amp; reminders</em> from the app's permission screen; without it, reminders
       use ordinary alarms and may arrive a little late.</td></tr>
-    <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>The app; the notification
-      library</td><td>Re-scheduling reminders, the widgets' midnight refresh and
+    <tr><td data-label="Permission"><code>RECEIVE_BOOT_COMPLETED</code></td><td data-label="Comes from">The app; the notification
+      library</td><td data-label="Why">Re-scheduling reminders, the widgets' midnight refresh and
       the nightly backup after a restart.</td></tr>
-    <tr><td><code>ACCESS_NOTIFICATION_POLICY</code></td><td>The app; the
-      notification library</td><td>Do Not Disturb during focus sessions, only if
+    <tr><td data-label="Permission"><code>ACCESS_NOTIFICATION_POLICY</code></td><td data-label="Comes from">The app; the
+      notification library</td><td data-label="Why">Do Not Disturb during focus sessions, only if
       you switch it on and grant access (§8).</td></tr>
-    <tr><td><code>FOREGROUND_SERVICE</code>,
-      <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code></td><td>The app; the
-      notification library; WorkManager</td><td>Keeping the focus sound playing,
+    <tr><td data-label="Permission"><code>FOREGROUND_SERVICE</code>,
+      <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code></td><td data-label="Comes from">The app; the
+      notification library; WorkManager</td><td data-label="Why">Keeping the focus sound playing,
       with its notification, while the screen is off.</td></tr>
-    <tr><td><code>WAKE_LOCK</code></td><td>Google Mobile Ads, the notification
-      library, WorkManager, the background-task library</td><td>Letting a
+    <tr><td data-label="Permission"><code>WAKE_LOCK</code></td><td data-label="Comes from">Google Mobile Ads, the notification
+      library, WorkManager, the background-task library</td><td data-label="Why">Letting a
       scheduled reminder or backup finish once it has started.</td></tr>
-    <tr><td><code>VIBRATE</code></td><td>The notification and haptic-feedback
-      libraries</td><td>Light haptic feedback, and reminder vibration.</td></tr>
-    <tr><td><code>WRITE_EXTERNAL_STORAGE</code> (Android 9 and older only)</td><td>The
-      app</td><td>Saving the progress card to your gallery when you tap
+    <tr><td data-label="Permission"><code>VIBRATE</code></td><td data-label="Comes from">The notification and haptic-feedback
+      libraries</td><td data-label="Why">Light haptic feedback, and reminder vibration.</td></tr>
+    <tr><td data-label="Permission"><code>WRITE_EXTERNAL_STORAGE</code> (Android 9 and older only)</td><td data-label="Comes from">The
+      app</td><td data-label="Why">Saving the progress card to your gallery when you tap
       <em>save</em> (§12). Newer Android needs no permission for this.</td></tr>
-    <tr><td><code>com.android.vending.BILLING</code></td><td>Google Play Billing
-      (via react-native-iap)</td><td>Buying and restoring Pro (§5).</td></tr>
-    <tr><td><code>AD_ID</code>, <code>ACCESS_ADSERVICES_AD_ID</code>,
+    <tr><td data-label="Permission"><code>com.android.vending.BILLING</code></td><td data-label="Comes from">Google Play Billing
+      (via react-native-iap)</td><td data-label="Why">Buying and restoring Pro (§5).</td></tr>
+    <tr><td data-label="Permission"><code>AD_ID</code>, <code>ACCESS_ADSERVICES_AD_ID</code>,
       <code>ACCESS_ADSERVICES_ATTRIBUTION</code>,
-      <code>ACCESS_ADSERVICES_TOPICS</code></td><td>Google Mobile Ads
-      SDK</td><td>The advertising ID and Android's Privacy Sandbox
+      <code>ACCESS_ADSERVICES_TOPICS</code></td><td data-label="Comes from">Google Mobile Ads
+      SDK</td><td data-label="Why">The advertising ID and Android's Privacy Sandbox
       (§4).</td></tr>
   </tbody>
 </table>
@@ -486,8 +490,8 @@ say so before the version that did it shipped.</p>
 <table>
   <thead><tr><th>Date</th><th>Change</th></tr></thead>
   <tbody>
-    <tr><td>25 November 2026</td><td>First published for version 1.0.0.</td></tr>
-    <tr><td>25 November 2026</td><td>Exact-alarm permission corrected: the
+    <tr><td data-label="Date">25 November 2026</td><td data-label="Change">First published for version 1.0.0.</td></tr>
+    <tr><td data-label="Date">25 November 2026</td><td data-label="Change">Exact-alarm permission corrected: the
       released build requests it on every Android version (§10).</td></tr>
   </tbody>
 </table>

@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy · Summa Calculator: Scientific</title>
 <meta name="description" content="Summa has no server, no analytics and no ads. Every calculation stays on your phone. Purchases are handled by Google Play, and Drive backup is optional and goes to your own Google Drive.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#fbfcfb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0e0d" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/webp" href="../assets/icons/summa.webp">
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
@@ -12,7 +16,7 @@
 
 <header>
   <a class="brand" href="../">
-    <img src="../assets/summa.png" alt="">
+    <img src="../assets/icons/summa.webp" width="48" height="48" alt="">
     <div>
       <b>Summa Calculator: Scientific</b>
       <span>com.skrchowdhury.summa</span>
@@ -120,12 +124,12 @@ directory, which the Android sandbox makes unreadable to every other app):</p>
 <table>
   <thead><tr><th>What is saved</th><th>Detail</th></tr></thead>
   <tbody>
-    <tr><td>History</td><td>Each calculation's expression and result, when you made it, whether you pinned it, and any note you add. Saved only while <em>Settings &rsaquo; Save history</em> is on</td></tr>
-    <tr><td>Calculator state</td><td>The memory value, your named variables and the last answer</td></tr>
-    <tr><td>Settings</td><td>Theme, accent colour, larger keys, digit grouping, amount in words, degrees or radians, save history, vibrate on key press, the expanded scientific keys and the last calculator mode</td></tr>
-    <tr><td>Summa Plus</td><td>A cached copy of whether you own Plus (with Google Play's purchase token), so it works offline, and how many free tries of each Plus tool you have used. Re-checked with Google Play at startup</td></tr>
-    <tr><td>Drive backup state</td><td>Whether backup is on, when it last ran, and the ID of the backup file in your Drive. Never your password or email address</td></tr>
-    <tr><td>Calculator widget</td><td>The sum currently on the 4 × 4 widget, in the widget's own private state file</td></tr>
+    <tr><td data-label="What is saved">History</td><td data-label="Detail">Each calculation's expression and result, when you made it, whether you pinned it, and any note you add. Saved only while <em>Settings &rsaquo; Save history</em> is on</td></tr>
+    <tr><td data-label="What is saved">Calculator state</td><td data-label="Detail">The memory value, your named variables and the last answer</td></tr>
+    <tr><td data-label="What is saved">Settings</td><td data-label="Detail">Theme, accent colour, larger keys, digit grouping, amount in words, degrees or radians, save history, vibrate on key press, the expanded scientific keys and the last calculator mode</td></tr>
+    <tr><td data-label="What is saved">Summa Plus</td><td data-label="Detail">A cached copy of whether you own Plus (with Google Play's purchase token), so it works offline, and how many free tries of each Plus tool you have used. Re-checked with Google Play at startup</td></tr>
+    <tr><td data-label="What is saved">Drive backup state</td><td data-label="Detail">Whether backup is on, when it last ran, and the ID of the backup file in your Drive. Never your password or email address</td></tr>
+    <tr><td data-label="What is saved">Calculator widget</td><td data-label="Detail">The sum currently on the 4 × 4 widget, in the widget's own private state file</td></tr>
   </tbody>
 </table>
 
@@ -190,11 +194,11 @@ policy</a>; the developer has no access to it.</p>
 <table>
   <thead><tr><th>Permission</th><th>Comes from</th><th>Why it is needed</th></tr></thead>
   <tbody>
-    <tr><td><code>INTERNET</code></td><td>The app, and Google Play Billing</td><td>The Summa Plus purchase and Drive backup — nothing else</td></tr>
-    <tr><td><code>ACCESS_NETWORK_STATE</code></td><td>AndroidX WorkManager; Google Play Billing's diagnostics</td><td>Lets those libraries wait for a connection instead of failing</td></tr>
-    <tr><td><code>com.android.vending.BILLING</code></td><td>Google Play Billing (via react-native-iap)</td><td>The Summa Plus purchase through Google Play</td></tr>
-    <tr><td><code>VIBRATE</code></td><td>react-native-haptic-feedback</td><td><em>Vibrate on key press</em>. Off by default; switch it in Settings</td></tr>
-    <tr><td><code>WAKE_LOCK</code>, <code>RECEIVE_BOOT_COMPLETED</code>, <code>FOREGROUND_SERVICE</code></td><td>AndroidX WorkManager, which Jetpack Glance (the widget library) uses</td><td>Redrawing the home-screen widgets. The app itself runs no foreground service and does nothing at boot</td></tr>
+    <tr><td data-label="Permission"><code>INTERNET</code></td><td data-label="Comes from">The app, and Google Play Billing</td><td data-label="Why it is needed">The Summa Plus purchase and Drive backup — nothing else</td></tr>
+    <tr><td data-label="Permission"><code>ACCESS_NETWORK_STATE</code></td><td data-label="Comes from">AndroidX WorkManager; Google Play Billing's diagnostics</td><td data-label="Why it is needed">Lets those libraries wait for a connection instead of failing</td></tr>
+    <tr><td data-label="Permission"><code>com.android.vending.BILLING</code></td><td data-label="Comes from">Google Play Billing (via react-native-iap)</td><td data-label="Why it is needed">The Summa Plus purchase through Google Play</td></tr>
+    <tr><td data-label="Permission"><code>VIBRATE</code></td><td data-label="Comes from">react-native-haptic-feedback</td><td data-label="Why it is needed"><em>Vibrate on key press</em>. Off by default; switch it in Settings</td></tr>
+    <tr><td data-label="Permission"><code>WAKE_LOCK</code>, <code>RECEIVE_BOOT_COMPLETED</code>, <code>FOREGROUND_SERVICE</code></td><td data-label="Comes from">AndroidX WorkManager, which Jetpack Glance (the widget library) uses</td><td data-label="Why it is needed">Redrawing the home-screen widgets. The app itself runs no foreground service and does nothing at boot</td></tr>
   </tbody>
 </table>
 
@@ -297,7 +301,7 @@ did it shipped.</p>
 <table>
   <thead><tr><th>Date</th><th>Change</th></tr></thead>
   <tbody>
-    <tr><td>16 November 2026</td><td>First published for version 1.0.0.</td></tr>
+    <tr><td data-label="Date">16 November 2026</td><td data-label="Change">First published for version 1.0.0.</td></tr>
   </tbody>
 </table>
 

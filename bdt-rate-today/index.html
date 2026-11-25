@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy · BDT Rate Today</title>
 <meta name="description" content="BDT Rate Today collects no personal data, has no accounts, no analytics and no ads. It writes nothing to your device.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#fbfcfb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0e0d" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/webp" href="../assets/icons/bdt-rate-today.webp">
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
@@ -12,7 +16,7 @@
 
 <header>
   <a class="brand" href="../">
-    <img src="../assets/bdt-rate-today.png" alt="">
+    <img src="../assets/icons/bdt-rate-today.webp" width="48" height="48" alt="">
     <div>
       <b>BDT Rate Today</b>
       <span>com.skrchowdhury.bdtratestoday</span>
@@ -129,8 +133,8 @@ asks for one.</p>
   <thead><tr><th>Permission</th><th>Why it is needed</th></tr></thead>
   <tbody>
     <tr>
-      <td><code>android.permission.INTERNET</code></td>
-      <td>To fetch public exchange-rate data. This is the app's entire purpose;
+      <td data-label="Permission"><code>android.permission.INTERNET</code></td>
+      <td data-label="Why it is needed">To fetch public exchange-rate data. This is the app's entire purpose;
       without it there are no rates to show.</td>
     </tr>
   </tbody>
@@ -155,29 +159,29 @@ device identifier.</p>
   <thead><tr><th>Host</th><th>Used for</th><th>What the request contains</th></tr></thead>
   <tbody>
     <tr>
-      <td>Wise Comparisons API<br><code>api.wise.com</code></td>
-      <td>Provider-by-provider transfer quotes for a corridor</td>
-      <td>Source currency, target currency (BDT) and the send amount</td>
+      <td data-label="Host">Wise Comparisons API<br><code>api.wise.com</code></td>
+      <td data-label="Used for">Provider-by-provider transfer quotes for a corridor</td>
+      <td data-label="What the request contains">Source currency, target currency (BDT) and the send amount</td>
     </tr>
     <tr>
-      <td>bdt-rates.com<br><code>bdt-rates.com</code></td>
-      <td>Published rates for the corridors it covers, and provider logos</td>
-      <td>The corridor being viewed</td>
+      <td data-label="Host">bdt-rates.com<br><code>bdt-rates.com</code></td>
+      <td data-label="Used for">Published rates for the corridors it covers, and provider logos</td>
+      <td data-label="What the request contains">The corridor being viewed</td>
     </tr>
     <tr>
-      <td>Remitly<br><code>api.remitly.io</code></td>
-      <td>Quotes for the AED corridor</td>
-      <td>The corridor and the send amount</td>
+      <td data-label="Host">Remitly<br><code>api.remitly.io</code></td>
+      <td data-label="Used for">Quotes for the AED corridor</td>
+      <td data-label="What the request contains">The corridor and the send amount</td>
     </tr>
     <tr>
-      <td>Ria Money Transfer<br><code>www.riamoneytransfer.com</code></td>
-      <td>Ria&rsquo;s own published exchange rate for a corridor</td>
-      <td>Nothing beyond the request for a public country page</td>
+      <td data-label="Host">Ria Money Transfer<br><code>www.riamoneytransfer.com</code></td>
+      <td data-label="Used for">Ria&rsquo;s own published exchange rate for a corridor</td>
+      <td data-label="What the request contains">Nothing beyond the request for a public country page</td>
     </tr>
     <tr>
-      <td>Open Exchange Rates<br><code>open.er-api.com</code></td>
-      <td>Mid-market reference rate</td>
-      <td>Nothing beyond the request for the public USD rate table</td>
+      <td data-label="Host">Open Exchange Rates<br><code>open.er-api.com</code></td>
+      <td data-label="Used for">Mid-market reference rate</td>
+      <td data-label="What the request contains">Nothing beyond the request for the public USD rate table</td>
     </tr>
   </tbody>
 </table>
@@ -311,9 +315,9 @@ it shipped.</p>
 <table>
   <thead><tr><th>Date</th><th>Change</th></tr></thead>
   <tbody>
-    <tr><td>2 September 2026</td><td>Added Ria Money Transfer as a fifth rate source, for version 1.1.0.</td></tr>
-    <tr><td>15 August 2026</td><td>Expanded with per-host request detail, permission and library disclosure, verification steps and a rights section.</td></tr>
-    <tr><td>15 August 2026</td><td>First published for version 1.0.0.</td></tr>
+    <tr><td data-label="Date">2 September 2026</td><td data-label="Change">Added Ria Money Transfer as a fifth rate source, for version 1.1.0.</td></tr>
+    <tr><td data-label="Date">15 August 2026</td><td data-label="Change">Expanded with per-host request detail, permission and library disclosure, verification steps and a rights section.</td></tr>
+    <tr><td data-label="Date">15 August 2026</td><td data-label="Change">First published for version 1.0.0.</td></tr>
   </tbody>
 </table>
 

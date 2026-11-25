@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy · জমি হিসাব (Jomi Hishab)</title>
 <meta name="description" content="জমি হিসাব calculates land areas entirely on your device, and your land data never leaves it. This page says exactly what the ads, usage statistics and the optional purchase send.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#fbfcfb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0e0d" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/webp" href="../assets/icons/jomi-hishab.webp">
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
@@ -12,7 +16,7 @@
 
 <header>
   <a class="brand" href="../">
-    <img src="../assets/jomi-hishab.png" alt="">
+    <img src="../assets/icons/jomi-hishab.webp" width="48" height="48" alt="">
     <div>
       <b>জমি হিসাব · Jomi Hishab</b>
       <span>com.skrchowdhury.jomihishab</span>
@@ -206,13 +210,13 @@ itself sends only these seven events:</p>
 <table>
   <thead><tr><th>Event</th><th>Sent when</th><th>Extra detail</th></tr></thead>
   <tbody>
-    <tr><td><code>calc_done</code></td><td>you pause typing after a calculation</td><td>none</td></tr>
-    <tr><td><code>entry_saved</code></td><td>you save a result to the ledger</td><td>which tool it came from (for example "দাম")</td></tr>
-    <tr><td><code>share_opened</code></td><td>you open the share window</td><td>which tool it came from</td></tr>
-    <tr><td><code>image_downloaded</code></td><td>you save a result image</td><td>whether it was the HD image</td></tr>
-    <tr><td><code>hd_reward_completed</code></td><td>you finish the video for an HD image</td><td>none</td></tr>
-    <tr><td><code>adfree_24h</code></td><td>you finish the video for 24 hours without ads</td><td>none</td></tr>
-    <tr><td><code>adfree_purchased</code></td><td>you buy "remove ads"</td><td>none</td></tr>
+    <tr><td data-label="Event"><code>calc_done</code></td><td data-label="Sent when">you pause typing after a calculation</td><td data-label="Extra detail">none</td></tr>
+    <tr><td data-label="Event"><code>entry_saved</code></td><td data-label="Sent when">you save a result to the ledger</td><td data-label="Extra detail">which tool it came from (for example "দাম")</td></tr>
+    <tr><td data-label="Event"><code>share_opened</code></td><td data-label="Sent when">you open the share window</td><td data-label="Extra detail">which tool it came from</td></tr>
+    <tr><td data-label="Event"><code>image_downloaded</code></td><td data-label="Sent when">you save a result image</td><td data-label="Extra detail">whether it was the HD image</td></tr>
+    <tr><td data-label="Event"><code>hd_reward_completed</code></td><td data-label="Sent when">you finish the video for an HD image</td><td data-label="Extra detail">none</td></tr>
+    <tr><td data-label="Event"><code>adfree_24h</code></td><td data-label="Sent when">you finish the video for 24 hours without ads</td><td data-label="Extra detail">none</td></tr>
+    <tr><td data-label="Event"><code>adfree_purchased</code></td><td data-label="Sent when">you buy "remove ads"</td><td data-label="Extra detail">none</td></tr>
   </tbody>
 </table>
 
@@ -250,14 +254,14 @@ Android sandbox makes unreadable to every other app):</p>
 <table>
   <thead><tr><th>What is saved</th><th>Detail</th></tr></thead>
   <tbody>
-    <tr><td>Settings</td><td>Region, language, theme, up to three pinned units,
+    <tr><td data-label="What is saved">Settings</td><td data-label="Detail">Region, language, theme, up to three pinned units,
     your own units, adjusted values and whether you have seen the intro
     (<code>jomihishab.settings.v1</code>)</td></tr>
-    <tr><td>The ledger</td><td>Results you chose to save, with the date and any
+    <tr><td data-label="What is saved">The ledger</td><td data-label="Detail">Results you chose to save, with the date and any
     name and note you added (<code>jh-khata</code>)</td></tr>
-    <tr><td>Ad-free status</td><td>When a 24-hour ad-free period ends, and
+    <tr><td data-label="What is saved">Ad-free status</td><td data-label="Detail">When a 24-hour ad-free period ends, and
     whether you bought "remove ads" (<code>jh-adfree</code>)</td></tr>
-    <tr><td>Two counters</td><td>How many times the app has been opened and how
+    <tr><td data-label="What is saved">Two counters</td><td data-label="Detail">How many times the app has been opened and how
     many calculations finished, so new users see no ads at first
     (<code>jh-adcount</code>)</td></tr>
   </tbody>
@@ -291,43 +295,43 @@ the rest are merged in by the libraries named below.</p>
 <table>
   <thead><tr><th>Permission</th><th>Comes from</th><th>Why it is there</th></tr></thead>
   <tbody>
-    <tr><td><code>android.permission.INTERNET</code></td><td>the app's own manifest</td>
-    <td>Ads, usage statistics, Remote Config and Play Billing. No calculation
+    <tr><td data-label="Permission"><code>android.permission.INTERNET</code></td><td data-label="Comes from">the app's own manifest</td>
+    <td data-label="Why it is there">Ads, usage statistics, Remote Config and Play Billing. No calculation
     uses the network.</td></tr>
-    <tr><td><code>android.permission.WRITE_EXTERNAL_STORAGE</code></td><td>the app's own manifest</td>
-    <td>Android 9 and older only (<code>maxSdkVersion 28</code>): saving a result
+    <tr><td data-label="Permission"><code>android.permission.WRITE_EXTERNAL_STORAGE</code></td><td data-label="Comes from">the app's own manifest</td>
+    <td data-label="Why it is there">Android 9 and older only (<code>maxSdkVersion 28</code>): saving a result
     image to Pictures, asked for at that moment. Not declared on Android 10 and
     newer.</td></tr>
-    <tr><td><code>com.android.vending.BILLING</code></td><td><code>react-native-iap</code> (OpenIAP)</td>
-    <td>The optional "remove ads" purchase through Google Play.</td></tr>
-    <tr><td><code>android.permission.ACCESS_NETWORK_STATE</code></td><td><code>react-native-google-mobile-ads</code></td>
-    <td>Checks whether a connection exists before requesting an ad.</td></tr>
-    <tr><td><code>android.permission.WAKE_LOCK</code></td><td><code>react-native-google-mobile-ads</code></td>
-    <td>Lets ad work finish without the CPU sleeping mid-request.</td></tr>
-    <tr><td><code>com.google.android.gms.permission.AD_ID</code></td><td><code>play-services-ads-api</code></td>
-    <td>Reading the advertising ID described in section 2.</td></tr>
-    <tr><td><code>android.permission.ACCESS_ADSERVICES_AD_ID</code></td><td><code>play-services-ads-api</code></td>
-    <td rowspan="3">Android Privacy Sandbox, declared by the ads SDK on every app
+    <tr><td data-label="Permission"><code>com.android.vending.BILLING</code></td><td data-label="Comes from"><code>react-native-iap</code> (OpenIAP)</td>
+    <td data-label="Why it is there">The optional "remove ads" purchase through Google Play.</td></tr>
+    <tr><td data-label="Permission"><code>android.permission.ACCESS_NETWORK_STATE</code></td><td data-label="Comes from"><code>react-native-google-mobile-ads</code></td>
+    <td data-label="Why it is there">Checks whether a connection exists before requesting an ad.</td></tr>
+    <tr><td data-label="Permission"><code>android.permission.WAKE_LOCK</code></td><td data-label="Comes from"><code>react-native-google-mobile-ads</code></td>
+    <td data-label="Why it is there">Lets ad work finish without the CPU sleeping mid-request.</td></tr>
+    <tr><td data-label="Permission"><code>com.google.android.gms.permission.AD_ID</code></td><td data-label="Comes from"><code>play-services-ads-api</code></td>
+    <td data-label="Why it is there">Reading the advertising ID described in section 2.</td></tr>
+    <tr><td data-label="Permission"><code>android.permission.ACCESS_ADSERVICES_AD_ID</code></td><td data-label="Comes from"><code>play-services-ads-api</code></td>
+    <td data-label="Why it is there" rowspan="3">Android Privacy Sandbox, declared by the ads SDK on every app
     that embeds it.</td></tr>
-    <tr><td><code>android.permission.ACCESS_ADSERVICES_ATTRIBUTION</code></td><td><code>play-services-ads-api</code></td></tr>
-    <tr><td><code>android.permission.ACCESS_ADSERVICES_TOPICS</code></td><td><code>play-services-ads-api</code></td></tr>
-    <tr><td><code>android.permission.ACCESS_WIFI_STATE</code></td><td>AppLovin SDK (mediation)</td>
-    <td>Lets the AppLovin SDK see whether the phone is on Wi-Fi when choosing an
+    <tr><td data-label="Permission"><code>android.permission.ACCESS_ADSERVICES_ATTRIBUTION</code></td><td data-label="Comes from"><code>play-services-ads-api</code></td></tr>
+    <tr><td data-label="Permission"><code>android.permission.ACCESS_ADSERVICES_TOPICS</code></td><td data-label="Comes from"><code>play-services-ads-api</code></td></tr>
+    <tr><td data-label="Permission"><code>android.permission.ACCESS_WIFI_STATE</code></td><td data-label="Comes from">AppLovin SDK (mediation)</td>
+    <td data-label="Why it is there">Lets the AppLovin SDK see whether the phone is on Wi-Fi when choosing an
     ad. It does not reveal which network.</td></tr>
-    <tr><td><code>android.permission.VIBRATE</code></td><td>AppLovin SDK (mediation)</td>
-    <td>Declared by the AppLovin SDK for some ad formats. The app itself never
+    <tr><td data-label="Permission"><code>android.permission.VIBRATE</code></td><td data-label="Comes from">AppLovin SDK (mediation)</td>
+    <td data-label="Why it is there">Declared by the AppLovin SDK for some ad formats. The app itself never
     vibrates.</td></tr>
-    <tr><td><code>com.applovin.array.apphub.permission.BIND_APPHUB_SERVICE</code></td><td>AppLovin SDK (mediation)</td>
-    <td>Lets the AppLovin SDK talk to AppLovin's own service if a device has it
+    <tr><td data-label="Permission"><code>com.applovin.array.apphub.permission.BIND_APPHUB_SERVICE</code></td><td data-label="Comes from">AppLovin SDK (mediation)</td>
+    <td data-label="Why it is there">Lets the AppLovin SDK talk to AppLovin's own service if a device has it
     preinstalled. It grants access to no data on the phone.</td></tr>
-    <tr><td><code>com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE</code></td><td><code>play-services-measurement</code> (Firebase Analytics)</td>
-    <td>Reads Google Play's install referrer — how the app was found on Play — for
+    <tr><td data-label="Permission"><code>com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE</code></td><td data-label="Comes from"><code>play-services-measurement</code> (Firebase Analytics)</td>
+    <td data-label="Why it is there">Reads Google Play's install referrer — how the app was found on Play — for
     install attribution.</td></tr>
-    <tr><td><code>android.permission.FOREGROUND_SERVICE</code></td><td><code>androidx.work</code>, via the ads stack</td>
-    <td>Declared by Android's WorkManager library. The app starts no foreground
+    <tr><td data-label="Permission"><code>android.permission.FOREGROUND_SERVICE</code></td><td data-label="Comes from"><code>androidx.work</code>, via the ads stack</td>
+    <td data-label="Why it is there">Declared by Android's WorkManager library. The app starts no foreground
     service of its own and shows no notification.</td></tr>
-    <tr><td><code>com.skrchowdhury.jomihishab.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code></td><td><code>androidx.core</code></td>
-    <td>Signature-level and scoped to this app alone. It keeps the app's internal
+    <tr><td data-label="Permission"><code>com.skrchowdhury.jomihishab.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code></td><td data-label="Comes from"><code>androidx.core</code></td>
+    <td data-label="Why it is there">Signature-level and scoped to this app alone. It keeps the app's internal
     receivers <em>closed</em> to other apps, and grants access to nothing.</td></tr>
   </tbody>
 </table>
@@ -460,12 +464,12 @@ the version it describes ships.</p>
 <table>
   <thead><tr><th>Date</th><th>Change</th></tr></thead>
   <tbody>
-    <tr><td>5 November 2026</td><td>Version 1.1.0: native, banner and rewarded
+    <tr><td data-label="Date">5 November 2026</td><td data-label="Change">Version 1.1.0: native, banner and rewarded
     ads with Meta Audience Network and AppLovin mediation; Google Analytics for
     Firebase and Remote Config; the optional "remove ads" purchase; the ledger,
     backup files and result images; the permission list updated to fifteen
     entries.</td></tr>
-    <tr><td>11 September 2026</td><td>First published for version 1.0.</td></tr>
+    <tr><td data-label="Date">11 September 2026</td><td data-label="Change">First published for version 1.0.</td></tr>
   </tbody>
 </table>
 

@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy · Onkoo (অংক)</title>
 <meta name="description" content="Onkoo is a number puzzle game for grown-ups. The developer collects nothing. This page says exactly what Google AdMob rewarded ads, Google Play Games and Google Play Billing receive, and how to switch each off.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#fbfcfb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0e0d" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/webp" href="../assets/icons/onkoo.webp">
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
@@ -12,9 +16,9 @@
 
 <header>
   <a class="brand" href="../">
-    <img src="../assets/onkoo.png" alt="">
+    <img src="../assets/icons/onkoo.webp" width="48" height="48" alt="">
     <div>
-      <b>Onkoo <span style="opacity:.7">(অংক)</span></b>
+      <b>Onkoo <span class="alt">(অংক)</span></b>
       <span>com.skrchowdhury.onkoo</span>
     </div>
   </a>
@@ -133,13 +137,13 @@ Android sandbox makes unreadable to every other app):</p>
 <table>
   <thead><tr><th>What is saved</th><th>Detail</th></tr></thead>
   <tbody>
-    <tr><td>Progress</td><td>Journey position and stars, XP, coins, streak freezes, personal bests, puzzles played per game and difficulty, the daily set, chests, badges and their counters, outfits</td></tr>
-    <tr><td>Days played</td><td>Which days you played (for the streak and badges) and XP per week (for the league)</td></tr>
-    <tr><td>Skill summary</td><td>Points per skill, used to draw the brain-score chart on the Me screen</td></tr>
-    <tr><td>Settings</td><td>Language (English or বাংলা), theme, sound, vibration, reduce motion, the daily reminder time, and the Cloud save switch</td></tr>
-    <tr><td>Introduction answers</td><td>What brings you to Onkoo, how many minutes a day, and your starting level — used only to set up the game</td></tr>
-    <tr><td>Onkoo Plus</td><td>Whether you own Plus and Google Play's purchase token for it. Ownership is re-checked with Google Play on every launch, never trusted from the file alone</td></tr>
-    <tr><td>Ad limit</td><td>How many coin ads you have watched today (three a day at most)</td></tr>
+    <tr><td data-label="What is saved">Progress</td><td data-label="Detail">Journey position and stars, XP, coins, streak freezes, personal bests, puzzles played per game and difficulty, the daily set, chests, badges and their counters, outfits</td></tr>
+    <tr><td data-label="What is saved">Days played</td><td data-label="Detail">Which days you played (for the streak and badges) and XP per week (for the league)</td></tr>
+    <tr><td data-label="What is saved">Skill summary</td><td data-label="Detail">Points per skill, used to draw the brain-score chart on the Me screen</td></tr>
+    <tr><td data-label="What is saved">Settings</td><td data-label="Detail">Language (English or বাংলা), theme, sound, vibration, reduce motion, the daily reminder time, and the Cloud save switch</td></tr>
+    <tr><td data-label="What is saved">Introduction answers</td><td data-label="Detail">What brings you to Onkoo, how many minutes a day, and your starting level — used only to set up the game</td></tr>
+    <tr><td data-label="What is saved">Onkoo Plus</td><td data-label="Detail">Whether you own Plus and Google Play's purchase token for it. Ownership is re-checked with Google Play on every launch, never trusted from the file alone</td></tr>
+    <tr><td data-label="What is saved">Ad limit</td><td data-label="Detail">How many coin ads you have watched today (three a day at most)</td></tr>
   </tbody>
 </table>
 
@@ -299,17 +303,17 @@ when you turn the reminder on.</p>
 <table>
   <thead><tr><th>Permission</th><th>Comes from</th><th>Why it is there</th></tr></thead>
   <tbody>
-    <tr><td><code>INTERNET</code></td><td>The app</td><td>Rewarded ads, Play Games, Play Billing and the Play review card. The puzzles never use the network</td></tr>
-    <tr><td><code>ACCESS_NETWORK_STATE</code></td><td>Google Mobile Ads library</td><td>Lets the Google libraries check whether a connection exists</td></tr>
-    <tr><td><code>WAKE_LOCK</code></td><td>Google Mobile Ads library</td><td>Keeps the device awake while an ad video plays</td></tr>
-    <tr><td><code>com.google.android.gms.permission.AD_ID</code></td><td>Google Mobile Ads SDK</td><td>Lets AdMob read the advertising ID (§3)</td></tr>
-    <tr><td><code>ACCESS_ADSERVICES_AD_ID</code>, <code>ACCESS_ADSERVICES_ATTRIBUTION</code>, <code>ACCESS_ADSERVICES_TOPICS</code></td><td>Google Mobile Ads SDK</td><td>Android Privacy Sandbox APIs for ads (§3)</td></tr>
-    <tr><td><code>com.android.vending.BILLING</code></td><td>Google Play Billing</td><td>Onkoo Plus and coin packs</td></tr>
-    <tr><td><code>POST_NOTIFICATIONS</code></td><td>The notification library (Notifee)</td><td>The optional daily reminder. Asked only when you turn it on</td></tr>
-    <tr><td><code>ACCESS_NOTIFICATION_POLICY</code></td><td>The notification library (Notifee)</td><td>Declared by the library for Do Not Disturb features. Onkoo never reads or changes Do Not Disturb</td></tr>
-    <tr><td><code>BROADCAST_CLOSE_SYSTEM_DIALOGS</code> (Android 11 and earlier only)</td><td>The notification library (Notifee)</td><td>Declared by the library for notification buttons. Onkoo's reminder has none</td></tr>
-    <tr><td><code>FOREGROUND_SERVICE</code></td><td>AndroidX WorkManager, used by the Google and notification libraries</td><td>Declared by the library for long background tasks. Onkoo itself starts no foreground service</td></tr>
-    <tr><td><code>VIBRATE</code></td><td>The haptics library</td><td>Gentle taps on answers. Off when you turn vibration off in Settings</td></tr>
+    <tr><td data-label="Permission"><code>INTERNET</code></td><td data-label="Comes from">The app</td><td data-label="Why it is there">Rewarded ads, Play Games, Play Billing and the Play review card. The puzzles never use the network</td></tr>
+    <tr><td data-label="Permission"><code>ACCESS_NETWORK_STATE</code></td><td data-label="Comes from">Google Mobile Ads library</td><td data-label="Why it is there">Lets the Google libraries check whether a connection exists</td></tr>
+    <tr><td data-label="Permission"><code>WAKE_LOCK</code></td><td data-label="Comes from">Google Mobile Ads library</td><td data-label="Why it is there">Keeps the device awake while an ad video plays</td></tr>
+    <tr><td data-label="Permission"><code>com.google.android.gms.permission.AD_ID</code></td><td data-label="Comes from">Google Mobile Ads SDK</td><td data-label="Why it is there">Lets AdMob read the advertising ID (§3)</td></tr>
+    <tr><td data-label="Permission"><code>ACCESS_ADSERVICES_AD_ID</code>, <code>ACCESS_ADSERVICES_ATTRIBUTION</code>, <code>ACCESS_ADSERVICES_TOPICS</code></td><td data-label="Comes from">Google Mobile Ads SDK</td><td data-label="Why it is there">Android Privacy Sandbox APIs for ads (§3)</td></tr>
+    <tr><td data-label="Permission"><code>com.android.vending.BILLING</code></td><td data-label="Comes from">Google Play Billing</td><td data-label="Why it is there">Onkoo Plus and coin packs</td></tr>
+    <tr><td data-label="Permission"><code>POST_NOTIFICATIONS</code></td><td data-label="Comes from">The notification library (Notifee)</td><td data-label="Why it is there">The optional daily reminder. Asked only when you turn it on</td></tr>
+    <tr><td data-label="Permission"><code>ACCESS_NOTIFICATION_POLICY</code></td><td data-label="Comes from">The notification library (Notifee)</td><td data-label="Why it is there">Declared by the library for Do Not Disturb features. Onkoo never reads or changes Do Not Disturb</td></tr>
+    <tr><td data-label="Permission"><code>BROADCAST_CLOSE_SYSTEM_DIALOGS</code> (Android 11 and earlier only)</td><td data-label="Comes from">The notification library (Notifee)</td><td data-label="Why it is there">Declared by the library for notification buttons. Onkoo's reminder has none</td></tr>
+    <tr><td data-label="Permission"><code>FOREGROUND_SERVICE</code></td><td data-label="Comes from">AndroidX WorkManager, used by the Google and notification libraries</td><td data-label="Why it is there">Declared by the library for long background tasks. Onkoo itself starts no foreground service</td></tr>
+    <tr><td data-label="Permission"><code>VIBRATE</code></td><td data-label="Comes from">The haptics library</td><td data-label="Why it is there">Gentle taps on answers. Off when you turn vibration off in Settings</td></tr>
   </tbody>
 </table>
 
@@ -362,13 +366,13 @@ phones is what Play Games cloud save (§4) is for, and it is under your control.
 <table>
   <thead><tr><th>To…</th><th>Do this</th></tr></thead>
   <tbody>
-    <tr><td>Delete your progress on this phone</td><td><em>Settings &rsaquo; Reset progress</em>, or uninstall the app. With cloud save on, the reset is synced to the cloud copy too, and an older cloud copy can't bring the old progress back</td></tr>
-    <tr><td>Remove everything the app saved on the phone</td><td><em>Settings &rsaquo; Apps &rsaquo; Onkoo &rsaquo; Storage &rsaquo; Clear data</em>, or uninstall</td></tr>
-    <tr><td>Stop cloud uploads</td><td><em>Settings &rsaquo; Cloud save</em> off</td></tr>
-    <tr><td>Delete the cloud copy and leaderboard scores</td><td>Your <a href="https://play.google.com/games/profile">Play Games profile</a> or <a href="https://myaccount.google.com">Google Account</a></td></tr>
-    <tr><td>Change ad consent</td><td><em>Settings &rsaquo; Ad privacy choices</em>, where shown</td></tr>
-    <tr><td>Reset or delete the advertising ID</td><td>Phone <em>Settings &rsaquo; Google &rsaquo; Ads</em></td></tr>
-    <tr><td>Stop reminders</td><td><em>Settings &rsaquo; Daily reminder</em>, or Android's notification settings</td></tr>
+    <tr><td data-label="To…">Delete your progress on this phone</td><td data-label="Do this"><em>Settings &rsaquo; Reset progress</em>, or uninstall the app. With cloud save on, the reset is synced to the cloud copy too, and an older cloud copy can't bring the old progress back</td></tr>
+    <tr><td data-label="To…">Remove everything the app saved on the phone</td><td data-label="Do this"><em>Settings &rsaquo; Apps &rsaquo; Onkoo &rsaquo; Storage &rsaquo; Clear data</em>, or uninstall</td></tr>
+    <tr><td data-label="To…">Stop cloud uploads</td><td data-label="Do this"><em>Settings &rsaquo; Cloud save</em> off</td></tr>
+    <tr><td data-label="To…">Delete the cloud copy and leaderboard scores</td><td data-label="Do this">Your <a href="https://play.google.com/games/profile">Play Games profile</a> or <a href="https://myaccount.google.com">Google Account</a></td></tr>
+    <tr><td data-label="To…">Change ad consent</td><td data-label="Do this"><em>Settings &rsaquo; Ad privacy choices</em>, where shown</td></tr>
+    <tr><td data-label="To…">Reset or delete the advertising ID</td><td data-label="Do this">Phone <em>Settings &rsaquo; Google &rsaquo; Ads</em></td></tr>
+    <tr><td data-label="To…">Stop reminders</td><td data-label="Do this"><em>Settings &rsaquo; Daily reminder</em>, or Android's notification settings</td></tr>
   </tbody>
 </table>
 
@@ -411,7 +415,7 @@ that did it shipped.</p>
 <table>
   <thead><tr><th>Date</th><th>Change</th></tr></thead>
   <tbody>
-    <tr><td>8 November 2026</td><td>First published for version 1.0.0.</td></tr>
+    <tr><td data-label="Date">8 November 2026</td><td data-label="Change">First published for version 1.0.0.</td></tr>
   </tbody>
 </table>
 

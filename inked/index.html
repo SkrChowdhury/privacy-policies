@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy · Inked: Colour Nonograms</title>
 <meta name="description" content="Inked has no server, no analytics and no ads. Play Games leaderboards and cloud save are optional; purchases are handled by Google Play.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#fbfcfb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0e0d" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/webp" href="../assets/icons/inked.webp">
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
@@ -12,7 +16,7 @@
 
 <header>
   <a class="brand" href="../">
-    <img src="../assets/inked.png" alt="">
+    <img src="../assets/icons/inked.webp" width="48" height="48" alt="">
     <div>
       <b>Inked: Colour Nonograms</b>
       <span>com.skrchowdhury.inked</span>
@@ -118,12 +122,12 @@ directory, which the Android sandbox makes unreadable to every other app):</p>
 <table>
   <thead><tr><th>What is saved</th><th>Detail</th></tr></thead>
   <tbody>
-    <tr><td>Progress</td><td>For each print you solve: your best time, mistakes, hints used, when you solved it and how often you replayed it. Per day: how many prints you solved and for how long. Your in-progress board, so you can continue where you left off</td></tr>
-    <tr><td>Daily prints</td><td>Which daily prints you have started, and which day's daily hint you have used</td></tr>
-    <tr><td>Settings</td><td>Paper, mistake mode, haptics, reduced motion, larger cells, left-handed controls, colourblind marks, the reminder and its time, and whether you have seen the introduction</td></tr>
-    <tr><td>Subscription status</td><td>A cached copy of whether Editions is active, so the app works offline. It is kept in its own file, never backed up and never exported, and is re-checked with Google Play</td></tr>
-    <tr><td>Play Games</td><td>Leaderboard scores waiting to be posted while offline, and whether you have been asked to sign in</td></tr>
-    <tr><td>Cloud save state</td><td>Whether cloud save is on, and when it last synced. Never your password</td></tr>
+    <tr><td data-label="What is saved">Progress</td><td data-label="Detail">For each print you solve: your best time, mistakes, hints used, when you solved it and how often you replayed it. Per day: how many prints you solved and for how long. Your in-progress board, so you can continue where you left off</td></tr>
+    <tr><td data-label="What is saved">Daily prints</td><td data-label="Detail">Which daily prints you have started, and which day's daily hint you have used</td></tr>
+    <tr><td data-label="What is saved">Settings</td><td data-label="Detail">Paper, mistake mode, haptics, reduced motion, larger cells, left-handed controls, colourblind marks, the reminder and its time, and whether you have seen the introduction</td></tr>
+    <tr><td data-label="What is saved">Subscription status</td><td data-label="Detail">A cached copy of whether Editions is active, so the app works offline. It is kept in its own file, never backed up and never exported, and is re-checked with Google Play</td></tr>
+    <tr><td data-label="What is saved">Play Games</td><td data-label="Detail">Leaderboard scores waiting to be posted while offline, and whether you have been asked to sign in</td></tr>
+    <tr><td data-label="What is saved">Cloud save state</td><td data-label="Detail">Whether cloud save is on, and when it last synced. Never your password</td></tr>
   </tbody>
 </table>
 
@@ -190,11 +194,11 @@ is fetched or sent to produce it.</p>
 <table>
   <thead><tr><th>Permission</th><th>Why it is needed</th></tr></thead>
   <tbody>
-    <tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td><td>Google Play Billing, Play Games leaderboards and cloud save — each only when you use it</td></tr>
-    <tr><td><code>com.android.vending.BILLING</code></td><td>The Editions subscription through Google Play</td></tr>
-    <tr><td><code>POST_NOTIFICATIONS</code></td><td>The daily reminder, only if you turn it on and allow it</td></tr>
-    <tr><td><code>RECEIVE_BOOT_COMPLETED</code>, <code>WAKE_LOCK</code></td><td>Keeping the reminder scheduled after the phone restarts</td></tr>
-    <tr><td><code>VIBRATE</code></td><td>Haptic feedback while you paint. You can turn haptics off in Settings</td></tr>
+    <tr><td data-label="Permission"><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td><td data-label="Why it is needed">Google Play Billing, Play Games leaderboards and cloud save — each only when you use it</td></tr>
+    <tr><td data-label="Permission"><code>com.android.vending.BILLING</code></td><td data-label="Why it is needed">The Editions subscription through Google Play</td></tr>
+    <tr><td data-label="Permission"><code>POST_NOTIFICATIONS</code></td><td data-label="Why it is needed">The daily reminder, only if you turn it on and allow it</td></tr>
+    <tr><td data-label="Permission"><code>RECEIVE_BOOT_COMPLETED</code>, <code>WAKE_LOCK</code></td><td data-label="Why it is needed">Keeping the reminder scheduled after the phone restarts</td></tr>
+    <tr><td data-label="Permission"><code>VIBRATE</code></td><td data-label="Why it is needed">Haptic feedback while you paint. You can turn haptics off in Settings</td></tr>
   </tbody>
 </table>
 
@@ -286,7 +290,7 @@ did it shipped.</p>
 <table>
   <thead><tr><th>Date</th><th>Change</th></tr></thead>
   <tbody>
-    <tr><td>12 October 2026</td><td>First published for version 1.0.0.</td></tr>
+    <tr><td data-label="Date">12 October 2026</td><td data-label="Change">First published for version 1.0.0.</td></tr>
   </tbody>
 </table>
 

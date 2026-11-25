@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy · ঠাকুরঘর (Thakurghor)</title>
 <meta name="description" content="ঠাকুরঘর computes its panjika, keeps your reading, japa and family days on your phone, and sends the developer nothing. Ads come from Google AdMob and purchases go through Google Play; this page says exactly what each of them receives.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#fbfcfb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0e0d" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/webp" href="../assets/icons/thakurghor.webp">
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
@@ -12,7 +16,7 @@
 
 <header>
   <a class="brand" href="../">
-    <img src="../assets/thakurghor.png" alt="">
+    <img src="../assets/icons/thakurghor.webp" width="48" height="48" alt="">
     <div>
       <b>ঠাকুরঘর · Thakurghor</b>
       <span>com.skrchowdhury.thakurghor</span>
@@ -144,25 +148,25 @@ directory, which the Android sandbox makes unreadable to every other app):</p>
 <table>
   <thead><tr><th>What is saved</th><th>Detail</th></tr></thead>
   <tbody>
-    <tr><td>Settings</td><td>Region and city, panjika system, language, theme,
+    <tr><td data-label="What is saved">Settings</td><td data-label="Detail">Region and city, panjika system, language, theme,
       text size, sounds, reminder choices</td></tr>
-    <tr><td>Reading</td><td>Your place in the Gita, the Chandi and the
+    <tr><td data-label="What is saved">Reading</td><td data-label="Detail">Your place in the Gita, the Chandi and the
       downloaded texts, bookmarks, highlights and the notes you write</td></tr>
-    <tr><td>Downloaded texts</td><td>The text packs you chose to download
+    <tr><td data-label="What is saved">Downloaded texts</td><td data-label="Detail">The text packs you chose to download
       (section 8), until you remove them in <em>ডাউনলোড</em></td></tr>
-    <tr><td>Family days</td><td>The names and lunar dates you add (only on your
+    <tr><td data-label="What is saved">Family days</td><td data-label="Detail">The names and lunar dates you add (only on your
       phone; see section 1)</td></tr>
-    <tr><td>Practice</td><td>Japa sittings, the sadhana checklist, puja and katha
+    <tr><td data-label="What is saved">Practice</td><td data-label="Detail">Japa sittings, the sadhana checklist, puja and katha
       progress</td></tr>
-    <tr><td>Rashi and পঞ্জিকা+</td><td>The name, birth date, time and place you
+    <tr><td data-label="What is saved">Rashi and পঞ্জিকা+</td><td data-label="Detail">The name, birth date, time and place you
       enter, your rashi and birth nakshatra, the name and gotra for the সংকল্প,
       eclipse reminders, and which পঞ্জিকা+ tools a rewarded ad has unlocked and
       until when</td></tr>
-    <tr><td>Reminders</td><td>Which reminders and শুভ দিন bells you switched
+    <tr><td data-label="What is saved">Reminders</td><td data-label="Detail">Which reminders and শুভ দিন bells you switched
       on</td></tr>
-    <tr><td>Purchases</td><td>Which membership or one-time items your Google Play
+    <tr><td data-label="What is saved">Purchases</td><td data-label="Detail">Which membership or one-time items your Google Play
       account has, so they work offline</td></tr>
-    <tr><td>Widgets and search</td><td>Widget preferences and your last five
+    <tr><td data-label="What is saved">Widgets and search</td><td data-label="Detail">Widget preferences and your last five
       searches</td></tr>
   </tbody>
 </table>
@@ -251,31 +255,31 @@ when the phone starts.</p>
 <table>
   <thead><tr><th>Permission</th><th>Why</th></tr></thead>
   <tbody>
-    <tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>,
-      <code>ACCESS_WIFI_STATE</code></td><td>Loading ads, talking to Google
+    <tr><td data-label="Permission"><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>,
+      <code>ACCESS_WIFI_STATE</code></td><td data-label="Why">Loading ads, talking to Google
       Play Billing, and downloading the text packs you choose — on Wi-Fi only,
       unless you change that (section 8).</td></tr>
-    <tr><td><code>ACCESS_COARSE_LOCATION</code></td><td>Only if you switch on
+    <tr><td data-label="Permission"><code>ACCESS_COARSE_LOCATION</code></td><td data-label="Why">Only if you switch on
       “use my location” — one approximate fix to pick the nearest city
       (section 3).</td></tr>
-    <tr><td><code>POST_NOTIFICATIONS</code></td><td>Showing the reminders you
+    <tr><td data-label="Permission"><code>POST_NOTIFICATIONS</code></td><td data-label="Why">Showing the reminders you
       turn on.</td></tr>
-    <tr><td><code>USE_EXACT_ALARM</code></td><td>Ringing a reminder at the exact
+    <tr><td data-label="Permission"><code>USE_EXACT_ALARM</code></td><td data-label="Why">Ringing a reminder at the exact
       minute — paran windows and muhurtas are time-critical.</td></tr>
-    <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>Re-scheduling reminders
+    <tr><td data-label="Permission"><code>RECEIVE_BOOT_COMPLETED</code></td><td data-label="Why">Re-scheduling reminders
       after the phone restarts.</td></tr>
-    <tr><td><code>FOREGROUND_SERVICE</code>,
-      <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code></td><td>Keeping audio
+    <tr><td data-label="Permission"><code>FOREGROUND_SERVICE</code>,
+      <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code></td><td data-label="Why">Keeping audio
       playing, with its controls, when the screen is off.</td></tr>
-    <tr><td><code>WAKE_LOCK</code></td><td>Keeping the screen on while you read
+    <tr><td data-label="Permission"><code>WAKE_LOCK</code></td><td data-label="Why">Keeping the screen on while you read
       or chant, if you leave that setting on.</td></tr>
-    <tr><td><code>VIBRATE</code></td><td>Haptic feedback, such as each bead in
+    <tr><td data-label="Permission"><code>VIBRATE</code></td><td data-label="Why">Haptic feedback, such as each bead in
       japa.</td></tr>
-    <tr><td><code>com.android.vending.BILLING</code></td><td>Google Play
+    <tr><td data-label="Permission"><code>com.android.vending.BILLING</code></td><td data-label="Why">Google Play
       purchases (section 5).</td></tr>
-    <tr><td><code>AD_ID</code>, <code>ACCESS_ADSERVICES_AD_ID</code>,
+    <tr><td data-label="Permission"><code>AD_ID</code>, <code>ACCESS_ADSERVICES_AD_ID</code>,
       <code>ACCESS_ADSERVICES_ATTRIBUTION</code>,
-      <code>ACCESS_ADSERVICES_TOPICS</code></td><td>Declared by the Google Mobile
+      <code>ACCESS_ADSERVICES_TOPICS</code></td><td data-label="Why">Declared by the Google Mobile
       Ads SDK for the advertising ID and Android's Privacy Sandbox
       (section 4).</td></tr>
   </tbody>
@@ -396,10 +400,10 @@ say so before the version that did it shipped.</p>
 <table>
   <thead><tr><th>Date</th><th>Change</th></tr></thead>
   <tbody>
-    <tr><td>16 October 2026</td><td>First published for version 1.0.0.</td></tr>
-    <tr><td>16 October 2026</td><td>Added the optional text-pack downloads from
+    <tr><td data-label="Date">16 October 2026</td><td data-label="Change">First published for version 1.0.0.</td></tr>
+    <tr><td data-label="Date">16 October 2026</td><td data-label="Change">Added the optional text-pack downloads from
       GitHub Pages (sections 2, 7 and 8).</td></tr>
-    <tr><td>31 October 2026</td><td>The package name is now
+    <tr><td data-label="Date">31 October 2026</td><td data-label="Change">The package name is now
       <code>com.skrchowdhury.thakurghor</code>, as registered on Google Play
       (header and section 7). The new ad banners are listed (section 4), and so
       are the birth details kept on the phone for রাশি, কুণ্ডলী and পঞ্জিকা+

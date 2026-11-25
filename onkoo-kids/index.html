@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy · Onkoo Kids</title>
 <meta name="description" content="Onkoo Kids is a free maths game for ages 4–8. It collects no personal data, shows no ads, has no analytics and works offline. The optional tip jar and rating sit behind a parental gate.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#fbfcfb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0e0d" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/webp" href="../assets/icons/onkoo-kids.webp">
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
@@ -12,9 +16,9 @@
 
 <header>
   <a class="brand" href="../">
-    <img src="../assets/onkoo-kids.png" alt="">
+    <img src="../assets/icons/onkoo-kids.webp" width="48" height="48" alt="">
     <div>
-      <b>Onkoo Kids <span style="opacity:.7">(অংক কিডস)</span></b>
+      <b>Onkoo Kids <span class="alt">(অংক কিডস)</span></b>
       <span>com.skrchowdhury.onkookids</span>
     </div>
   </a>
@@ -118,12 +122,12 @@ every other app):</p>
 <table>
   <thead><tr><th>What is saved</th><th>Detail</th></tr></thead>
   <tbody>
-    <tr><td>Progress</td><td>The furthest stage reached, best stars per stage, seeds, stickers earned (with the date earned), the garden and its plants, rounds played per game, and which games have been seen</td></tr>
-    <tr><td>Learning summary</td><td>For each of the 16 skills, how many questions were answered and how many were right first time — used for the skill rings and the Certificate of Learning in the grown-ups area</td></tr>
-    <tr><td>Play time</td><td>Minutes played per day and which days were played — used for the weekly chart and the optional daily time limit</td></tr>
-    <tr><td>Settings</td><td>Language (English or বাংলা), age band, daily time limit, sound, reduced motion, Sprout's colour, and whether the introduction has been seen</td></tr>
-    <tr><td>Certificate names</td><td>The most recent name typed on the garden certificate and on the Certificate of Learning, so it doesn't have to be typed again (see §6)</td></tr>
-    <tr><td>Tip jar</td><td>How many tips have been given, to show a thank-you. Never payment details</td></tr>
+    <tr><td data-label="What is saved">Progress</td><td data-label="Detail">The furthest stage reached, best stars per stage, seeds, stickers earned (with the date earned), the garden and its plants, rounds played per game, and which games have been seen</td></tr>
+    <tr><td data-label="What is saved">Learning summary</td><td data-label="Detail">For each of the 16 skills, how many questions were answered and how many were right first time — used for the skill rings and the Certificate of Learning in the grown-ups area</td></tr>
+    <tr><td data-label="What is saved">Play time</td><td data-label="Detail">Minutes played per day and which days were played — used for the weekly chart and the optional daily time limit</td></tr>
+    <tr><td data-label="What is saved">Settings</td><td data-label="Detail">Language (English or বাংলা), age band, daily time limit, sound, reduced motion, Sprout's colour, and whether the introduction has been seen</td></tr>
+    <tr><td data-label="What is saved">Certificate names</td><td data-label="Detail">The most recent name typed on the garden certificate and on the Certificate of Learning, so it doesn't have to be typed again (see §6)</td></tr>
+    <tr><td data-label="What is saved">Tip jar</td><td data-label="Detail">How many tips have been given, to show a thank-you. Never payment details</td></tr>
   </tbody>
 </table>
 
@@ -194,11 +198,11 @@ runtime permission, so the app never asks for anything.</p>
 <table>
   <thead><tr><th>Permission</th><th>Comes from</th><th>Why it is there</th></tr></thead>
   <tbody>
-    <tr><td><code>INTERNET</code></td><td>The app, and the file-saving library</td><td>Google Play Billing for tips and the Play review card, both in the grown-ups area. The games never use the network</td></tr>
-    <tr><td><code>ACCESS_NETWORK_STATE</code></td><td>The file-saving library and Google Play Billing</td><td>Lets those libraries check whether a connection exists</td></tr>
-    <tr><td><code>com.android.vending.BILLING</code></td><td>Google Play Billing</td><td>The optional tip jar</td></tr>
-    <tr><td><code>WAKE_LOCK</code></td><td>The file-saving library</td><td>Declared by the library for long file operations. The app only uses it to write certificate pictures</td></tr>
-    <tr><td><code>VIBRATE</code></td><td>The haptics library</td><td>Gentle taps on answers. Off when sound is off or reduced motion is on</td></tr>
+    <tr><td data-label="Permission"><code>INTERNET</code></td><td data-label="Comes from">The app, and the file-saving library</td><td data-label="Why it is there">Google Play Billing for tips and the Play review card, both in the grown-ups area. The games never use the network</td></tr>
+    <tr><td data-label="Permission"><code>ACCESS_NETWORK_STATE</code></td><td data-label="Comes from">The file-saving library and Google Play Billing</td><td data-label="Why it is there">Lets those libraries check whether a connection exists</td></tr>
+    <tr><td data-label="Permission"><code>com.android.vending.BILLING</code></td><td data-label="Comes from">Google Play Billing</td><td data-label="Why it is there">The optional tip jar</td></tr>
+    <tr><td data-label="Permission"><code>WAKE_LOCK</code></td><td data-label="Comes from">The file-saving library</td><td data-label="Why it is there">Declared by the library for long file operations. The app only uses it to write certificate pictures</td></tr>
+    <tr><td data-label="Permission"><code>VIBRATE</code></td><td data-label="Comes from">The haptics library</td><td data-label="Why it is there">Gentle taps on answers. Off when sound is off or reduced motion is on</td></tr>
   </tbody>
 </table>
 
@@ -298,7 +302,7 @@ that did it shipped.</p>
 <table>
   <thead><tr><th>Date</th><th>Change</th></tr></thead>
   <tbody>
-    <tr><td>6 November 2026</td><td>First published for version 1.0.</td></tr>
+    <tr><td data-label="Date">6 November 2026</td><td data-label="Change">First published for version 1.0.</td></tr>
   </tbody>
 </table>
 

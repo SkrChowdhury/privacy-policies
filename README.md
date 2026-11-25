@@ -255,7 +255,9 @@ disagree, one of them is a bug.
 ## Adding an app
 
 1. `mkdir <app-slug>` and copy the closest existing `index.html` into it
-2. Drop a 512×512 icon at `assets/<app-slug>.png`
+2. Drop a 512×512 icon at `assets/<app-slug>.png`, then make the small copy the
+   pages actually load (2–4 KB instead of 30–350 KB):
+   `cwebp -q 88 -m 6 -alpha_q 100 -resize 144 144 assets/<app-slug>.png -o assets/icons/<app-slug>.webp`
 3. Update the header, title, `.meta` block, `.glance` table and the body
 4. Add a card to `index.html` and a column to its comparison table
 5. Add a row to the table above

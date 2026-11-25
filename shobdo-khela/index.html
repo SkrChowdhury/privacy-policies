@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy · শব্দ খেলা (Shobdo Khela)</title>
 <meta name="description" content="শব্দ খেলা collects nothing and has no server. Cloud save and daily reminders are optional and off by default; cloud save puts your progress in your own Google Drive and nowhere else.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#fbfcfb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0e0d" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/webp" href="../assets/icons/shobdo-khela.webp">
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
@@ -12,7 +16,7 @@
 
 <header>
   <a class="brand" href="../">
-    <img src="../assets/shobdo-khela.png" alt="">
+    <img src="../assets/icons/shobdo-khela.webp" width="48" height="48" alt="">
     <div>
       <b>শব্দ খেলা · Shobdo Khela</b>
       <span>com.skrchowdhury.shobdokhela</span>
@@ -131,38 +135,38 @@ unreadable to every other app on the phone:</p>
   <thead><tr><th>What is saved</th><th>Detail</th></tr></thead>
   <tbody>
     <tr>
-      <td>Puzzle progress</td>
-      <td>The words you have guessed in each puzzle, kept per day and per
+      <td data-label="What is saved">Puzzle progress</td>
+      <td data-label="Detail">The words you have guessed in each puzzle, kept per day and per
       difficulty so the daily, an archive puzzle and a practice game can all be
       in progress at once. Only the guessed words are stored — the coloured tile
       feedback is recalculated from them each time</td>
     </tr>
     <tr>
-      <td>Statistics</td>
-      <td>Games played, games won, current streak, longest streak, guess
+      <td data-label="What is saved">Statistics</td>
+      <td data-label="Detail">Games played, games won, current streak, longest streak, guess
       distribution, and which day's puzzle you last completed</td>
     </tr>
     <tr>
-      <td>Collection and rewards</td>
-      <td>The words you have collected with their meanings, your points balance
+      <td data-label="What is saved">Collection and rewards</td>
+      <td data-label="Detail">The words you have collected with their meanings, your points balance
       and what you have spent it on, and the badges, titles and board skins you
       have earned</td>
     </tr>
     <tr>
-      <td>Settings</td>
-      <td>Theme, language, difficulty, keyboard layout, high-contrast mode,
+      <td data-label="What is saved">Settings</td>
+      <td data-label="Detail">Theme, language, difficulty, keyboard layout, high-contrast mode,
       reduce-motion preference, strict scoring, Bangla numerals, haptics,
       whether you have seen the tutorial, whether daily reminders are on and at
       what hour, and the display name you typed on your profile, if you set one</td>
     </tr>
     <tr>
-      <td>Reminder schedule</td>
-      <td>Only if you turn reminders on: the times and texts of the next week's
+      <td data-label="What is saved">Reminder schedule</td>
+      <td data-label="Detail">Only if you turn reminders on: the times and texts of the next week's
       reminders, so Android can re-arm them after the phone restarts</td>
     </tr>
     <tr>
-      <td>Home-screen widget</td>
-      <td>Only if you add the widget: which day it describes, whether that day is
+      <td data-label="What is saved">Home-screen widget</td>
+      <td data-label="Detail">Only if you add the widget: which day it describes, whether that day is
       solved, your streak, and the lines it shows, so the widget can stay current
       while the game is closed</td>
     </tr>
@@ -203,12 +207,12 @@ permissions, both classified by Google as non-sensitive:</p>
   <thead><tr><th>Google Drive scope</th><th>What it allows</th></tr></thead>
   <tbody>
     <tr>
-      <td><code>drive.appdata</code></td>
-      <td>The hidden per-app folder, and nothing else. Only this app can see it</td>
+      <td data-label="Google Drive scope"><code>drive.appdata</code></td>
+      <td data-label="What it allows">The hidden per-app folder, and nothing else. Only this app can see it</td>
     </tr>
     <tr>
-      <td><code>drive.file</code></td>
-      <td>Files this app itself created — that is, the visible backup file</td>
+      <td data-label="Google Drive scope"><code>drive.file</code></td>
+      <td data-label="What it allows">Files this app itself created — that is, the visible backup file</td>
     </tr>
   </tbody>
 </table>
@@ -264,25 +268,25 @@ developer has no access to it and receives no copy of it.</p>
   <thead><tr><th>Permission</th><th>Why it is needed</th></tr></thead>
   <tbody>
     <tr>
-      <td><code>android.permission.VIBRATE</code></td>
-      <td>Haptic feedback on key presses and tile reveals. You can turn haptics
+      <td data-label="Permission"><code>android.permission.VIBRATE</code></td>
+      <td data-label="Why it is needed">Haptic feedback on key presses and tile reveals. You can turn haptics
       off in Settings. It is an install-time permission that grants access to the
       vibration motor and to no information whatsoever.</td>
     </tr>
     <tr>
-      <td><code>android.permission.INTERNET</code></td>
-      <td>Cloud save only — talking to Google Drive. Nothing opens a network
+      <td data-label="Permission"><code>android.permission.INTERNET</code></td>
+      <td data-label="Why it is needed">Cloud save only — talking to Google Drive. Nothing opens a network
       connection until you turn cloud save on.</td>
     </tr>
     <tr>
-      <td><code>android.permission.POST_NOTIFICATIONS</code></td>
-      <td>The optional daily reminder (from version 1.1.0). Android asks you for
+      <td data-label="Permission"><code>android.permission.POST_NOTIFICATIONS</code></td>
+      <td data-label="Why it is needed">The optional daily reminder (from version 1.1.0). Android asks you for
       it only when you turn reminders on; if you refuse, reminders stay off. You
       can withdraw it at any time in your phone's settings.</td>
     </tr>
     <tr>
-      <td><code>android.permission.RECEIVE_BOOT_COMPLETED</code></td>
-      <td>Lets the game re-arm reminders you have already turned on after the
+      <td data-label="Permission"><code>android.permission.RECEIVE_BOOT_COMPLETED</code></td>
+      <td data-label="Why it is needed">Lets the game re-arm reminders you have already turned on after the
       phone restarts, because Android forgets scheduled alarms on a reboot (from
       version 1.1.0). It does nothing if reminders are off, and it grants access
       to no information.</td>
@@ -523,10 +527,10 @@ version that did it shipped.</p>
 <table>
   <thead><tr><th>Date</th><th>Change</th></tr></thead>
   <tbody>
-    <tr><td>12 November 2026</td><td>For version 1.1.0: added the <code>POST_NOTIFICATIONS</code> and <code>RECEIVE_BOOT_COMPLETED</code> permissions and the optional <strong>daily reminder</strong> they serve; the <strong>home-screen widget</strong>; Google's <strong>Play In-App Review</strong> library; and <strong>challenge links</strong> in shared results. Corrected the description of the cloud backup and the export: both include the optional profile display name, which the previous wording said they did not.</td></tr>
-    <tr><td>23 August 2026</td><td>Documented <strong>cloud save</strong>: the optional Google Drive backup, the two non-sensitive Drive scopes it uses, what the backup file contains, and how to unlink, delete it or revoke access. Corrected the permissions and network sections — the released build now declares <code>INTERNET</code> for this feature, where the previous wording said it did not declare it at all.</td></tr>
-    <tr><td>15 August 2026</td><td>Corrected the permissions section: the released build declares <code>VIBRATE</code>, which the previous wording did not mention. Added storage, library, deletion, security, rights and verification detail.</td></tr>
-    <tr><td>15 August 2026</td><td>First published for version 1.0.0.</td></tr>
+    <tr><td data-label="Date">12 November 2026</td><td data-label="Change">For version 1.1.0: added the <code>POST_NOTIFICATIONS</code> and <code>RECEIVE_BOOT_COMPLETED</code> permissions and the optional <strong>daily reminder</strong> they serve; the <strong>home-screen widget</strong>; Google's <strong>Play In-App Review</strong> library; and <strong>challenge links</strong> in shared results. Corrected the description of the cloud backup and the export: both include the optional profile display name, which the previous wording said they did not.</td></tr>
+    <tr><td data-label="Date">23 August 2026</td><td data-label="Change">Documented <strong>cloud save</strong>: the optional Google Drive backup, the two non-sensitive Drive scopes it uses, what the backup file contains, and how to unlink, delete it or revoke access. Corrected the permissions and network sections — the released build now declares <code>INTERNET</code> for this feature, where the previous wording said it did not declare it at all.</td></tr>
+    <tr><td data-label="Date">15 August 2026</td><td data-label="Change">Corrected the permissions section: the released build declares <code>VIBRATE</code>, which the previous wording did not mention. Added storage, library, deletion, security, rights and verification detail.</td></tr>
+    <tr><td data-label="Date">15 August 2026</td><td data-label="Change">First published for version 1.0.0.</td></tr>
   </tbody>
 </table>
 
