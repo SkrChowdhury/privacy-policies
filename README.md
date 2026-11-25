@@ -24,6 +24,7 @@ without taking the policies offline.
 | Onkoo (অংক) | `com.skrchowdhury.onkoo` | `/onkoo/` |
 | Onkoo Kids (অংক কিডস) | `com.skrchowdhury.onkookids` | `/onkoo-kids/` · terms `/onkoo-kids/terms/` |
 | Summa Calculator: Scientific | `com.skrchowdhury.summa` | `/summa/` |
+| প্রস্তুতি (Prostuti) | `com.skrchowdhury.prostuti` | `/prostuti/` |
 
 Base: `https://skrchowdhury.github.io/privacy-policies/`
 
@@ -191,6 +192,50 @@ tools; English only; suitable for everyone, not designed for children.
   or the email address.
 - **Files / share:** none written outside the app. *Copy history as CSV* uses
   the clipboard and the share sheet; *Copy result* uses the clipboard.
+
+### প্রস্তুতি (Prostuti)
+
+Verified on 25 November 2026 against the app's source and its packaged, signed
+release build (`aapt2 dump permissions`, merged release manifest report).
+Version 1.0.0 (versionCode 1). An exam study planner for SSC, HSC, university
+admission, BCS and bank exams; Bangla and English; aimed at ages 13 and up.
+
+- **Release permissions (16 + the generated receiver permission):** `INTERNET`
+  (app; also Google Mobile Ads, notify-kit, openiap, datatransport);
+  `ACCESS_NETWORK_STATE` (Google Mobile Ads, notify-kit, androidx.work,
+  datatransport); `POST_NOTIFICATIONS`, `RECEIVE_BOOT_COMPLETED`,
+  `ACCESS_NOTIFICATION_POLICY` (app; notify-kit); `SCHEDULE_EXACT_ALARM`
+  `maxSdkVersion 33` (app; notify-kit, tsbackgroundfetch); `FOREGROUND_SERVICE`
+  (app; notify-kit, androidx.work); `FOREGROUND_SERVICE_MEDIA_PLAYBACK` (app);
+  `WRITE_EXTERNAL_STORAGE` `maxSdkVersion 28` (app, saving the share card);
+  `WAKE_LOCK` (Google Mobile Ads, notify-kit, androidx.work, tsbackgroundfetch);
+  `VIBRATE` (notify-kit, react-native-haptic-feedback);
+  `com.android.vending.BILLING` (openiap-google via react-native-iap, Play
+  Billing 9.1.0); `AD_ID` and 3× `ACCESS_ADSERVICES_*` (play-services-ads 25.5.0).
+- **Network:** Google AdMob banners (Syllabus, Chapters, Stats, Settings; none
+  for Pro; UMP consent first; max content rating G); Google Play Billing
+  (`prostuti_pro_lifetime`, one-time); the public exam-date Google Sheet as CSV
+  from `docs.google.com` (app start, at most every 6 h; carries nothing);
+  Google Sign-In (play-services-auth) + Drive v3 REST on `www.googleapis.com`,
+  scope `drive.appdata` only, only while Drive backup (Pro, off by default) is
+  used; Google Play In-App Review. No developer server.
+- **Ads / analytics / crash reporting:** AdMob only. The ads SDK brings
+  `play-services-measurement-sdk-api` and datatransport; no Firebase or Google
+  Analytics in the app.
+- **Storage:** MMKV id `prostuti` — `state.v1` (settings, exams, syllabus
+  edits, chapter statuses, revision schedule, plan, routine, sessions, scores,
+  notes, daily progress, exam-day checklist, Pro status with the purchase token,
+  backup settings with the connected Google account's email), `live.v1` (sheet
+  cache), `focus.active`, `backup.meta` (Drive file id). SharedPreferences
+  `prostuti_dnd` holds the previous Do Not Disturb mode during a session.
+  `allowBackup="false"`.
+- **Drive backup file:** `prostuti-backup.json` in the app data folder — study
+  data only (settings, exams, edits, statuses, revision, routine, sessions,
+  scores, notes, daily progress) plus app version and time; never the Pro status,
+  the token or the email. Manual, nightly (~02:00 on Wi-Fi or charging) and after
+  a session if > 6 h old. Restore needs no Pro.
+- **Files / share:** the progress card goes to the share sheet, or to the
+  gallery album *Prostuti* when the user taps save.
 
 ## Page structure
 
