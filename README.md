@@ -24,7 +24,7 @@ without taking the policies offline.
 | Onkoo (অংক) | `com.skrchowdhury.onkoo` | `/onkoo/` |
 | Onkoo Kids (অংক কিডস) | `com.skrchowdhury.onkookids` | `/onkoo-kids/` · terms `/onkoo-kids/terms/` |
 | Summa Calculator: Scientific | `com.skrchowdhury.summa` | `/summa/` |
-| প্রস্তুতি (Prostuti) | `com.skrchowdhury.prostuti` | `/prostuti/` |
+| প্রস্তুতি (Prostuti) | `com.skrchowdhury.prostuti` | `/prostuti/` · terms `/prostuti/terms/` |
 
 Base: `https://skrchowdhury.github.io/privacy-policies/`
 
