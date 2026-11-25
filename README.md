@@ -25,6 +25,7 @@ without taking the policies offline.
 | Onkoo Kids (অংক কিডস) | `com.skrchowdhury.onkookids` | `/onkoo-kids/` · terms `/onkoo-kids/terms/` |
 | Summa Calculator: Scientific | `com.skrchowdhury.summa` | `/summa/` |
 | প্রস্তুতি (Prostuti) | `com.skrchowdhury.prostuti` | `/prostuti/` · terms `/prostuti/terms/` |
+| চা দোকান (Cha Dokan) | `com.skrchowdhury.chadokan` | `/cha-dokan/` |
 
 Base: `https://skrchowdhury.github.io/privacy-policies/`
 
@@ -237,6 +238,38 @@ admission, BCS and bank exams; Bangla and English; aimed at ages 13 and up.
   a session if > 6 h old. Restore needs no Pro.
 - **Files / share:** the progress card goes to the share sheet, or to the
   gallery album *Prostuti* when the user taps save.
+
+### চা দোকান (Cha Dokan)
+
+Verified on 26 November 2026 against the app's source and its packaged release
+build (`aapt2 dump permissions`, merged release manifest report). Version 1.0.0
+(versionCode 1). A Bangla tea-stall idle game; Play target audience 13+.
+
+- **Release permissions (9 + the generated receiver permission):** `INTERNET`,
+  `POST_NOTIFICATIONS` (app; also Notifee); `VIBRATE`
+  (react-native-haptic-feedback, Notifee); `RECEIVE_BOOT_COMPLETED`,
+  `WAKE_LOCK`, `FOREGROUND_SERVICE`, `ACCESS_NETWORK_STATE` (androidx.work
+  2.8.0, Notifee); `ACCESS_NOTIFICATION_POLICY`,
+  `BROADCAST_CLOSE_SYSTEM_DIALOGS` (maxSdk 30) (Notifee). Notifee's
+  `SCHEDULE_EXACT_ALARM` is stripped with `tools:node="remove"` (the daily
+  notification is an inexact timestamp trigger).
+- **Network:** one host — `api.open-meteo.com`, current precipitation and
+  weather code at Dhaka's fixed coordinates (23.81, 90.41), at start and then
+  hourly while open, real-time mode only; carries nothing else. The About page's
+  LinkedIn and portfolio links open in the browser on a tap. No developer server.
+- **Ads / purchases / analytics / crash reporting / Play Games:** none in 1.0.0
+  (ads, billing and Play Games are behind fakes until a later version; the page
+  says so in its "Future versions" section). Play In-App Review is bundled but
+  never called.
+- **Storage:** MMKV id `chadokan` — `chaDokan.save.v1` (the game and its
+  settings), `chaDokan.weather` (last rain reading and its time),
+  `chaDokan.fakeCloud` (a spare copy of the save for the future cloud save; local
+  only). No text input anywhere in the app.
+- **`android:allowBackup="true"`** with `backup_rules.xml` /
+  `data_extraction_rules.xml` including only `mmkv/chadokan` (+ `.crc`), for
+  cloud backup and device transfer.
+- **Notifications:** local (Notifee), at most one a day, never 22:00–08:00,
+  offered by an in-game prompt after day 2; Android's prompt only on yes.
 
 ## Page structure
 
