@@ -205,7 +205,8 @@ admission, BCS and bank exams; Bangla and English; aimed at ages 13 and up.
   `ACCESS_NETWORK_STATE` (Google Mobile Ads, notify-kit, androidx.work,
   datatransport); `POST_NOTIFICATIONS`, `RECEIVE_BOOT_COMPLETED`,
   `ACCESS_NOTIFICATION_POLICY` (app; notify-kit); `SCHEDULE_EXACT_ALARM`
-  `maxSdkVersion 33` (app; notify-kit, tsbackgroundfetch); `FOREGROUND_SERVICE`
+  (app; notify-kit, tsbackgroundfetch — whose `maxSdkVersion 33` the app
+  removes with `tools:remove`, so it applies on every version); `FOREGROUND_SERVICE`
   (app; notify-kit, androidx.work); `FOREGROUND_SERVICE_MEDIA_PLAYBACK` (app);
   `WRITE_EXTERNAL_STORAGE` `maxSdkVersion 28` (app, saving the share card);
   `WAKE_LOCK` (Google Mobile Ads, notify-kit, androidx.work, tsbackgroundfetch);

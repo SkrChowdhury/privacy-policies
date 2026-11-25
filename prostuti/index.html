@@ -331,10 +331,11 @@ it in the app. They use no network.</p>
     <tr><td><code>POST_NOTIFICATIONS</code></td><td>The app; the notification
       library</td><td>Showing the reminders you turn on and the focus-session
       notification.</td></tr>
-    <tr><td><code>SCHEDULE_EXACT_ALARM</code> (Android 13 and older only)</td><td>The
-      app; the notification and background-task libraries</td><td>Ringing a
-      routine reminder at the exact minute. On newer Android the app does not
-      request it and uses ordinary alarms.</td></tr>
+    <tr><td><code>SCHEDULE_EXACT_ALARM</code></td><td>The app; the notification
+      and background-task libraries</td><td>Ringing a routine reminder at the exact
+      minute. On Android 14 and newer it stays off until you allow <em>Alarms
+      &amp; reminders</em> from the app's permission screen; without it, reminders
+      use ordinary alarms and may arrive a little late.</td></tr>
     <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>The app; the notification
       library</td><td>Re-scheduling reminders, the widgets' midnight refresh and
       the nightly backup after a restart.</td></tr>
@@ -486,6 +487,8 @@ say so before the version that did it shipped.</p>
   <thead><tr><th>Date</th><th>Change</th></tr></thead>
   <tbody>
     <tr><td>25 November 2026</td><td>First published for version 1.0.0.</td></tr>
+    <tr><td>25 November 2026</td><td>Exact-alarm permission corrected: the
+      released build requests it on every Android version (§10).</td></tr>
   </tbody>
 </table>
 
