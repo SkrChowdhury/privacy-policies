@@ -243,7 +243,7 @@ admission, BCS and bank exams; Bangla and English; aimed at ages 13 and up.
 
 Verified on 26 November 2026 against the app's source and its packaged release
 build (`aapt2 dump permissions`, merged release manifest report, release
-dependency tree). Version 1.0.1 (versionCode 2). A Bangla tea-stall idle game; Play target audience 13+.
+dependency tree). Version 1.0.2 (versionCode 3). A Bangla tea-stall idle game; Play target audience 13+.
 
 - **Release permissions (10 + the generated receiver permission):** `com.android.vending.BILLING`
   (openiap-google / Play Billing 9.1.0, from 1.0.1); `INTERNET`,
@@ -264,13 +264,23 @@ dependency tree). Version 1.0.1 (versionCode 2). A Bangla tea-stall idle game; P
   `gems_550`, `gems_1200` (consumable), `owner_pack` (one-time), `malik_pass_monthly`
   (subscription). Verified on the phone, no developer server. Restore at launch
   and on return from background; a refunded pack or ended pass is revoked.
-- **Ads / analytics / crash reporting / Play Games:** none (ads and Play Games are
-  behind fakes until a later version). Play In-App Review is bundled but never called.
+- **Play Games (from 1.0.2, versionCode 3):** Play Games Services v2 22.1.0
+  (adds no permission; project 11088256842, Saved Games on). Automatic sign-in
+  at launch; Play's sign-in sheet only when the leaderboard is opened. Three
+  leaderboards — total earnings (thousands of ৳), weekly earnings (Dhaka week,
+  Sat–Fri), customers served — submitted on background (at most every 10 min),
+  after a purchase and on opening the board; top 10 read with gamer names and
+  player IDs. Cloud save: the whole save as snapshot `chadokan-main`, same
+  cadence; on first start a further-along cloud save is offered, never taken
+  silently.
+- **Ads / analytics / crash reporting:** none (ads are behind a fake until a
+  later version). Play In-App Review is bundled but never called.
 - **Storage:** MMKV id `chadokan` — `chaDokan.save.v1` (the game and its
   settings; from 1.0.1 also `owner`/`pass` flags, the last 30 credited gem-pack
   purchase tokens `iapTokens`, the pass's last daily-gems date `passDay`), `chaDokan.weather` (last rain reading and its time),
-  `chaDokan.fakeCloud` (a spare copy of the save for the future cloud save; local
-  only). No text input anywhere in the app.
+  `chaDokan.fakeCloud` (1.0.1's local stand-in for the cloud save; no longer
+  written once Play Games is configured, an old copy stays local). No text input
+  anywhere in the app.
 - **`android:allowBackup="true"`** with `backup_rules.xml` /
   `data_extraction_rules.xml` including only `mmkv/chadokan` (+ `.crc`), for
   cloud backup and device transfer.

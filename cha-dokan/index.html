@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy · চা দোকান (Cha Dokan)</title>
-<meta name="description" content="চা দোকান collects nothing and has no server: no account, no ads, no analytics. Optional purchases go through Google Play. The game is saved on your phone; the only other network request asks Open-Meteo whether it is raining in Dhaka.">
+<meta name="description" content="চা দোকান's developer collects nothing and has no server: no ads, no analytics. Optional Google Play Games sign-in puts your earnings on leaderboards and keeps a cloud save in your own Google account; optional purchases go through Google Play. The only other network request asks Open-Meteo whether it is raining in Dhaka.">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#fbfcfb" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0b0e0d" media="(prefers-color-scheme: dark)">
@@ -25,7 +25,7 @@
 </header>
 
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated 26 November 2026 · version 1.0.1</p>
+<p class="updated">Last updated 26 November 2026 · version 1.0.2</p>
 
 <dl class="meta">
   <div><dt>Application</dt><dd>চা দোকান — Cha Dokan</dd></div>
@@ -35,10 +35,17 @@
 </dl>
 
 <div class="callout">
-  <p><strong>The short version:</strong> the game collects nothing about you.
-  There is no server behind it, no account, no ads, no analytics and no crash
+  <p><strong>The short version:</strong> the developer collects nothing about
+  you. There is no server behind the game, no ads, no analytics and no crash
   reporting. Your tea stall — its money, stalls, workers
   and settings — is saved on your phone and nowhere the developer can reach.</p>
+
+  <p><strong>Leaderboards and cloud save go through Google Play Games.</strong>
+  From version 1.0.2, if you have a Google Play Games profile, the game can sign
+  you in to Play Games, post your earnings and customers served to three Play
+  Games leaderboards, and keep a copy of your game as a Play Games saved game in
+  <em>your own</em> Google account. That goes to Google, not to the developer, and
+  the game plays the same without it (<a href="#pgs">§6</a>).</p>
 
   <p><strong>Optional purchases go through Google Play.</strong> From version
   1.0.1 the shop sells gem packs, a one-time shop-owner pack and a monthly
@@ -62,19 +69,18 @@
 <div class="glance">
 <table>
   <tbody>
-    <tr><th>Personal data collected</th><td>None</td></tr>
-    <tr><th>Data shared with third parties</th><td>None</td></tr>
-    <tr><th>Data sent to the developer</th><td>None — there is no server</td></tr>
-    <tr><th>Data transmitted off the device</th><td>None by the game — the weather request carries only Dhaka's fixed coordinates; purchases are made in Google Play's own sheet</td></tr>
-    <tr><th>Accounts or sign-in</th><td>None</td></tr>
-    <tr><th>Online leaderboards</th><td>None</td></tr>
+    <tr><th>Data collected by the developer</th><td>None — there is no developer server</td></tr>
+    <tr><th>Shared through Google Play Games</th><td>Only if you are signed in to Play Games: your earnings and customers served on three leaderboards, and your saved game in your own Google account</td></tr>
+        <tr><th>Data transmitted off the device</th><td>To Google only: Play Games scores and the cloud save while you are signed in, and purchases in Google Play's own sheet. The weather request carries only Dhaka's fixed coordinates</td></tr>
+    <tr><th>Accounts or sign-in</th><td>No Cha Dokan account. Optional Google Play Games sign-in, for the leaderboards and cloud save</td></tr>
+    <tr><th>Online leaderboards</th><td>Google Play Games: all-time earnings, this week's earnings, customers served — only if you are signed in</td></tr>
     <tr><th>Advertising or advertising ID</th><td>None</td></tr>
     <tr><th>Analytics, telemetry or crash reporting</th><td>None</td></tr>
     <tr><th>In-app purchases</th><td>Optional, through Google Play Billing: gem packs, the shop-owner pack, the monthly মালিক পাস</td></tr>
     <tr><th>Chat or user-generated content</th><td>None — the game has no text field at all</td></tr>
     <tr><th>Android permissions declared</th><td><code>INTERNET</code>, <code>POST_NOTIFICATIONS</code>, <code>VIBRATE</code>, <code>BILLING</code> and six that its notification and scheduling libraries merge in — all listed in <a href="#permissions">§3</a></td></tr>
     <tr><th>Notifications</th><td>Optional, at most one a day, made on your phone — no push service</td></tr>
-    <tr><th>Works in airplane mode</th><td>Completely — only the live Dhaka weather and new purchases wait for a connection</td></tr>
+    <tr><th>Works in airplane mode</th><td>Completely — only the live Dhaka weather, the leaderboards, the cloud save and new purchases wait for a connection</td></tr>
     <tr><th>Android Auto Backup</th><td>Enabled for the game's save only — to your own Google account</td></tr>
     <tr><th>Age suitability</th><td>Ages 13 and up</td></tr>
   </tbody>
@@ -89,6 +95,7 @@
     <li><a href="#permissions">Permissions</a></li>
     <li><a href="#network">Network access</a></li>
     <li><a href="#purchases">Purchases</a></li>
+    <li><a href="#pgs">Google Play Games: leaderboards and cloud save</a></li>
     <li><a href="#notifications">Notifications</a></li>
     <li><a href="#sdks">Libraries in the game</a></li>
     <li><a href="#backup">Android Auto Backup</a></li>
@@ -105,16 +112,20 @@
 
 <h2 id="collect">1. What the game collects</h2>
 
-<p><strong>Nothing.</strong> Nothing is collected because there is nowhere for it
-to go: there is no server behind this game, no account, no online leaderboard and
-no advertising.</p>
+<p><strong>Nothing reaches the developer.</strong> There is no server behind this
+game, no Cha Dokan account and no advertising, so there is nowhere for anything to
+go. The one thing that leaves the phone with your game in it is optional and goes
+to Google: if you are signed in to Google Play Games, your scores and a cloud copy
+of your save, described in <a href="#pgs">§6</a>.</p>
 
 <p>Specifically, the game never collects, requests or receives:</p>
 
 <ul>
   <li>your name, email address, phone number or any other contact detail — the
-  game has no place to type one</li>
-  <li>your progress, earnings, play times or how often you play</li>
+  game has no place to type one (Play Games shows other players' gamer names on
+  the leaderboard; it never gives the game an email address)</li>
+  <li>your play times or how often you play — and your progress and earnings
+  reach no one but Google Play Games, and only while you are signed in</li>
   <li>your location, at any precision — the weather is always Dhaka's, from
   fixed coordinates built into the app</li>
   <li>your device identifiers, Android ID or advertising ID</li>
@@ -124,7 +135,7 @@ no advertising.</p>
 
 <p>Every customer, order, price, story and festival lives inside the app package
 on your phone. Nothing about the game is fetched, and nothing about your play is
-reported.</p>
+reported to the developer.</p>
 
 <h2 id="storage">2. What is stored on your device</h2>
 
@@ -165,18 +176,18 @@ phone:</p>
       those stay with Google</td>
     </tr>
     <tr>
-      <td data-label="What is saved">A spare copy of the game</td>
-      <td data-label="Detail">A second copy of the save, kept for a cloud save planned for a later
-      version (see <a href="#future">§14</a>). In this version it stays in the
-      same private storage and never leaves the phone</td>
+      <td data-label="What is saved">Play Games bookkeeping</td>
+      <td data-label="Detail">When the game last uploaded its cloud save to Play Games, and this
+      week's earnings for the weekly leaderboard (see <a href="#pgs">§6</a>)</td>
     </tr>
   </tbody>
 </table>
 
 <p>This data is readable only by this app, and it is removed when you clear the
 app's data in Android Settings or uninstall the game. <strong>Uninstalling deletes
-all of it</strong> from the phone; the only other copy is Android's own backup
-in your Google account, described in <a href="#backup">§8</a>.</p>
+all of it</strong> from the phone; the only other copies are in your own Google
+account — Android's backup (<a href="#backup">§9</a>) and, if you signed in to
+Play Games, the cloud save (<a href="#pgs">§6</a>).</p>
 
 <h2 id="permissions">3. Permissions</h2>
 
@@ -190,12 +201,13 @@ them, so the list matches what <code>aapt2</code> prints for the build:</p>
     <tr>
       <td data-label="Permission"><code>INTERNET</code></td>
       <td data-label="Comes from">The game</td>
-      <td data-label="Why it is there">The Dhaka weather request in <a href="#network">§4</a>, and nothing else.</td>
+      <td data-label="Why it is there">The Dhaka weather request in <a href="#network">§4</a>. (Play Games and
+      Play Billing talk to Google through the Google Play apps on the phone.)</td>
     </tr>
     <tr>
       <td data-label="Permission"><code>POST_NOTIFICATIONS</code></td>
       <td data-label="Comes from">The game</td>
-      <td data-label="Why it is there">The optional daily notification in <a href="#notifications">§6</a>.
+      <td data-label="Why it is there">The optional daily notification in <a href="#notifications">§7</a>.
       Android asks you for it only if you say yes when the game offers
       notifications; if you refuse, there are none.</td>
     </tr>
@@ -259,7 +271,7 @@ phone, exact-alarm or advertising-ID permission.</p>
 
 <h2 id="network">4. Network access</h2>
 
-<p>The game makes <strong>one kind of request</strong>, and only while it is
+<p>The game itself makes <strong>one kind of request</strong>, and only while it is
 open: when it starts and then about once an hour, it asks
 <a href="https://open-meteo.com/">Open-Meteo</a> for the current rain at
 latitude 23.81, longitude 90.41 — a fixed point in Dhaka, the same for every
@@ -278,9 +290,12 @@ street simply uses the season's usual chance of rain.</p>
 website. They open in your browser only when you tap them, and the game sends
 nothing with them.</p>
 
-<p>There is no background sync, no periodic upload and no telemetry channel. Put
-the phone in airplane mode and play: everything works, including the money your
-stall earns while you are away.</p>
+<p>Everything else goes to Google through the Google Play apps on the phone:
+purchases (<a href="#purchases">§5</a>) and, if you are signed in to Play Games,
+the leaderboards and the cloud save (<a href="#pgs">§6</a>). There is no
+telemetry channel and nothing is sent to the developer. Put the phone in airplane
+mode and play: everything works, including the money your stall earns while you
+are away; the leaderboards and the cloud save simply wait.</p>
 
 <h2 id="purchases">5. Purchases</h2>
 
@@ -303,7 +318,41 @@ Subscriptions</em>). What Google Play records about your purchases is held
 under <a href="https://policies.google.com/privacy">Google's privacy
 policy</a>.</p>
 
-<h2 id="notifications">6. Notifications</h2>
+<h2 id="pgs">6. Google Play Games: leaderboards and cloud save</h2>
+
+<p>Play Games is optional; the whole game works without it. If you have a Google
+Play Games profile, Play Games may sign you in automatically when the game opens.
+If you are not signed in, the game asks Play Games to show its own sign-in sheet
+only when you open the leaderboard. While you are signed in:</p>
+
+<ul>
+  <li><strong>Your profile.</strong> Google gives the game your Play Games player
+  ID and gamer name, so the leaderboard can show your row. No email address and
+  no contacts.</li>
+  <li><strong>Leaderboards.</strong> The game posts three numbers to Play Games
+  leaderboards: total earnings (in thousands of taka), this week's earnings
+  (the Dhaka week, Saturday to Friday) and happy customers served. It reads the
+  gamer names and scores at the top of each board to draw the leaderboard screen.
+  Who can see your scores depends on your Play Games profile's visibility, which
+  you set in Play Games. Scores are posted when you leave the game and when you
+  open the leaderboard.</li>
+  <li><strong>Cloud save.</strong> The save described in <a href="#storage">§2</a>
+  — including whether you own the shop-owner pack or the মালিক পাস and the recent
+  gem-pack purchase tokens — is stored as a Play Games <em>saved game</em> in your
+  own Google account, at most every ten minutes when you leave the game and right
+  after a purchase. On a new phone, if the cloud save has come further than the
+  game on the phone, the game asks before it uses it.</li>
+</ul>
+
+<p>Play Games data is held by Google under the
+<a href="https://policies.google.com/privacy">Google Privacy Policy</a>; the
+developer has no access to it beyond the public leaderboards every player sees.
+To stop it, sign out of Play Games or don't sign in. You can delete the game's
+scores and saved game from your
+<a href="https://play.google.com/games/profile">Play Games profile</a> or your
+<a href="https://myaccount.google.com">Google Account</a>.</p>
+
+<h2 id="notifications">7. Notifications</h2>
 
 <p>After your first couple of days at the stall, the game asks — in its own words, inside the
 game — whether you would like a note when something is happening at your stall.
@@ -315,7 +364,7 @@ out of the night hours (22:00 to 08:00). There is no push service and no server.
 You can turn them off in the game's Settings, or in Android's settings for the
 app, at any time.</p>
 
-<h2 id="sdks">7. Libraries in the game</h2>
+<h2 id="sdks">8. Libraries in the game</h2>
 
 <p>The game is built with React Native and bundles open-source libraries for
 drawing, animation, gestures, navigation, local storage (MMKV), sound, vibration,
@@ -332,13 +381,17 @@ through the open-source react-native-iap (openiap) library, for the purchases in
 <a href="#purchases">§5</a>. openiap also brings Google's Play Integrity client,
 which the game never calls.</p>
 
+<p>From version 1.0.2 it includes <strong>Google Play Games Services</strong>
+(v2, 22.1.0) for the leaderboards and cloud save in <a href="#pgs">§6</a>.</p>
+
 <p>There is <strong>no</strong> advertising network, analytics SDK, attribution
 SDK, crash reporter, A/B testing framework, push-notification service or
 social-media SDK in this game. Apart from the weather request in
-<a href="#network">§4</a> and Google Play Billing in <a href="#purchases">§5</a>,
-no bundled library contacts a server.</p>
+<a href="#network">§4</a>, Google Play Billing in <a href="#purchases">§5</a> and
+Google Play Games in <a href="#pgs">§6</a>, no bundled library contacts a
+server.</p>
 
-<h2 id="backup">8. Android Auto Backup</h2>
+<h2 id="backup">9. Android Auto Backup</h2>
 
 <p>The game allows Android's built-in Auto Backup. That is an operating-system
 feature rather than part of this app: when it is on for your phone, Android may
@@ -356,7 +409,7 @@ developer has no access to it and receives no copy of it. To turn it off, use
 Android's own setting — typically <em>Settings &rsaquo; Google &rsaquo;
 Backup</em>.</p>
 
-<h2 id="deletion">9. Retention and deletion</h2>
+<h2 id="deletion">10. Retention and deletion</h2>
 
 <p>Data is kept on your device for as long as you keep it. You are in full
 control of it:</p>
@@ -367,59 +420,66 @@ control of it:</p>
   <li><strong>Uninstalling</strong> the game removes all of it from the phone</li>
   <li>An Android backup in your Google account is managed — and can be deleted —
   from your Google account's backup settings</li>
+  <li>Play Games scores and the cloud save are deleted from your
+  <a href="https://play.google.com/games/profile">Play Games profile</a> (the
+  game's entry there) or your Google Account</li>
 </ul>
 
-<p>There is no deletion request to submit, because no copy exists anywhere the
-developer can reach.</p>
+<p>There is no deletion request to submit to the developer, because no copy exists
+anywhere the developer can reach.</p>
 
-<h2 id="security">10. Security</h2>
+<h2 id="security">11. Security</h2>
 
 <p>On the device, your data is protected by the Android application sandbox: the
 game's private storage is readable only by this app, and only on an unmodified
 device. There is no additional encryption layer, and none is claimed. The weather
-request uses HTTPS.</p>
+request uses HTTPS; Play Games and Play Billing use Google's own encrypted
+connections.</p>
 
 <p>The strongest protection here is structural: there is no server holding your
 data, so there is no breach of the developer's that could expose it.</p>
 
-<h2 id="rights">11. Your rights</h2>
+<h2 id="rights">12. Your rights</h2>
 
 <p>Data-protection laws such as the GDPR give you rights of access, correction,
 export and erasure over personal data a service holds about you. Those rights are
-satisfied here in the simplest possible way: no personal data is collected, so
-there is no profile to access, nothing to correct and nothing for anyone else to
-erase.</p>
+satisfied here in the simplest possible way: the developer collects no personal
+data, so there is no profile to access, correct or erase. What Google Play Games
+and Google Play hold about you is yours to see and delete in your Google Account,
+under Google's privacy policy.</p>
 
-<h2 id="verify">12. Verifying these claims</h2>
+<h2 id="verify">13. Verifying these claims</h2>
 
 <ul>
   <li>Open <em>Settings &rsaquo; Apps &rsaquo; চা দোকান &rsaquo;
   Permissions</em>. Notifications is the only one shown, and it is off until you
   agree to it; the others are install-time and are not shown as toggles.</li>
-  <li>Turn on airplane mode and play. Nothing stops working.</li>
+  <li>Turn on airplane mode and play. Nothing stops working; the leaderboard shows
+  a sample board, marked as one, until it can reach Play Games again.</li>
   <li>With the Android SDK installed,
   <code>aapt2 dump permissions app-release.apk</code> prints the build's complete
   permission list — the ten in <a href="#permissions">§3</a> plus the
   signature-level entry described there, and nothing else.</li>
 </ul>
 
-<h2 id="children">13. Children</h2>
+<h2 id="children">14. Children</h2>
 
 <p>চা দোকান is made for players aged 13 and up; it is not designed for children
 and is not part of Google Play's Families programme. It collects no data from
-anyone, children included: it shows no ads and has no chat, no messaging, no
-online leaderboard and no user-generated content. Its optional purchases go
-through Google Play, whose own purchase controls (such as requiring
-authentication for purchases) apply.</p>
+anyone, children included: it shows no ads and has no chat, no messaging and no
+user-generated content. Its optional leaderboards and cloud save go through
+Google Play Games, and its optional purchases through Google Play, whose own
+controls (such as Play Games profile visibility and requiring authentication for
+purchases) apply.</p>
 
-<h2 id="future">14. Future versions</h2>
+<h2 id="future">15. Future versions</h2>
 
-<p>Later versions may add optional ads (Google AdMob) and leaderboards with a
-cloud save (Google Play Games). Neither is in this version. Before a version with any of them ships, this page will
-be updated to say exactly what each one sends, to whom, and how to switch it off —
-and the Google Play <em>Data safety</em> declaration with it.</p>
+<p>A later version may add optional ads (Google AdMob). They are not in this
+version. Before a version with them ships, this page will be updated to say
+exactly what they send, to whom, and how to switch them off — and the Google Play
+<em>Data safety</em> declaration with it.</p>
 
-<h2 id="changes">15. Changes to this policy</h2>
+<h2 id="changes">16. Changes to this policy</h2>
 
 <p>Any revision will be posted on this page with a new date at the top. If the
 game ever did begin collecting something, this page would say so before the
@@ -428,12 +488,13 @@ version that did it shipped.</p>
 <table>
   <thead><tr><th>Date</th><th>Change</th></tr></thead>
   <tbody>
+    <tr><td data-label="Date">26 November 2026</td><td data-label="Change">For version 1.0.2: optional <strong>Google Play Games</strong> sign-in, three leaderboards and a cloud save in your own Google account (§6).</td></tr>
     <tr><td data-label="Date">26 November 2026</td><td data-label="Change">For version 1.0.1: optional purchases through <strong>Google Play Billing</strong> (§5), the <code>BILLING</code> permission, and what the game keeps about purchases on the phone.</td></tr>
     <tr><td data-label="Date">26 November 2026</td><td data-label="Change">First published for version 1.0.0.</td></tr>
   </tbody>
 </table>
 
-<h2 id="contact">16. Contact</h2>
+<h2 id="contact">17. Contact</h2>
 
 <p>Questions about this policy or the game:
 <a href="mailto:emailofs2o@gmail.com">emailofs2o@gmail.com</a></p>
