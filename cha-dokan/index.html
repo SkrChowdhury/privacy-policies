@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy · চা দোকান (Cha Dokan)</title>
-<meta name="description" content="চা দোকান collects nothing and has no server: no account, no ads, no purchases, no analytics. The game is saved on your phone; the only network request asks Open-Meteo whether it is raining in Dhaka.">
+<meta name="description" content="চা দোকান collects nothing and has no server: no account, no ads, no analytics. Optional purchases go through Google Play. The game is saved on your phone; the only other network request asks Open-Meteo whether it is raining in Dhaka.">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#fbfcfb" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0b0e0d" media="(prefers-color-scheme: dark)">
@@ -25,7 +25,7 @@
 </header>
 
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated 26 November 2026</p>
+<p class="updated">Last updated 26 November 2026 · version 1.0.1</p>
 
 <dl class="meta">
   <div><dt>Application</dt><dd>চা দোকান — Cha Dokan</dd></div>
@@ -36,9 +36,15 @@
 
 <div class="callout">
   <p><strong>The short version:</strong> the game collects nothing about you.
-  There is no server behind it, no account, no ads, no in-app purchases, no
-  analytics and no crash reporting. Your tea stall — its money, stalls, workers
+  There is no server behind it, no account, no ads, no analytics and no crash
+  reporting. Your tea stall — its money, stalls, workers
   and settings — is saved on your phone and nowhere the developer can reach.</p>
+
+  <p><strong>Optional purchases go through Google Play.</strong> From version
+  1.0.1 the shop sells gem packs, a one-time shop-owner pack and a monthly
+  মালিক পাস through Google Play Billing. Google handles the payment; the game
+  only learns what you bought, keeps that on your phone and sends it nowhere.
+  Everything in the game can still be earned by playing.</p>
 
   <p><strong>One small network request:</strong> about once an hour while you
   play, the game asks the free weather service <strong>Open-Meteo</strong>
@@ -59,16 +65,16 @@
     <tr><th>Personal data collected</th><td>None</td></tr>
     <tr><th>Data shared with third parties</th><td>None</td></tr>
     <tr><th>Data sent to the developer</th><td>None — there is no server</td></tr>
-    <tr><th>Data transmitted off the device</th><td>None — the weather request carries only Dhaka's fixed coordinates</td></tr>
+    <tr><th>Data transmitted off the device</th><td>None by the game — the weather request carries only Dhaka's fixed coordinates; purchases are made in Google Play's own sheet</td></tr>
     <tr><th>Accounts or sign-in</th><td>None</td></tr>
     <tr><th>Online leaderboards</th><td>None</td></tr>
     <tr><th>Advertising or advertising ID</th><td>None</td></tr>
     <tr><th>Analytics, telemetry or crash reporting</th><td>None</td></tr>
-    <tr><th>In-app purchases</th><td>None</td></tr>
+    <tr><th>In-app purchases</th><td>Optional, through Google Play Billing: gem packs, the shop-owner pack, the monthly মালিক পাস</td></tr>
     <tr><th>Chat or user-generated content</th><td>None — the game has no text field at all</td></tr>
-    <tr><th>Android permissions declared</th><td><code>INTERNET</code>, <code>POST_NOTIFICATIONS</code>, <code>VIBRATE</code> and six that its notification and scheduling libraries merge in — all listed in <a href="#permissions">§3</a></td></tr>
+    <tr><th>Android permissions declared</th><td><code>INTERNET</code>, <code>POST_NOTIFICATIONS</code>, <code>VIBRATE</code>, <code>BILLING</code> and six that its notification and scheduling libraries merge in — all listed in <a href="#permissions">§3</a></td></tr>
     <tr><th>Notifications</th><td>Optional, at most one a day, made on your phone — no push service</td></tr>
-    <tr><th>Works in airplane mode</th><td>Completely — only the live Dhaka weather is missing</td></tr>
+    <tr><th>Works in airplane mode</th><td>Completely — only the live Dhaka weather and new purchases wait for a connection</td></tr>
     <tr><th>Android Auto Backup</th><td>Enabled for the game's save only — to your own Google account</td></tr>
     <tr><th>Age suitability</th><td>Ages 13 and up</td></tr>
   </tbody>
@@ -82,6 +88,7 @@
     <li><a href="#storage">What is stored on your device</a></li>
     <li><a href="#permissions">Permissions</a></li>
     <li><a href="#network">Network access</a></li>
+    <li><a href="#purchases">Purchases</a></li>
     <li><a href="#notifications">Notifications</a></li>
     <li><a href="#sdks">Libraries in the game</a></li>
     <li><a href="#backup">Android Auto Backup</a></li>
@@ -150,9 +157,17 @@ phone:</p>
       when that was checked</td>
     </tr>
     <tr>
+      <td data-label="What is saved">Purchases</td>
+      <td data-label="Detail">Whether you own the shop-owner pack and whether the মালিক পাস is
+      running (both re-checked with Google Play each time the game opens), the
+      purchase tokens of the last gem packs credited (so a pack is never counted
+      twice), and the date the pass last gave its daily gems. No payment details:
+      those stay with Google</td>
+    </tr>
+    <tr>
       <td data-label="What is saved">A spare copy of the game</td>
       <td data-label="Detail">A second copy of the save, kept for a cloud save planned for a later
-      version (see <a href="#future">§13</a>). In this version it stays in the
+      version (see <a href="#future">§14</a>). In this version it stays in the
       same private storage and never leaves the phone</td>
     </tr>
   </tbody>
@@ -161,7 +176,7 @@ phone:</p>
 <p>This data is readable only by this app, and it is removed when you clear the
 app's data in Android Settings or uninstall the game. <strong>Uninstalling deletes
 all of it</strong> from the phone; the only other copy is Android's own backup
-in your Google account, described in <a href="#backup">§7</a>.</p>
+in your Google account, described in <a href="#backup">§8</a>.</p>
 
 <h2 id="permissions">3. Permissions</h2>
 
@@ -180,9 +195,15 @@ them, so the list matches what <code>aapt2</code> prints for the build:</p>
     <tr>
       <td data-label="Permission"><code>POST_NOTIFICATIONS</code></td>
       <td data-label="Comes from">The game</td>
-      <td data-label="Why it is there">The optional daily notification in <a href="#notifications">§5</a>.
+      <td data-label="Why it is there">The optional daily notification in <a href="#notifications">§6</a>.
       Android asks you for it only if you say yes when the game offers
       notifications; if you refuse, there are none.</td>
+    </tr>
+    <tr>
+      <td data-label="Permission"><code>com.android.vending.BILLING</code></td>
+      <td data-label="Comes from">Google Play Billing 9.1.0 (through react-native-iap / openiap)</td>
+      <td data-label="Why it is there">Lets the game open Google Play's purchase sheet and ask Play what you
+      have bought (from version 1.0.1). Grants access to no personal information.</td>
     </tr>
     <tr>
       <td data-label="Permission"><code>VIBRATE</code></td>
@@ -261,7 +282,28 @@ nothing with them.</p>
 the phone in airplane mode and play: everything works, including the money your
 stall earns while you are away.</p>
 
-<h2 id="notifications">5. Notifications</h2>
+<h2 id="purchases">5. Purchases</h2>
+
+<p>The shop's gem packs, the one-time <strong>দোকান মালিক প্যাক</strong> and the
+monthly <strong>মালিক পাস</strong> are sold through <strong>Google Play
+Billing</strong>. Prices are shown as Google Play gives them. When you buy,
+Google Play's own sheet takes the payment; the game never sees your card,
+mobile-wallet or account details.</p>
+
+<p>The game talks to Google Play — the Play Store app on your phone — when it
+opens, when it comes back from the background (to see what you own, so a
+refunded pack or an ended pass is taken back) and when you buy. Google Play
+tells it which product was bought and gives a purchase token; the game keeps
+that on the phone (see <a href="#storage">§2</a>) and sends it to no server.
+Purchases are checked on the phone; there is no developer server.</p>
+
+<p>The মালিক পাস renews every month until you cancel it in Google Play
+(<em>Play Store &rsaquo; Payments &amp; subscriptions &rsaquo;
+Subscriptions</em>). What Google Play records about your purchases is held
+under <a href="https://policies.google.com/privacy">Google's privacy
+policy</a>.</p>
+
+<h2 id="notifications">6. Notifications</h2>
 
 <p>After your first couple of days at the stall, the game asks — in its own words, inside the
 game — whether you would like a note when something is happening at your stall.
@@ -273,7 +315,7 @@ out of the night hours (22:00 to 08:00). There is no push service and no server.
 You can turn them off in the game's Settings, or in Android's settings for the
 app, at any time.</p>
 
-<h2 id="sdks">6. Libraries in the game</h2>
+<h2 id="sdks">7. Libraries in the game</h2>
 
 <p>The game is built with React Native and bundles open-source libraries for
 drawing, animation, gestures, navigation, local storage (MMKV), sound, vibration,
@@ -285,12 +327,18 @@ typefaces.</p>
 <p>It also bundles Google's <strong>Play In-App Review</strong> library, which
 this version never calls: no rating sheet is shown.</p>
 
+<p>From version 1.0.1 it includes <strong>Google Play Billing</strong> 9.1.0,
+through the open-source react-native-iap (openiap) library, for the purchases in
+<a href="#purchases">§5</a>. openiap also brings Google's Play Integrity client,
+which the game never calls.</p>
+
 <p>There is <strong>no</strong> advertising network, analytics SDK, attribution
 SDK, crash reporter, A/B testing framework, push-notification service or
 social-media SDK in this game. Apart from the weather request in
-<a href="#network">§4</a>, no bundled library contacts a server.</p>
+<a href="#network">§4</a> and Google Play Billing in <a href="#purchases">§5</a>,
+no bundled library contacts a server.</p>
 
-<h2 id="backup">7. Android Auto Backup</h2>
+<h2 id="backup">8. Android Auto Backup</h2>
 
 <p>The game allows Android's built-in Auto Backup. That is an operating-system
 feature rather than part of this app: when it is on for your phone, Android may
@@ -308,7 +356,7 @@ developer has no access to it and receives no copy of it. To turn it off, use
 Android's own setting — typically <em>Settings &rsaquo; Google &rsaquo;
 Backup</em>.</p>
 
-<h2 id="deletion">8. Retention and deletion</h2>
+<h2 id="deletion">9. Retention and deletion</h2>
 
 <p>Data is kept on your device for as long as you keep it. You are in full
 control of it:</p>
@@ -324,7 +372,7 @@ control of it:</p>
 <p>There is no deletion request to submit, because no copy exists anywhere the
 developer can reach.</p>
 
-<h2 id="security">9. Security</h2>
+<h2 id="security">10. Security</h2>
 
 <p>On the device, your data is protected by the Android application sandbox: the
 game's private storage is readable only by this app, and only on an unmodified
@@ -334,7 +382,7 @@ request uses HTTPS.</p>
 <p>The strongest protection here is structural: there is no server holding your
 data, so there is no breach of the developer's that could expose it.</p>
 
-<h2 id="rights">10. Your rights</h2>
+<h2 id="rights">11. Your rights</h2>
 
 <p>Data-protection laws such as the GDPR give you rights of access, correction,
 export and erasure over personal data a service holds about you. Those rights are
@@ -342,7 +390,7 @@ satisfied here in the simplest possible way: no personal data is collected, so
 there is no profile to access, nothing to correct and nothing for anyone else to
 erase.</p>
 
-<h2 id="verify">11. Verifying these claims</h2>
+<h2 id="verify">12. Verifying these claims</h2>
 
 <ul>
   <li>Open <em>Settings &rsaquo; Apps &rsaquo; চা দোকান &rsaquo;
@@ -351,26 +399,27 @@ erase.</p>
   <li>Turn on airplane mode and play. Nothing stops working.</li>
   <li>With the Android SDK installed,
   <code>aapt2 dump permissions app-release.apk</code> prints the build's complete
-  permission list — the nine in <a href="#permissions">§3</a> plus the
+  permission list — the ten in <a href="#permissions">§3</a> plus the
   signature-level entry described there, and nothing else.</li>
 </ul>
 
-<h2 id="children">12. Children</h2>
+<h2 id="children">13. Children</h2>
 
 <p>চা দোকান is made for players aged 13 and up; it is not designed for children
 and is not part of Google Play's Families programme. It collects no data from
-anyone, children included: it shows no ads, sells nothing, and has no chat, no
-messaging, no online leaderboard and no user-generated content.</p>
+anyone, children included: it shows no ads and has no chat, no messaging, no
+online leaderboard and no user-generated content. Its optional purchases go
+through Google Play, whose own purchase controls (such as requiring
+authentication for purchases) apply.</p>
 
-<h2 id="future">13. Future versions</h2>
+<h2 id="future">14. Future versions</h2>
 
-<p>Later versions may add optional ads (Google AdMob), in-app purchases (Google
-Play Billing), and leaderboards with a cloud save (Google Play Games). None of
-them is in this version. Before a version with any of them ships, this page will
+<p>Later versions may add optional ads (Google AdMob) and leaderboards with a
+cloud save (Google Play Games). Neither is in this version. Before a version with any of them ships, this page will
 be updated to say exactly what each one sends, to whom, and how to switch it off —
 and the Google Play <em>Data safety</em> declaration with it.</p>
 
-<h2 id="changes">14. Changes to this policy</h2>
+<h2 id="changes">15. Changes to this policy</h2>
 
 <p>Any revision will be posted on this page with a new date at the top. If the
 game ever did begin collecting something, this page would say so before the
@@ -379,11 +428,12 @@ version that did it shipped.</p>
 <table>
   <thead><tr><th>Date</th><th>Change</th></tr></thead>
   <tbody>
+    <tr><td data-label="Date">26 November 2026</td><td data-label="Change">For version 1.0.1: optional purchases through <strong>Google Play Billing</strong> (§5), the <code>BILLING</code> permission, and what the game keeps about purchases on the phone.</td></tr>
     <tr><td data-label="Date">26 November 2026</td><td data-label="Change">First published for version 1.0.0.</td></tr>
   </tbody>
 </table>
 
-<h2 id="contact">15. Contact</h2>
+<h2 id="contact">16. Contact</h2>
 
 <p>Questions about this policy or the game:
 <a href="mailto:emailofs2o@gmail.com">emailofs2o@gmail.com</a></p>

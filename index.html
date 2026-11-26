@@ -201,6 +201,7 @@ how to check it yourself.</p>
         <span class="pill good">Collects nothing</span>
         <span class="pill good">No ads · works offline</span>
         <span class="pill">Asks Open-Meteo about Dhaka's rain</span>
+        <span class="pill">Purchases via Google Play</span>
       </div>
     </div>
     <span class="chev">&rsaquo;</span>
@@ -246,9 +247,10 @@ nothing, works offline, and keeps its optional tip jar, its rating button and
 the developer's links behind a parental gate that a young child can't pass.</p>
 
 <p><b>চা দোকান</b> (Cha Dokan), the tea-stall game, saves everything on the
-phone and has no ads or purchases. Its one network request asks the weather
-service Open-Meteo whether it is raining at a fixed point in Dhaka, so the street
-can rain when Dhaka does; the request carries nothing about you.</p>
+phone and has no ads. Its optional gem packs, shop-owner pack and monthly মালিক
+পাস are bought through Google Play. Its one other network request asks the
+weather service Open-Meteo whether it is raining at a fixed point in Dhaka, so
+the street can rain when Dhaka does; the request carries nothing about you.</p>
 
 <p>Each policy describes exactly what its app does with data: which Android
 permissions the released build actually declares, what is written to your
@@ -266,7 +268,7 @@ anything you choose to export or share.</p>
     <tr><th>Advertising or advertising ID</th><td>None — except জমি হিসাব, which shows a Google AdMob banner, ঠাকুরঘর, which shows AdMob ads on some screens of its free version, Onkoo, which offers AdMob rewarded videos (none for Plus owners), and প্রস্তুতি, which shows AdMob banners on four screens of its free version (none for Pro)</td></tr>
     <tr><th>Data shared with third parties</th><td>None — except the advertising ID and related ad data of জমি হিসাব, ঠাকুরঘর, Onkoo and প্রস্তুতি, shared with Google to serve their ads, and the leaderboard scores of Inked and Onkoo, posted to Google Play Games only if you sign in</td></tr>
     <tr><th>Analytics, telemetry or crash reporting</th><td>None</td></tr>
-    <tr><th>In-app purchases</th><td>None — except Inked's optional Editions subscription, ঠাকুরঘর's optional membership and one-time items, Onkoo's optional Plus and coin packs, Summa's optional one-time Summa Plus, প্রস্তুতি's optional one-time Prostuti Pro, and Onkoo Kids' optional tips (behind a parental gate), through Google Play</td></tr>
+    <tr><th>In-app purchases</th><td>None — except Inked's optional Editions subscription, ঠাকুরঘর's optional membership and one-time items, Onkoo's optional Plus and coin packs, Summa's optional one-time Summa Plus, প্রস্তুতি's optional one-time Prostuti Pro, চা দোকান's optional gem packs, shop-owner pack and monthly মালিক পাস, and Onkoo Kids' optional tips (behind a parental gate), through Google Play</td></tr>
     <tr><th>Location, contacts, camera, microphone or photos</th><td>Never accessed — except ঠাকুরঘর's optional approximate location, used once on the phone to pick a city and never stored or sent</td></tr>
     <tr><th>Age suitability</th><td>Everyone — except জমি হিসাব, rated 18+ for its subject matter, Onkoo, a game for adults (18+), Inked, ঠাকুরঘর, প্রস্তুতি and চা দোকান, aimed at ages 13 and up, and Onkoo Kids, made for children aged 4–8 under Google Play's Families Policy</td></tr>
   </tbody>
@@ -320,7 +322,7 @@ reading. This table summarises them; each policy page has the full detail.</p>
       <td>Only for tips and rating, through Google Play, in the grown-ups area</td>
       <td>Only for Google Play (the Plus price and purchase) and Drive backup (if on)</td>
       <td>Ads, Google Play Billing, the public exam-date sheet, and Drive backup (if on) — the plan and syllabus are offline</td>
-      <td>Only the Dhaka weather from Open-Meteo, carrying fixed coordinates — the game is offline</td>
+      <td>The Dhaka weather from Open-Meteo, carrying fixed coordinates, and Google Play Billing for purchases — the game is offline</td>
     </tr>
     <tr>
       <th>Permissions in the released build</th>
@@ -335,7 +337,7 @@ reading. This table summarises them; each policy page has the full detail.</p>
       <td><code>INTERNET</code>, <code>BILLING</code>, <code>VIBRATE</code>, <code>ACCESS_NETWORK_STATE</code>, <code>WAKE_LOCK</code> — origins listed on its page</td>
       <td><code>INTERNET</code>, <code>BILLING</code>, <code>VIBRATE</code>, <code>ACCESS_NETWORK_STATE</code>, and three from the widget library — origins listed on its page</td>
       <td><code>INTERNET</code>, <code>BILLING</code>, <code>POST_NOTIFICATIONS</code>, <code>AD_ID</code>, <code>ACCESS_NOTIFICATION_POLICY</code> and more — origins listed on its page</td>
-      <td><code>INTERNET</code>, <code>POST_NOTIFICATIONS</code>, <code>VIBRATE</code> and six from its notification libraries — origins listed on its page</td>
+      <td><code>INTERNET</code>, <code>POST_NOTIFICATIONS</code>, <code>VIBRATE</code>, <code>BILLING</code> and six from its notification libraries — origins listed on its page</td>
     </tr>
     <tr>
       <th>Works in airplane mode</th>
@@ -350,7 +352,7 @@ reading. This table summarises them; each policy page has the full detail.</p>
       <td>Yes, completely — only the tip jar needs a network</td>
       <td>Yes — every calculation, tool and widget; only purchases and Drive backup wait</td>
       <td>Yes — plan, syllabus, routine, timer, stats and widgets; ads, purchases, backup and date updates wait</td>
-      <td>Yes, completely — only the live Dhaka weather is missing</td>
+      <td>Yes, completely — only the live Dhaka weather and new purchases wait</td>
     </tr>
     <tr>
       <th>Written to device storage</th>
@@ -365,7 +367,7 @@ reading. This table summarises them; each policy page has the full detail.</p>
       <td>MMKV: progress, stickers, garden, play time, settings, the last certificate name</td>
       <td>MMKV: history and notes, memory, variables, settings, Plus status, backup state</td>
       <td>MMKV: settings, exams, chapter statuses, routine, sessions, scores, notes, Pro status, backup state with the Google account email</td>
-      <td>MMKV: the game (money, stalls, workers, decorations, achievements), settings, the last weather reading</td>
+      <td>MMKV: the game (money, stalls, workers, decorations, achievements), settings, purchase status and recent gem-pack tokens, the last weather reading</td>
     </tr>
     <tr>
       <th>Android Auto Backup</th>
