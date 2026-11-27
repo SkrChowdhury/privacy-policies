@@ -277,7 +277,7 @@ dependency tree). Version 1.0.2 (versionCode 3). A Bangla tea-stall idle game; P
   later version). Play In-App Review is bundled but never called.
 - **Storage:** MMKV id `chadokan` — `chaDokan.save.v1` (the game and its
   settings; from 1.0.1 also `owner`/`pass` flags, the last 30 credited gem-pack
-  purchase tokens `iapTokens`, the pass's last daily-gems date `passDay`), `chaDokan.weather` (last rain reading and its time),
+  purchase tokens `iapTokens`, the pass's last daily-gems date `passDay`), `chaDokan.weather` (last rain reading and its time), `chaDokan.board.v1` (from 1.0.5: the last Play Games leaderboard pages per tab — gamer names, scores, the player's rank — shown at once, refreshed on open and in the background at most every 5 min),
   `chaDokan.fakeCloud` (1.0.1's local stand-in for the cloud save; no longer
   written once Play Games is configured, an old copy stays local). No text input
   anywhere in the app.
