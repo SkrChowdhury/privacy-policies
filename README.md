@@ -272,7 +272,14 @@ dependency tree). Version 1.0.2 (versionCode 3). A Bangla tea-stall idle game; P
   after a purchase and on opening the board; top 10 read with gamer names and
   player IDs. Cloud save: the whole save as snapshot `chadokan-main`, same
   cadence; on first start a further-along cloud save is offered, never taken
-  silently.
+  silently. From 1.0.5: 22 achievements (content/achievements.json in the app repo), reported
+  when earned (signed in), the reported keys kept in the save (`achSent`).
+- **From 1.0.5:** sharing — Android's share sheet (ACTION_SEND) with a PNG drawn on the phone
+  (name, icon, day, total earnings, open stalls; written to the app's external cache `share/`,
+  FileProvider `com.skrchowdhury.chadokan.share`) and the text with the Play Store link; the copy
+  button uses the clipboard. Ratings — Play In-App Review at a new stall or a finished story, from
+  day 3, at most every 30 days (`reviewAt` in the save); the rating page's store button opens the
+  Play Store page. No new permission.
 - **Ads / analytics / crash reporting:** none (ads are behind a fake until a
   later version). Play In-App Review is bundled but never called.
 - **Storage:** MMKV id `chadokan` — `chaDokan.save.v1` (the game and its

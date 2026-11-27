@@ -25,7 +25,7 @@
 </header>
 
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated 26 November 2026 · version 1.0.2</p>
+<p class="updated">Last updated 28 November 2026 · version 1.0.5</p>
 
 <dl class="meta">
   <div><dt>Application</dt><dd>চা দোকান — Cha Dokan</dd></div>
@@ -177,7 +177,8 @@ phone:</p>
     </tr>
     <tr>
       <td data-label="What is saved">Play Games bookkeeping</td>
-      <td data-label="Detail">When the game last uploaded its cloud save to Play Games, this
+      <td data-label="Detail">Which Play Games achievements were reported, when the game last
+      asked Google Play for a rating, when the game last uploaded its cloud save to Play Games, this
       week's earnings for the weekly leaderboard, and the last leaderboard pages Play Games showed
       (the top players' gamer names and scores, and yours), so the leaderboard opens at once (see
       <a href="#pgs">§6</a>)</td>
@@ -292,6 +293,20 @@ street simply uses the season's usual chance of rain.</p>
 website. They open in your browser only when you tap them, and the game sends
 nothing with them.</p>
 
+<p><strong>Sharing.</strong> From version 1.0.5, the share page's button opens
+Android's share sheet with a picture the game draws on the phone — the game's
+name and icon, your day, your total earnings and how many stalls are open — and
+a line of text with the game's Play Store link. The picture is written to the
+app's own cache folder only so the app you pick can read it; nothing is sent
+unless you choose an app and send it. The copy button puts the same text on
+your clipboard.</p>
+
+<p><strong>Ratings.</strong> From version 1.0.5, at a happy moment (a new stall,
+a regular's whole story) the game may ask Google Play to show its rating sheet —
+from the third day, at most once every 30 days. Google Play decides whether it
+shows, and never tells the game whether or how you rated. The rating page's
+<em>Play Store-এ রিভিউ লিখুন</em> button opens the game's Play Store page.</p>
+
 <p>Everything else goes to Google through the Google Play apps on the phone:
 purchases (<a href="#purchases">§5</a>) and, if you are signed in to Play Games,
 the leaderboards and the cloud save (<a href="#pgs">§6</a>). There is no
@@ -346,6 +361,11 @@ only when you open the leaderboard. While you are signed in:</p>
   own Google account, at most every ten minutes when you leave the game and right
   after a purchase. On a new phone, if the cloud save has come further than the
   game on the phone, the game asks before it uses it.</li>
+  <li><strong>Achievements.</strong> From version 1.0.5, 22 Play Games
+  achievements — the in-game achievements, opening each stall, hearing each
+  regular's whole story, the whole street and selling the street — are unlocked
+  in your Play Games profile when your save earns them. The save remembers which
+  ones were reported (§2).</li>
 </ul>
 
 <p>Play Games data is held by Google under the
@@ -378,7 +398,7 @@ iftar, worked out on the phone from fixed coordinates), along with Bangla
 typefaces.</p>
 
 <p>It also bundles Google's <strong>Play In-App Review</strong> library, which
-this version never calls: no rating sheet is shown.</p>
+from version 1.0.5 asks for a rating as described in <a href="#network">§4</a>.</p>
 
 <p>From version 1.0.1 it includes <strong>Google Play Billing</strong> 9.1.0,
 through the open-source react-native-iap (openiap) library, for the purchases in
@@ -492,6 +512,7 @@ version that did it shipped.</p>
 <table>
   <thead><tr><th>Date</th><th>Change</th></tr></thead>
   <tbody>
+    <tr><td data-label="Date">28 November 2026</td><td data-label="Change">For version 1.0.5: Play Games achievements (§6), the share sheet with a picture of your stall and the rating sheet at happy moments (§4), and what the save keeps about them (§2).</td></tr>
     <tr><td data-label="Date">26 November 2026</td><td data-label="Change">For version 1.0.2: optional <strong>Google Play Games</strong> sign-in, three leaderboards and a cloud save in your own Google account (§6).</td></tr>
     <tr><td data-label="Date">26 November 2026</td><td data-label="Change">For version 1.0.1: optional purchases through <strong>Google Play Billing</strong> (§5), the <code>BILLING</code> permission, and what the game keeps about purchases on the phone.</td></tr>
     <tr><td data-label="Date">26 November 2026</td><td data-label="Change">First published for version 1.0.0.</td></tr>
